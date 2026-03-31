@@ -1,0 +1,20 @@
+/*
+Theme Name: FTS Law – Foreign Legal & Visa Support
+Theme URI: https://law.fts.biz.id
+Author: FTS Development
+Author URI: https://fts.biz.id
+Description: Professional law office website for foreign investors, entrepreneurs, and expats in Indonesia. Specializing in visa & immigration, company setup, PT PMA, and foreign investment law.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+License: Private
+License URI: https://law.fts.biz.id
+Text Domain: fts-law
+Tags: law, legal, professional, foreign-investment, visa, immigration, indonesia
+*/
+
+/*
+ * All theme styles are loaded via functions.php enqueue from css/style.css
+ * This file exists only to register the theme with WordPress.
+ */
