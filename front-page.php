@@ -43,7 +43,7 @@ get_header();
       <!-- Right: Lawyer Card -->
       <div class="hero-card" aria-label="Lawyer Profile Card">
         <img
-          src="https://law.fts.biz.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg"
+          src="https://law.fts.biz.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
           alt="Syarif – Licensed Indonesian Lawyer"
           loading="eager"
           width="280"
@@ -92,7 +92,7 @@ get_header();
       <!-- Photo -->
       <div class="profile-photo">
         <img
-          src="https://law.fts.biz.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg"
+          src="https://law.fts.biz.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
           alt="Syarif – Licensed Indonesian Lawyer"
           loading="lazy" />
       </div>

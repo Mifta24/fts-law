@@ -67,13 +67,13 @@
             class="btn btn-gold"
             href="<?php echo esc_url( home_url( '/consultation' ) ); ?>"
           >Book Consultation</a>
-          <a
+          <!-- <a
             class="btn btn-green"
             href="<?php echo esc_url( fts_wa_url() ); ?>"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat via WhatsApp"
-          >💬 WhatsApp</a>
+          >💬 WhatsApp</a> -->
         </div>
       </div>
 
