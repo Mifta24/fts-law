@@ -304,7 +304,7 @@ get_header(); ?>
         <!-- Office Photo -->
         <div class="office-photo-card">
           <img
-            src="https://law.fts.biz.id/wp-content/uploads/2026/03/IMG-20260316-WA0001.jpg"
+            src="https://law.fts.biz.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
             alt="Law Office – <?php echo esc_attr( fts_office_address() ); ?>"
             loading="lazy"
             width="800"
@@ -395,19 +395,6 @@ get_header(); ?>
             <span class="contact-person-card__role">International Legal Consultant</span>
             <p class="contact-person-card__desc">
               International client coordinator for Japanese, Korean, and Singapore clients.
-            </p>
-          </div>
-        </div>
-
-        <div class="contact-person-card">
-          <div class="contact-person-card__avatar contact-person-card__avatar--initials" aria-label="Office Team">
-            <span>MR</span>
-          </div>
-          <div class="contact-person-card__info">
-            <strong class="contact-person-card__name">Mr Miftah / M Rizqui</strong>
-            <span class="contact-person-card__role">Client Relations &amp; Admin</span>
-            <p class="contact-person-card__desc">
-              First point of contact for inquiries, appointment scheduling, and follow-ups.
             </p>
           </div>
         </div>
