@@ -425,12 +425,10 @@ get_header();
         <div class="form-box">
           <h3>Download Free Guide</h3>
           <?php
-          // ── Replace the shortcode ID below with your Contact Form 7 guide form ID ──
-          // Example: [contact-form-7 id="123" title="Free Legal Guide Form"]
-          if (shortcode_exists('contact-form-7')) :
-          ?>
-            [contact-form-7 id="guide-form" title="Free Legal Guide Form"]
-          <?php else : ?>
+          $guide_form_id = fts_cf7_guide_form_id();
+          if ( shortcode_exists('contact-form-7') && $guide_form_id ) :
+            echo do_shortcode('[contact-form-7 id="' . esc_attr( $guide_form_id ) . '" title="Free Legal Guide Form"]');
+          else : ?>
             <form class="guide-form" id="guide-download-form" method="post" action="<?php echo esc_url(home_url('/guide')); ?>">
               <?php wp_nonce_field('fts_guide_download', 'fts_guide_nonce'); ?>
               <input type="text" name="guide_name" placeholder="Full Name" required />
@@ -578,11 +576,10 @@ get_header();
         <div class="card-gradient contact-form-card">
           <h3 class="contact-form-title">Send Us a Message</h3>
           <?php
-          // Replace shortcode ID with your CF7 contact form ID after setup
-          if (shortcode_exists('contact-form-7')) :
-          ?>
-            [contact-form-7 id="contact-form" title="Contact Form"]
-          <?php else : ?>
+          $contact_form_id = fts_cf7_contact_form_id();
+          if ( shortcode_exists('contact-form-7') && $contact_form_id ) :
+            echo do_shortcode('[contact-form-7 id="' . esc_attr( $contact_form_id ) . '" title="Contact Form"]');
+          else : ?>
             <form class="contact-form" id="homepage-contact-form" method="post">
               <?php wp_nonce_field('fts_contact_form', 'fts_contact_nonce'); ?>
               <div class="contact-form-grid">

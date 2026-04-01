@@ -470,6 +470,18 @@ function fts_customizer( $wp_customize ) {
             'label'   => 'Google Maps Embed URL',
             'default' => '',
         ],
+        'fts_cf7_contact_form_id' => [
+            'label'   => 'CF7 Contact Form ID',
+            'default' => '72',
+        ],
+        'fts_cf7_consultation_form_id' => [
+            'label'   => 'CF7 Consultation Form ID',
+            'default' => '73',
+        ],
+        'fts_cf7_guide_form_id' => [
+            'label'   => 'CF7 Guide Form ID',
+            'default' => '74',
+        ],
     ];
 
     foreach ( $fields as $id => $args ) {
@@ -515,4 +527,16 @@ function fts_office_hours() : string {
 
 function fts_maps_embed() : string {
      return fts_get_option('fts_google_maps_embed', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.671136651886!2d106.78509397610306!3d-6.174763644527437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002212556b%3A0xd553386b470af88!2sNEO%20SOHO%20APARTEMENT!5e0!3m2!1sid!2sid!4v1753431520442!5m2!1sid!2sid');
+}
+
+function fts_cf7_contact_form_id() : string {
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_contact_form_id', '' ) );
+}
+
+function fts_cf7_consultation_form_id() : string {
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_consultation_form_id', '' ) );
+}
+
+function fts_cf7_guide_form_id() : string {
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '' ) );
 }

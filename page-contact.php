@@ -47,8 +47,9 @@ get_header(); ?>
           <?php
           // ── Replace shortcode ID with your CF7 contact form ID after setup ──
           // Example: echo do_shortcode('[contact-form-7 id="123" title="Contact Form"]');
-          if ( shortcode_exists('contact-form-7') ) :
-              echo do_shortcode('[contact-form-7 id="contact-form" title="Contact Form"]');
+            $contact_form_id = fts_cf7_contact_form_id();
+            if ( shortcode_exists('contact-form-7') && $contact_form_id ) :
+              echo do_shortcode('[contact-form-7 id="' . esc_attr( $contact_form_id ) . '" title="Contact Form"]');
           else : ?>
 
           <form

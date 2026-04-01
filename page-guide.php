@@ -149,8 +149,9 @@ get_header(); ?>
              * 4. Replace the HTML form below with the CF7 shortcode, e.g.:
              *    echo do_shortcode('[contact-form-7 id="YOUR_FORM_ID" title="Free Legal Guide Form"]');
              */
-            if ( shortcode_exists('contact-form-7') ) :
-              echo do_shortcode('[contact-form-7 id="guide-form" title="Free Legal Guide Form"]');
+            $guide_form_id = fts_cf7_guide_form_id();
+            if ( shortcode_exists('contact-form-7') && $guide_form_id ) :
+              echo do_shortcode('[contact-form-7 id="' . esc_attr( $guide_form_id ) . '" title="Free Legal Guide Form"]');
             else :
             ?>
 

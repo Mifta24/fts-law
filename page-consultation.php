@@ -74,8 +74,9 @@ get_header(); ?>
             <?php
             // ── Replace shortcode ID with your CF7 consultation form ID after setup ──
             // Example: echo do_shortcode('[contact-form-7 id="123" title="Consultation Form"]');
-            if ( shortcode_exists('contact-form-7') ) :
-                echo do_shortcode('[contact-form-7 id="consultation-form" title="Consultation Booking Form"]');
+            $consultation_form_id = fts_cf7_consultation_form_id();
+            if ( shortcode_exists('contact-form-7') && $consultation_form_id ) :
+              echo do_shortcode('[contact-form-7 id="' . esc_attr( $consultation_form_id ) . '" title="Consultation Booking Form"]');
             else : ?>
 
             <form
