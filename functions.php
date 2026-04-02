@@ -530,13 +530,13 @@ function fts_maps_embed() : string {
 }
 
 function fts_cf7_contact_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_contact_form_id', '' ) );
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_contact_form_id', '72' ) );
 }
 
 function fts_cf7_consultation_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_consultation_form_id', '' ) );
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_consultation_form_id', '73' ) );
 }
 
 function fts_cf7_guide_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '' ) );
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '74' ) );
 }
