@@ -67,6 +67,7 @@
             class="btn btn-gold"
             href="<?php echo esc_url( home_url( '/consultation' ) ); ?>"
           >Book Consultation</a>
+          <div class="gtranslate_wrapper nav-language-switcher"></div>
           <!-- <a
             class="btn btn-green"
             href="<?php echo esc_url( fts_wa_url() ); ?>"
