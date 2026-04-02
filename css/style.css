@@ -1249,6 +1249,25 @@ textarea {
     margin-top: 8px;
 }
 
+/* Contact Form 7 compatibility with theme form styles */
+.wpcf7 form .wpcf7-response-output {
+    margin: 0 0 14px;
+    padding: 10px 14px;
+    border-radius: var(--radius-xs);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.wpcf7 form .wpcf7-response-output:empty {
+    display: none;
+}
+
+.wpcf7 form textarea {
+    min-height: 120px;
+    max-height: 280px;
+    resize: vertical;
+}
+
 /* ─── CTA BAND ───────────────────────────────────────────────── */
 .cta-band {
     background: linear-gradient(140deg, var(--gold-dark), var(--gold));
