@@ -92,6 +92,9 @@
     /* Close when a regular nav link is clicked */
     qsa('a', nav).forEach(function (link) {
       on(link, 'click', function () {
+        if (link.closest('.nav-language-switcher')) {
+          return;
+        }
         closeMenu(menuToggle, nav, body);
       });
     });
@@ -121,7 +124,7 @@
     on(window, 'resize', function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
-        if (window.innerWidth > 720 && nav.classList.contains('is-open')) {
+        if (window.innerWidth > 1450 && nav.classList.contains('is-open')) {
           closeMenu(menuToggle, nav, body);
         }
       }, 120);
