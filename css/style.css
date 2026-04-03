@@ -405,7 +405,7 @@ section {
     padding: 0;
     border: 0;
     background: transparent;
-    font-size: 1.03rem;
+    font-size: 0.96rem;
     letter-spacing: 0.03em;
     transition: opacity 0.18s ease;
 }
@@ -442,7 +442,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 14px;
     flex-wrap: nowrap;
     white-space: nowrap;
     min-width: 0;
@@ -458,21 +458,22 @@ section {
 .nav-consult-language {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .nav-language-switcher {
-    min-width: 148px;
+    min-width: 136px;
     display: inline-flex;
     align-items: center;
 }
 
 .nav-consult-language .btn {
     min-height: 40px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
     padding-top: 0;
     padding-bottom: 0;
+    font-size: 0.86rem;
 }
 
 .nav-language-switcher .gtranslate_wrapper,
@@ -547,7 +548,7 @@ section {
 
 .nav a {
     color: rgba(255, 255, 255, 0.88);
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     transition:
         color 0.18s ease,
@@ -566,7 +567,7 @@ section {
     border: 1px solid transparent;
     background: transparent;
     color: rgba(255, 255, 255, 0.92);
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     line-height: 1;
     border-bottom: 2px solid transparent;
@@ -602,7 +603,7 @@ section {
     border: 0;
     background: transparent;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 500;
     font-family: inherit;
     cursor: pointer;
@@ -673,7 +674,7 @@ section {
     color: var(--navy);
 }
 
-@media (min-width: 1451px) and (hover: hover) and (pointer: fine) {
+@media (min-width: 1181px) and (hover: hover) and (pointer: fine) {
     .nav-primary > a:hover,
     .nav-primary > .nav-dropdown:hover > .nav-dropdown-toggle {
         color: var(--gold-light);
@@ -4476,8 +4477,8 @@ textarea {
     padding: 0 0 60px;
 }
 
-/* ─── HEADER COLLAPSE: 1450px ───────────────────────────────── */
-@media (max-width: 1450px) {
+/* ─── HEADER COLLAPSE: 1180px ───────────────────────────────── */
+@media (max-width: 1180px) {
     body.menu-open {
         overflow: hidden;
     }
