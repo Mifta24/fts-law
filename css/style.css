@@ -1333,7 +1333,7 @@ label {
     color: var(--red);
 }
 
-input,
+input:not([type="hidden"]),
 textarea,
 select {
     width: 100%;
@@ -1349,6 +1349,23 @@ select {
         box-shadow 0.18s;
     -webkit-appearance: none;
     appearance: none;
+}
+
+/* Force hidden controls to stay hidden across form plugins. */
+input[type="hidden"],
+form fieldset[hidden],
+form fieldset.hidden,
+form .is-hidden,
+.wpcf7 input[type="hidden"],
+.wpcf7 fieldset[hidden],
+.wpcf7 fieldset.hidden {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
 }
 
 /* Keep native UI/behavior for checkbox and radio controls. */
