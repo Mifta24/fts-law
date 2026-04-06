@@ -4494,6 +4494,45 @@ textarea {
     padding: 0 0 60px;
 }
 
+/* ─── HEADER TIGHT DESKTOP: 1181px–1440px ──────────────────── */
+@media (max-width: 1440px) and (min-width: 1181px) {
+    .header-inner {
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .nav {
+        order: 3;
+        flex: 0 0 100%;
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        gap: 14px;
+    }
+
+    .nav-primary {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        white-space: normal;
+        gap: 12px;
+    }
+
+    .nav-primary > a,
+    .nav-primary > .nav-dropdown > .nav-dropdown-toggle {
+        white-space: nowrap;
+    }
+
+    .nav-secondary {
+        justify-content: flex-end;
+    }
+
+    .nav-consult-language .btn {
+        min-height: 38px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
 /* ─── HEADER COLLAPSE: 1180px ───────────────────────────────── */
 @media (max-width: 1180px) {
     body.menu-open {
