@@ -63,6 +63,7 @@
     initSmoothScroll();
     initWaFloatPulse();
     initBreadcrumbScroll();
+    initGTranslateLabelFix();
 
   });
 
@@ -639,5 +640,44 @@
       }
     }
   })();
+
+  /* ═══════════════════════════════════════════════════════════════
+     15. GTRANSLATE LABEL FIX
+  ═══════════════════════════════════════════════════════════════ */
+
+  function initGTranslateLabelFix() {
+    var langSwitcher = qs('.nav-language-switcher');
+    if (!langSwitcher) return;
+
+    function cleanLabel() {
+      var walker = document.createTreeWalker(langSwitcher, NodeFilter.SHOW_TEXT, null, false);
+      var node;
+      while (node = walker.nextNode()) {
+        if (node.nodeValue.includes('Chinese (Simplified)')) {
+          node.nodeValue = node.nodeValue.replace('Chinese (Simplified)', 'Chinese');
+        }
+      }
+    }
+
+    cleanLabel();
+
+    var observer = new MutationObserver(function (mutations) {
+      var shouldClean = false;
+      for (var i = 0; i < mutations.length; i++) {
+        var m = mutations[i];
+        if (m.type === 'characterData' || m.addedNodes.length > 0) {
+          shouldClean = true;
+          break;
+        }
+      }
+      if (shouldClean) {
+        observer.disconnect();
+        cleanLabel();
+        observer.observe(langSwitcher, { childList: true, subtree: true, characterData: true });
+      }
+    });
+
+    observer.observe(langSwitcher, { childList: true, subtree: true, characterData: true });
+  }
 
 })();
