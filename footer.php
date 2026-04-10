@@ -148,6 +148,142 @@
     <span class="wa-float__label">WhatsApp</span>
   </a>
 
+  <!-- Trik 3: Custom Dictionary JS Khusus GTranslate Bahasa Jepang -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // 1. Isi dictionary ini dengan kata-kata dari GTranslate yang Anda anggap salah
+      // Format: "Teks Jepang salah hasil Google" : "Teks Jepang perbaikan Anda"
+      // 1. Kamus dikelompokkan berdasarkan halaman agar rapi
+      const dictGroups = {
+          // GLOBAL: Teks yang muncul di semua halaman (contoh: Header, Footer, Menu)
+          global: {
+              // "法律事務所・シャリフ＆パートナーズ": "test ww",
+          },
+          // HOME: Khusus halaman depan (/)
+          home: {
+              // "インドネシア在住外国人": "faf",
+              // "外国人投資家、企業、居住者向けの専門的な法律サービス。": "cik",
+              // "弁護士をご紹介します": "faf",
+          },
+          // --- BUSINESS & CORPORATE SETUP ---
+          company_setup: {},
+          pt_pma: {},
+          foreign_investment: {},
+          business_legal: {},
+          contract_drafting: {},
+          legal_risk: {},
+          
+          // --- VISA & IMMIGRATION ---
+          kitas: {},
+          kitap: {},
+          investor_visa: {},
+          visa_extension: {},
+          visa: {},
+          
+          // --- OTHERS & GENERAL PAGES ---
+          lawyer: {
+              // "弁護士のプロフィール": "Perbaikan profil",
+          },
+          services: {},
+          consultation: {},
+          contact: {},
+          guide: {},
+          blog: {},
+          privacy: {}
+      };
+
+      // 2. Gabungkan Global + Halaman yang Sedang Dibuka
+      function getActiveDictionary() {
+          // Selalu masukkan yang Global
+          let activeDict = Object.assign({}, dictGroups.global);
+          
+          let path = window.location.pathname;
+
+          // Cek halaman sedang dibuka dan masukkan kamus tambahannya
+          if (document.body.classList.contains('home') || path === "/") {
+              Object.assign(activeDict, dictGroups.home);
+          } else if (path.includes('/company-setup')) {
+              Object.assign(activeDict, dictGroups.company_setup);
+          } else if (path.includes('/pt-pma')) {
+              Object.assign(activeDict, dictGroups.pt_pma);
+          } else if (path.includes('/foreign-investment')) {
+              Object.assign(activeDict, dictGroups.foreign_investment);
+          } else if (path.includes('/business-legal')) {
+              Object.assign(activeDict, dictGroups.business_legal);
+          } else if (path.includes('/contract-drafting')) {
+              Object.assign(activeDict, dictGroups.contract_drafting);
+          } else if (path.includes('/legal-risk')) {
+              Object.assign(activeDict, dictGroups.legal_risk);
+          } else if (path.includes('/kitas')) {
+              Object.assign(activeDict, dictGroups.kitas);
+          } else if (path.includes('/kitap')) {
+              Object.assign(activeDict, dictGroups.kitap);
+          } else if (path.includes('/investor-visa')) {
+              Object.assign(activeDict, dictGroups.investor_visa);
+          } else if (path.includes('/visa-extension')) {
+              Object.assign(activeDict, dictGroups.visa_extension);
+          } else if (path.includes('/visa')) {
+              // Harus di bawah tipe visa spesifik, supaya tidak tertimpa
+              Object.assign(activeDict, dictGroups.visa);
+          } else if (path.includes('/lawyer')) {
+              Object.assign(activeDict, dictGroups.lawyer);
+          } else if (path.includes('/services')) {
+              Object.assign(activeDict, dictGroups.services);
+          } else if (path.includes('/consultation')) {
+              Object.assign(activeDict, dictGroups.consultation);
+          } else if (path.includes('/contact')) {
+              Object.assign(activeDict, dictGroups.contact);
+          } else if (path.includes('/guide')) {
+              Object.assign(activeDict, dictGroups.guide);
+          } else if (document.body.classList.contains('single-post') || document.body.classList.contains('archive') || path.includes('/blog')) {
+              Object.assign(activeDict, dictGroups.blog);
+          } else if (path.includes('/privacy-policy')) {
+              Object.assign(activeDict, dictGroups.privacy);
+          }
+
+          return activeDict;
+      }
+
+      function getCookie(name) {
+          let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\\/+^])/g, '\\$1') + "=([^;]*)"));
+          return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+      function applyFix() {
+          const googtrans = getCookie('googtrans');
+          const isJapanese = document.documentElement.lang === 'ja' || (googtrans && googtrans.includes('/ja'));
+
+          if (isJapanese) {
+              const myDictionary = getActiveDictionary(); // Ambil tabel yg sudah dicampur berdasarkan halaman!
+
+              let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+              let textNode;
+              while(textNode = walker.nextNode()) {
+                  for (let wrongWord in myDictionary) {
+                      if (textNode.nodeValue.includes(wrongWord)) {
+                          textNode.nodeValue = textNode.nodeValue.split(wrongWord).join(myDictionary[wrongWord]);
+                      }
+                  }
+              }
+          }
+      }
+
+      // Memberi waktu Google Translate menerjemahkan dulu, baru kita timpa hasilnya
+      setTimeout(applyFix, 1500); 
+      setTimeout(applyFix, 3000); 
+      
+      // Mengawasi jika pengunjung mengubah bahasa dari dropdown GTranslate tanpa me-refresh halaman
+      const observer = new MutationObserver(function(mutations) {
+          mutations.forEach(function(mutation) {
+              if (mutation.attributeName === "class" || mutation.attributeName === "lang") {
+                  setTimeout(applyFix, 800);
+              }
+          });
+      });
+      observer.observe(document.documentElement, { attributes: true });
+  });
+  </script>
+
   <?php wp_footer(); ?>
 </body>
 </html>
