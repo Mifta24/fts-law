@@ -268,19 +268,50 @@
           }
       }
 
-      // Memberi waktu Google Translate menerjemahkan dulu, baru kita timpa hasilnya
-      setTimeout(applyFix, 1500); 
-      setTimeout(applyFix, 3000); 
-      
-      // Mengawasi jika pengunjung mengubah bahasa dari dropdown GTranslate tanpa me-refresh halaman
-      const observer = new MutationObserver(function(mutations) {
-          mutations.forEach(function(mutation) {
-              if (mutation.attributeName === "class" || mutation.attributeName === "lang") {
-                  setTimeout(applyFix, 800);
-              }
-          });
+      // Coba langsung jalankan jika memungkinkan
+      applyFix();
+
+      // Mengawasi DOM: Begitu Google Translate mengubah teks, langsung kita timpa saat itu juga tanpa jeda
+      let debounceTimer;
+      const translatorObserver = new MutationObserver(function(mutations) {
+          let hasRelevantChanges = mutations.some(m => 
+              m.type === 'characterData' || 
+              m.type === 'childList' || 
+              (m.type === 'attributes' && (m.attributeName === 'class' || m.attributeName === 'lang'))
+          );
+          
+          if (hasRelevantChanges) {
+              clearTimeout(debounceTimer);
+              debounceTimer = setTimeout(function() {
+                  translatorObserver.disconnect(); // Matikan sementara untuk mencegah infinite loop
+                  applyFix(); // Terapkan kamus kustom kita (jika JS custom relevan)
+                  
+                  // CEK SPESIFIK: Jangan hilangkan loading putih sampai Google benar-benar selesai
+                  // GTranslate selalu menambahkan class 'translated-ltr' (atau mengganti lang html) saat terjemahan siap
+                  if (document.documentElement.classList.contains('gtranslate-loading')) {
+                      let isTranslatedReady = document.documentElement.classList.contains('translated-ltr') || 
+                                              document.documentElement.classList.contains('translated-rtl') || 
+                                              (document.documentElement.lang && !document.documentElement.lang.startsWith('en'));
+                      
+                      if (isTranslatedReady) {
+                          document.documentElement.classList.remove('gtranslate-loading');
+                          document.documentElement.classList.add('gtranslate-loading-done');
+                      }
+                  }
+
+                  // Nyalakan observasi kembali
+                  translatorObserver.observe(document.documentElement, { attributes: true, childList: true, characterData: true, subtree: true });
+              }, 20); // Jeda super cepat (20 mili-detik), nyaris instan
+          }
       });
-      observer.observe(document.documentElement, { attributes: true });
+
+      // Mulai memantau
+      translatorObserver.observe(document.documentElement, { 
+          attributes: true, 
+          childList: true, 
+          characterData: true, 
+          subtree: true 
+      });
   });
   </script>
 
