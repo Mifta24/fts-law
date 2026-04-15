@@ -15,7 +15,7 @@ define( 'FTS_EMAIL',      'info@law.fts.biz.id' );
 define( 'FTS_ADDRESS',    'Jakarta, Indonesia' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'LAW OFFICE · SYARIF &amp; PARTNERS' );
-define( 'FTS_THEME_VER',  '1.0.0' );
+define( 'FTS_THEME_VER',  '1.0.2' );
 
 
 // ─── THEME SETUP ──────────────────────────────────────────────────────────────
@@ -310,8 +310,8 @@ function fts_blog_url() : string {
 
 // ─── HELPER: LANGUAGE SWITCHER OUTPUT ────────────────────────────────────────
 /**
- * Renders language switcher markup.
- * Polylang is prioritized, then GTranslate fallback.
+ * Renders language switcher markup using Polylang.
+ * Falls back to a simple locale label if Polylang is not active.
  */
 function fts_language_switcher() : string {
     if ( function_exists( 'pll_the_languages' ) ) {
@@ -326,10 +326,7 @@ function fts_language_switcher() : string {
         return is_string( $html ) ? $html : '';
     }
 
-    if ( shortcode_exists( 'gtranslate' ) ) {
-        return (string) do_shortcode( '[gtranslate]' );
-    }
-
+    // Fallback: show current locale code only
     return '<span class="lang-fallback">' . esc_html( strtoupper( substr( get_locale(), 0, 2 ) ) ) . '</span>';
 }
 
