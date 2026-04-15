@@ -113,7 +113,7 @@ get_header();
 
         <!-- Profile CTAs -->
         <div class="hero-actions" style="margin-top: 28px;">
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Book a Consultation', 'fts-law'); ?>
           </a>
           <?php echo fts_wa_btn( __('WhatsApp Chat', 'fts-law') ); ?>
@@ -194,7 +194,7 @@ get_header();
           <p>
             <?php _e('KITAS, KITAP, Investor KITAS, visa extensions, and all immigration procedures for foreign nationals in Indonesia.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/visa' ) ); ?>"><?php _e('Visa Services &rarr;', 'fts-law'); ?></a>
+          <a href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>"><?php _e('Visa Services &rarr;', 'fts-law'); ?></a>
         </div>
 
         <div class="practice-card">
@@ -203,7 +203,7 @@ get_header();
           <p>
             <?php _e('PT PMA formation, corporate governance, shareholder agreements, directorship, and business licensing in Indonesia.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/company-setup' ) ); ?>"><?php _e('Company Setup &rarr;', 'fts-law'); ?></a>
+          <a href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>"><?php _e('Company Setup &rarr;', 'fts-law'); ?></a>
         </div>
 
         <div class="practice-card">
@@ -212,7 +212,7 @@ get_header();
           <p>
             <?php _e('Advising foreign investors on ownership regulations, the Positive Investment List, BKPM compliance, and investment risk management.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/foreign-investment' ) ); ?>"><?php _e('Investment Law &rarr;', 'fts-law'); ?></a>
+          <a href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>"><?php _e('Investment Law &rarr;', 'fts-law'); ?></a>
         </div>
 
         <div class="practice-card">
@@ -221,7 +221,7 @@ get_header();
           <p>
             <?php _e('Drafting and reviewing business contracts, partnership agreements, investor agreements, MOUs, and employment contracts in Indonesia.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/contract-drafting' ) ); ?>"><?php _e('Contract Services &rarr;', 'fts-law'); ?></a>
+          <a href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>"><?php _e('Contract Services &rarr;', 'fts-law'); ?></a>
         </div>
 
       </div>

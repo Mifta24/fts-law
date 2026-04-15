@@ -23,7 +23,7 @@
             <?php if ( has_custom_logo() ) : ?>
               <?php the_custom_logo(); ?>
             <?php else : ?>
-              <span class="footer-logo-text"><?php echo FTS_BRAND; ?></span>
+              <span class="footer-logo-text"><?php echo wp_kses_post( fts_brand() ); ?></span>
             <?php endif; ?>
           </div>
           <p class="footer-about">
@@ -91,7 +91,7 @@
 
           <!-- CTA in footer -->
           <a class="btn btn-gold footer-cta-btn"
-             href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
+             href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Book a Free Consultation', 'fts-law'); ?>
           </a>
         </div><!-- /Col 3 -->
@@ -102,13 +102,13 @@
       <div class="footer-bottom">
         <div class="footer-bottom__copy">
           &copy; <span data-year></span>
-          <?php echo FTS_BRAND; ?>.
+          <?php echo wp_kses_post( fts_brand() ); ?>.
           <?php _e('All rights reserved.', 'fts-law'); ?>
         </div>
         <div class="footer-bottom__legal">
-          <a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>"><?php _e('Privacy Policy', 'fts-law'); ?></a>
+          <a href="<?php echo esc_url( fts_page_url( 'privacy-policy' ) ); ?>"><?php _e('Privacy Policy', 'fts-law'); ?></a>
           <span aria-hidden="true">·</span>
-          <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php _e('Contact', 'fts-law'); ?></a>
+          <a href="<?php echo esc_url( fts_page_url( 'contact' ) ); ?>"><?php _e('Contact', 'fts-law'); ?></a>
         </div>
       </div><!-- /.footer-bottom -->
 
@@ -135,135 +135,7 @@
                -.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074
                .149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625
                .712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413
-               .248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.122 1.532 5.852L.054 23.25
-               a.75.75 0 00.916.916l5.398-1.478A11.955 11.955 0 0012 24
-               c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22
-               a9.956 9.956 0 01-5.187-1.448l-.37-.22-3.835 1.049 1.05-3.835
-               -.22-.37A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2
-               s10 4.477 10 10-4.477 10-10 10z"/>
-    </svg>
-    <span class="wa-float__label"><?php _e('WhatsApp', 'fts-law'); ?></span>
-  </a>
-
-  <!-- Trik 3: Custom Dictionary JS Khusus GTranslate Bahasa Jepang -->
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-      // 1. Isi dictionary ini dengan kata-kata dari GTranslate yang Anda anggap salah
-      // Format: "Teks Jepang salah hasil Google" : "Teks Jepang perbaikan Anda"
-      // 1. Kamus dikelompokkan berdasarkan halaman agar rapi
-      const dictGroups = {
-          // GLOBAL: Teks yang muncul di semua halaman (contoh: Header, Footer, Menu)
-          global: {
-              // "法律事務所・シャリフ＆パートナーズ": "test ww",
-          },
-          // HOME: Khusus halaman depan (/)
-          home: {
-              // "インドネシア在住外国人": "faf",
-              // "外国人投資家、企業、居住者向けの専門的な法律サービス。": "cik",
-              // "弁護士をご紹介します": "faf",
-          },
-          // --- BUSINESS & CORPORATE SETUP ---
-          company_setup: {},
-          pt_pma: {},
-          foreign_investment: {},
-          business_legal: {},
-          contract_drafting: {},
-          legal_risk: {},
-          
-          // --- VISA & IMMIGRATION ---
-          kitas: {},
-          kitap: {},
-          investor_visa: {},
-          visa_extension: {},
-          visa: {},
-          
-          // --- OTHERS & GENERAL PAGES ---
-          lawyer: {
-              // "弁護士のプロフィール": "Perbaikan profil",
-          },
-          services: {},
-          consultation: {},
-          contact: {},
-          guide: {},
-          blog: {},
-          privacy: {}
-      };
-
-      // 2. Gabungkan Global + Halaman yang Sedang Dibuka
-      function getActiveDictionary() {
-          // Selalu masukkan yang Global
-          let activeDict = Object.assign({}, dictGroups.global);
-          
-          let path = window.location.pathname;
-
-          // Cek halaman sedang dibuka dan masukkan kamus tambahannya
-          if (document.body.classList.contains('home') || path === "/") {
-              Object.assign(activeDict, dictGroups.home);
-          } else if (path.includes('/company-setup')) {
-              Object.assign(activeDict, dictGroups.company_setup);
-          } else if (path.includes('/pt-pma')) {
-              Object.assign(activeDict, dictGroups.pt_pma);
-          } else if (path.includes('/foreign-investment')) {
-              Object.assign(activeDict, dictGroups.foreign_investment);
-          } else if (path.includes('/business-legal')) {
-              Object.assign(activeDict, dictGroups.business_legal);
-          } else if (path.includes('/contract-drafting')) {
-              Object.assign(activeDict, dictGroups.contract_drafting);
-          } else if (path.includes('/legal-risk')) {
-              Object.assign(activeDict, dictGroups.legal_risk);
-          } else if (path.includes('/kitas')) {
-              Object.assign(activeDict, dictGroups.kitas);
-          } else if (path.includes('/kitap')) {
-              Object.assign(activeDict, dictGroups.kitap);
-          } else if (path.includes('/investor-visa')) {
-              Object.assign(activeDict, dictGroups.investor_visa);
-          } else if (path.includes('/visa-extension')) {
-              Object.assign(activeDict, dictGroups.visa_extension);
-          } else if (path.includes('/visa')) {
-              // Harus di bawah tipe visa spesifik, supaya tidak tertimpa
-              Object.assign(activeDict, dictGroups.visa);
-          } else if (path.includes('/lawyer')) {
-              Object.assign(activeDict, dictGroups.lawyer);
-          } else if (path.includes('/services')) {
-              Object.assign(activeDict, dictGroups.services);
-          } else if (path.includes('/consultation')) {
-              Object.assign(activeDict, dictGroups.consultation);
-          } else if (path.includes('/contact')) {
-              Object.assign(activeDict, dictGroups.contact);
-          } else if (path.includes('/guide')) {
-              Object.assign(activeDict, dictGroups.guide);
-          } else if (document.body.classList.contains('single-post') || document.body.classList.contains('archive') || path.includes('/blog')) {
-              Object.assign(activeDict, dictGroups.blog);
-          } else if (path.includes('/privacy-policy')) {
-              Object.assign(activeDict, dictGroups.privacy);
-          }
-
-          return activeDict;
-      }
-
-      function getCookie(name) {
-          let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\\/+^])/g, '\\$1') + "=([^;]*)"));
-          return matches ? decodeURIComponent(matches[1]) : undefined;
-      }
-
-      function applyFix() {
-          const googtrans = getCookie('googtrans');
-          const isJapanese = document.documentElement.lang === 'ja' || (googtrans && googtrans.includes('/ja'));
-
-          if (isJapanese) {
-              const myDictionary = getActiveDictionary(); // Ambil tabel yg sudah dicampur berdasarkan halaman!
-
-              let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-              let textNode;
-              while(textNode = walker.nextNode()) {
-                  for (let wrongWord in myDictionary) {
-                      if (textNode.nodeValue.includes(wrongWord)) {
-                          textNode.nodeValue = textNode.nodeValue.split(wrongWord).join(myDictionary[wrongWord]);
-                      }
-                  }
-              }
-          }
+               .248-.694.248-1.289.173-1.413-.07  }
       }
 
       // Memberi waktu Google Translate menerjemahkan dulu, baru kita timpa hasilnya
@@ -281,6 +153,7 @@
       observer.observe(document.documentElement, { attributes: true });
   });
   </script>
+  <?php endif; ?>
 
   <?php wp_footer(); ?>
 </body>

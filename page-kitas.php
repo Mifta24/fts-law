@@ -22,7 +22,7 @@ get_header();
         <?php _e('Legal support for foreign nationals applying for a KITAS (Kartu Izin Tinggal Terbatas) in Indonesia — handled by a licensed Indonesian lawyer.', 'fts-law'); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
-        <a class="btn btn-gold"  href="<?php echo esc_url( home_url( '/consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+        <a class="btn btn-gold"  href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>" target="_blank" rel="noopener noreferrer">💬 <?php _e('WhatsApp Chat', 'fts-law'); ?></a>
       </div>
     </div>
@@ -84,7 +84,7 @@ get_header();
               <span class="key-facts-list__value"><?php _e('Required separately for working', 'fts-law'); ?></span>
             </li>
           </ul>
-          <a class="btn btn-gold" style="width:100%;margin-top:16px;" href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
+          <a class="btn btn-gold" style="width:100%;margin-top:16px;" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Ask About Your KITAS', 'fts-law'); ?>
           </a>
         </div>
@@ -113,7 +113,7 @@ get_header();
           <p>
             <?php _e('For foreign nationals who own shares in a PT&nbsp;PMA company registered in Indonesia. Requires a valid investment position through BKPM/OSS.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/investor-visa' ) ); ?>" class="type-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>" class="type-card__link">
             <?php _e('Investor KITAS Details &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -124,7 +124,7 @@ get_header();
           <p>
             <?php _e('For foreign workers employed by an Indonesian company. Requires a Work Permit (IMTA/RPTKA) approved by the Ministry of Manpower before application.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/consultation' ) ); ?>" class="type-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>" class="type-card__link">
             <?php _e('Ask About Working KITAS &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -135,7 +135,7 @@ get_header();
           <p>
             <?php _e('For foreign nationals married to an Indonesian citizen or accompanying a KITAS holder as a dependent. Different documentation is required.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/consultation' ) ); ?>" class="type-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>" class="type-card__link">
             <?php _e('Ask About Family KITAS &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -146,7 +146,7 @@ get_header();
           <p>
             <?php _e('For foreign nationals studying, conducting research, or on a social or cultural mission in Indonesia. Requires an appropriate sponsor institution.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url( '/consultation' ) ); ?>" class="type-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>" class="type-card__link">
             <?php _e('Ask About Student KITAS &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -496,19 +496,19 @@ get_header();
       <h2 class="section-title" style="text-align:center;"><?php _e('Related Services', 'fts-law'); ?></h2>
       <div class="grid-3">
 
-        <a class="related-card" href="<?php echo esc_url( home_url( '/kitap' ) ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'kitap' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏠</span>
           <h4><?php _e('KITAP – Permanent Stay', 'fts-law'); ?></h4>
           <p><?php _e('Upgrade from KITAS to a Permanent Stay Permit after 5 years.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url( '/investor-visa' ) ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">💼</span>
           <h4><?php _e('Investor KITAS', 'fts-law'); ?></h4>
           <p><?php _e('KITAS for foreign investors holding shares in a PT PMA company.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url( '/visa-extension' ) ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'visa-extension' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🗓</span>
           <h4><?php _e('Visa Extension', 'fts-law'); ?></h4>
           <p><?php _e('Extend your stay permit before it expires — avoid overstay fines.', 'fts-law'); ?></p>

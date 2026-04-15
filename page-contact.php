@@ -53,7 +53,7 @@ get_header(); ?>
             class="contact-form"
             id="main-contact-form"
             method="post"
-            action="<?php echo esc_url( home_url('/contact') ); ?>"
+            action="<?php echo esc_url( fts_page_url( 'contact' ) ); ?>"
             novalidate
           >
             <?php wp_nonce_field('fts_contact_submit', 'fts_contact_nonce'); ?>
@@ -169,7 +169,7 @@ get_header(); ?>
                 <span>
                   <?php _e('I consent to being contacted regarding my inquiry. I understand all information shared will be kept strictly confidential.', 'fts-law'); ?>
                   <?php _e('View our', 'fts-law'); ?>
-                  <a href="<?php echo esc_url( home_url('/privacy-policy') ); ?>" target="_blank"><?php _e('Privacy Policy', 'fts-law'); ?></a>.
+                  <a href="<?php echo esc_url( fts_page_url( 'privacy-policy' ) ); ?>" target="_blank"><?php _e('Privacy Policy', 'fts-law'); ?></a>.
                 </span>
               </label>
             </div>
@@ -276,7 +276,7 @@ get_header(); ?>
           <div style="margin-top: 12px;">
             <a
               class="btn btn-gold"
-              href="<?php echo esc_url( home_url('/consultation') ); ?>"
+              href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"
               style="width:100%;"
             >
               <?php _e('Book a Legal Consultation', 'fts-law'); ?>
@@ -464,62 +464,62 @@ get_header(); ?>
 
       <div class="quick-links-grid">
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/visa') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">📋</span>
           <span><?php _e('Visa &amp; Immigration', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/kitas') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'kitas' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">🪪</span>
           <span><?php _e('KITAS', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/kitap') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'kitap' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">🏠</span>
           <span><?php _e('KITAP', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/investor-visa') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">💼</span>
           <span><?php _e('Investor Visa', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/visa-extension') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'visa-extension' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">🗓</span>
           <span><?php _e('Visa Extension', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/company-setup') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">🏢</span>
           <span><?php _e('Company Setup', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/pt-pma') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">📜</span>
           <span><?php _e('PT PMA Setup', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/foreign-investment') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">📈</span>
           <span><?php _e('Foreign Investment Law', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/contract-drafting') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">✍️</span>
           <span><?php _e('Contract Drafting', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/legal-risk') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">🔍</span>
           <span><?php _e('Legal Risk Review', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/guide') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">📘</span>
           <span><?php _e('Free Legal Guide', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( home_url('/lawyer') ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'lawyer' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">⚖️</span>
           <span><?php _e('About Our Lawyer', 'fts-law'); ?></span>
         </a>

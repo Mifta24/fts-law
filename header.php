@@ -68,15 +68,9 @@
           <div class="nav-consult-language">
             <a
               class="btn btn-gold"
-              href="<?php echo esc_url(home_url('/consultation')); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+              href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
             <div class="nav-language-switcher">
-              <?php
-              if (shortcode_exists('gtranslate')) {
-                echo do_shortcode('[gtranslate]');
-              } else {
-                echo '<div class="gtranslate_wrapper"></div>';
-              }
-              ?>
+              <?php echo wp_kses_post( fts_language_switcher() ); ?>
             </div>
           </div>
         </div>

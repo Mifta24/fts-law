@@ -478,7 +478,7 @@ get_header(); ?>
                 <div>
                   <strong><?php _e('Website', 'fts-law'); ?></strong>
                   <p>
-                    <a href="<?php echo esc_url( home_url('/contact') ); ?>">
+                    <a href="<?php echo esc_url( fts_page_url( 'contact' ) ); ?>">
                       law.fts.biz.id/contact
                     </a>
                   </p>
@@ -541,7 +541,7 @@ get_header(); ?>
             <p>
               <?php _e('Contact us directly for any questions about your personal data or this Privacy Policy.', 'fts-law'); ?>
             </p>
-            <a class="btn btn-gold" href="<?php echo esc_url( home_url('/contact') ); ?>">
+            <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'contact' ) ); ?>">
               <?php _e('Contact Us', 'fts-law'); ?>
             </a>
             <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>"
@@ -554,9 +554,9 @@ get_header(); ?>
           <div class="privacy-related-links">
             <h4><?php _e('Related Pages', 'fts-law'); ?></h4>
             <nav>
-              <a href="<?php echo esc_url( home_url('/consultation') ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
-              <a href="<?php echo esc_url( home_url('/guide') ); ?>"><?php _e('Free Legal Guide', 'fts-law'); ?></a>
-              <a href="<?php echo esc_url( home_url('/contact') ); ?>"><?php _e('Contact', 'fts-law'); ?></a>
+              <a href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+              <a href="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>"><?php _e('Free Legal Guide', 'fts-law'); ?></a>
+              <a href="<?php echo esc_url( fts_page_url( 'contact' ) ); ?>"><?php _e('Contact', 'fts-law'); ?></a>
               <a href="<?php echo esc_url( home_url('/') ); ?>"><?php _e('Home', 'fts-law'); ?></a>
             </nav>
           </div>

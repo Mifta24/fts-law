@@ -24,7 +24,7 @@ get_header();
       </p>
       <div class="hero-actions" style="justify-content:center; margin-top:24px;">
         <a class="btn btn-gold"
-           href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
+           href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
           <?php _e('Book Visa Consultation', 'fts-law'); ?>
         </a>
         <a class="btn btn-green"
@@ -133,7 +133,7 @@ get_header();
             <span class="visa-meta-badge">⏱ <?php _e('2–6 weeks processing', 'fts-law'); ?></span>
             <span class="visa-meta-badge">📅 <?php _e('Valid 1–2 years, renewable', 'fts-law'); ?></span>
           </div>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/kitas' ) ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'kitas' ) ); ?>">
             <?php _e('KITAS Details &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -156,7 +156,7 @@ get_header();
             <span class="visa-meta-badge">⏱ <?php _e('4–8 weeks processing', 'fts-law'); ?></span>
             <span class="visa-meta-badge">📅 <?php _e('Valid 5 years, renewable', 'fts-law'); ?></span>
           </div>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/kitap' ) ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'kitap' ) ); ?>">
             <?php _e('KITAP Details &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -179,7 +179,7 @@ get_header();
             <span class="visa-meta-badge">⏱ <?php _e('3–6 weeks processing', 'fts-law'); ?></span>
             <span class="visa-meta-badge">📅 <?php _e('Linked to PT PMA validity', 'fts-law'); ?></span>
           </div>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/investor-visa' ) ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">
             <?php _e('Investor Visa Details &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -202,7 +202,7 @@ get_header();
             <span class="visa-meta-badge">⚠️ <?php _e('Apply 30–60 days before expiry', 'fts-law'); ?></span>
             <span class="visa-meta-badge">💰 <?php _e('Overstay fines apply', 'fts-law'); ?></span>
           </div>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/visa-extension' ) ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'visa-extension' ) ); ?>">
             <?php _e('Extension Details &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -346,19 +346,19 @@ get_header();
 
       <div class="grid-3">
 
-        <a class="related-card" href="<?php echo esc_url( home_url( '/pt-pma' ) ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏢</span>
           <h4><?php _e('PT PMA Setup', 'fts-law'); ?></h4>
           <p><?php _e('Set up a foreign-owned company in Indonesia and get your Investor KITAS at the same time.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url( '/legal-risk' ) ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Review', 'fts-law'); ?></h4>
           <p><?php _e('Understand the legal risks of your current visa or residency situation before they become problems.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url( '/guide' ) ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">📘</span>
           <h4><?php _e('Free Legal Guide', 'fts-law'); ?></h4>
           <p><?php _e('Download our free guide covering visa basics, foreign investment rules, and common legal mistakes.', 'fts-law'); ?></p>

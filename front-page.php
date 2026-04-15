@@ -24,7 +24,7 @@ get_header();
         <h1><?php _e('Legal Support for<br>Foreigners in Indonesia', 'fts-law'); ?></h1>
         <p><?php _e('Professional legal services for foreign investors, companies, and residents.', 'fts-law'); ?></p>
         <div class="hero-actions">
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/consultation')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'consultation' )); ?>">
             <?php _e('Book Consultation', 'fts-law'); ?>
           </a>
           <a class="btn btn-green"
@@ -122,10 +122,10 @@ get_header();
         </div>
 
         <div class="profile-cta">
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/lawyer')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'lawyer' )); ?>">
             <?php _e('View Full Profile', 'fts-law'); ?>
           </a>
-          <a class="btn btn-outline" href="<?php echo esc_url(home_url('/consultation')); ?>">
+          <a class="btn btn-outline" href="<?php echo esc_url(fts_page_url( 'consultation' )); ?>">
             <?php _e('Book Consultation', 'fts-law'); ?>
           </a>
         </div>
@@ -195,7 +195,7 @@ get_header();
             <li><?php _e('KITAP Permanent Stay', 'fts-law'); ?></li>
             <li><?php _e('Visa Extension', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/visa')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'visa' )); ?>">
             <?php _e('Learn More', 'fts-law'); ?>
           </a>
         </article>
@@ -209,7 +209,7 @@ get_header();
             <li><?php _e('OSS &amp; NIB Registration', 'fts-law'); ?></li>
             <li><?php _e('Foreign Ownership', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/company-setup')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'company-setup' )); ?>">
             <?php _e('Learn More', 'fts-law'); ?>
           </a>
         </article>
@@ -223,7 +223,7 @@ get_header();
             <li><?php _e('Legal Advisory', 'fts-law'); ?></li>
             <li><?php _e('Corporate Governance', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/business-legal')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'business-legal' )); ?>">
             <?php _e('Learn More', 'fts-law'); ?>
           </a>
         </article>
@@ -237,7 +237,7 @@ get_header();
             <li><?php _e('Contract Drafting', 'fts-law'); ?></li>
             <li><?php _e('Market Entry Support', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/services')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'services' )); ?>">
             <?php _e('Learn More', 'fts-law'); ?>
           </a>
         </article>
@@ -245,7 +245,7 @@ get_header();
       </div>
 
       <div class="services-more-link">
-        <a href="<?php echo esc_url(home_url('/services')); ?>" class="btn btn-outline-navy">
+        <a href="<?php echo esc_url(fts_page_url( 'services' )); ?>" class="btn btn-outline-navy">
           <?php _e('View All Services &rarr;', 'fts-law'); ?>
         </a>
       </div>
@@ -264,25 +264,25 @@ get_header();
       </p>
       <div class="grid-4">
 
-        <a class="visa-tile" href="<?php echo esc_url(home_url('/kitas')); ?>">
+        <a class="visa-tile" href="<?php echo esc_url(fts_page_url( 'kitas' )); ?>">
           <span class="visa-tile__icon" aria-hidden="true">📋</span>
           <h4><?php _e('KITAS', 'fts-law'); ?></h4>
           <p><?php _e('Temporary Stay Permit for foreign nationals working or investing in Indonesia.', 'fts-law'); ?></p>
         </a>
 
-        <a class="visa-tile" href="<?php echo esc_url(home_url('/kitap')); ?>">
+        <a class="visa-tile" href="<?php echo esc_url(fts_page_url( 'kitap' )); ?>">
           <span class="visa-tile__icon" aria-hidden="true">🏠</span>
           <h4><?php _e('KITAP', 'fts-law'); ?></h4>
           <p><?php _e('Permanent Stay Permit for long-term foreign residents in Indonesia.', 'fts-law'); ?></p>
         </a>
 
-        <a class="visa-tile" href="<?php echo esc_url(home_url('/investor-visa')); ?>">
+        <a class="visa-tile" href="<?php echo esc_url(fts_page_url( 'investor-visa' )); ?>">
           <span class="visa-tile__icon" aria-hidden="true">💼</span>
           <h4><?php _e('Investor Visa', 'fts-law'); ?></h4>
           <p><?php _e('KITAS for foreign business owners with a PT PMA company in Indonesia.', 'fts-law'); ?></p>
         </a>
 
-        <a class="visa-tile" href="<?php echo esc_url(home_url('/visa-extension')); ?>">
+        <a class="visa-tile" href="<?php echo esc_url(fts_page_url( 'visa-extension' )); ?>">
           <span class="visa-tile__icon" aria-hidden="true">🗓</span>
           <h4><?php _e('Visa Extension', 'fts-law'); ?></h4>
           <p><?php _e('Legal support for extending your stay permit before it expires.', 'fts-law'); ?></p>
@@ -313,10 +313,10 @@ get_header();
           <li><?php _e('Shareholder agreement drafting', 'fts-law'); ?></li>
         </ul>
         <div class="hero-actions" style="margin-top:20px;">
-          <a class="btn btn-gold" href="<?php echo esc_url(home_url('/pt-pma')); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url(fts_page_url( 'pt-pma' )); ?>">
             <?php _e('PT PMA Setup Details', 'fts-law'); ?>
           </a>
-          <a class="btn btn-outline" href="<?php echo esc_url(home_url('/company-setup')); ?>">
+          <a class="btn btn-outline" href="<?php echo esc_url(fts_page_url( 'company-setup' )); ?>">
             <?php _e('Company Setup Overview', 'fts-law'); ?>
           </a>
         </div>
@@ -360,7 +360,7 @@ get_header();
           <span class="mini-label"><?php _e('Guide', 'fts-law'); ?></span>
           <h3><?php _e('Can Foreigners Own a Company in Indonesia?', 'fts-law'); ?></h3>
           <p><?php _e('Understand foreign ownership rules, PT&nbsp;PMA basics, and legal structure options available to international investors.', 'fts-law'); ?></p>
-          <a href="<?php echo esc_url(home_url('/foreign-investment')); ?>"
+          <a href="<?php echo esc_url(fts_page_url( 'foreign-investment' )); ?>"
             class="card__read-more"><?php _e('Read Guide &rarr;', 'fts-law'); ?></a>
         </article>
 
@@ -368,7 +368,7 @@ get_header();
           <span class="mini-label"><?php _e('Guide', 'fts-law'); ?></span>
           <h3><?php _e('PT PMA Company Structure Explained', 'fts-law'); ?></h3>
           <p><?php _e('Learn about shareholders, directors, commissioners, minimum capital requirements, and licensing steps for a PT&nbsp;PMA in Indonesia.', 'fts-law'); ?></p>
-          <a href="<?php echo esc_url(home_url('/pt-pma')); ?>"
+          <a href="<?php echo esc_url(fts_page_url( 'pt-pma' )); ?>"
             class="card__read-more"><?php _e('Read Guide &rarr;', 'fts-law'); ?></a>
         </article>
 
@@ -376,7 +376,7 @@ get_header();
           <span class="mini-label"><?php _e('Guide', 'fts-law'); ?></span>
           <h3><?php _e('How Foreigners Lose Their Company in Indonesia', 'fts-law'); ?></h3>
           <p><?php _e('The legal risks of nominee shareholders, director removal, share dilution, and shareholder disputes that every foreign investor must understand.', 'fts-law'); ?></p>
-          <a href="<?php echo esc_url(home_url('/legal-risk')); ?>"
+          <a href="<?php echo esc_url(fts_page_url( 'legal-risk' )); ?>"
             class="card__read-more"><?php _e('Read Guide &rarr;', 'fts-law'); ?></a>
         </article>
 
@@ -413,7 +413,7 @@ get_header();
           if ( shortcode_exists('contact-form-7') && $guide_form_id ) :
             echo do_shortcode('[contact-form-7 id="' . esc_attr( $guide_form_id ) . '" title="Free Legal Guide Form"]');
           else : ?>
-            <form class="guide-form" id="guide-download-form" method="post" action="<?php echo esc_url(home_url('/guide')); ?>">
+            <form class="guide-form" id="guide-download-form" method="post" action="<?php echo esc_url(fts_page_url( 'guide' )); ?>">
               <?php wp_nonce_field('fts_guide_download', 'fts_guide_nonce'); ?>
               <input type="text" name="guide_name" placeholder="<?php esc_attr_e('Full Name', 'fts-law'); ?>" required />
               <input type="email" name="guide_email" placeholder="<?php esc_attr_e('Email Address', 'fts-law'); ?>" required />
@@ -452,7 +452,7 @@ get_header();
         </p>
         <div class="cta-band__actions">
           <a class="btn btn-white"
-            href="<?php echo esc_url(home_url('/consultation')); ?>">
+            href="<?php echo esc_url(fts_page_url( 'consultation' )); ?>">
             <?php _e('Book Consultation', 'fts-law'); ?>
           </a>
           <a class="btn btn-green"
@@ -498,7 +498,7 @@ get_header();
               <p class="card__excerpt">
                 <?php _e('A step-by-step guide to applying for an Investor KITAS, including eligibility, required documents, and processing time.', 'fts-law'); ?>
               </p>
-              <a class="card__read-more" href="<?php echo esc_url(home_url('/blog')); ?>"><?php _e('Read more &rarr;', 'fts-law'); ?></a>
+              <a class="card__read-more" href="<?php echo esc_url(fts_blog_url()); ?>"><?php _e('Read more &rarr;', 'fts-law'); ?></a>
             </div>
           </article>
 
@@ -509,7 +509,7 @@ get_header();
               <p class="card__excerpt">
                 <?php _e('Everything foreign investors need to know about setting up a PT&nbsp;PMA — from minimum capital to business licensing.', 'fts-law'); ?>
               </p>
-              <a class="card__read-more" href="<?php echo esc_url(home_url('/blog')); ?>"><?php _e('Read more &rarr;', 'fts-law'); ?></a>
+              <a class="card__read-more" href="<?php echo esc_url(fts_blog_url()); ?>"><?php _e('Read more &rarr;', 'fts-law'); ?></a>
             </div>
           </article>
 
@@ -520,7 +520,7 @@ get_header();
               <p class="card__excerpt">
                 <?php _e('Understanding the Negative Investment List, BKPM regulations, and which sectors are open to 100% foreign ownership.', 'fts-law'); ?>
               </p>
-              <a class="card__read-more" href="<?php echo esc_url(home_url('/blog')); ?>"><?php _e('Read more &rarr;', 'fts-law'); ?></a>
+              <a class="card__read-more" href="<?php echo esc_url(fts_blog_url()); ?>"><?php _e('Read more &rarr;', 'fts-law'); ?></a>
             </div>
           </article>
 
@@ -528,7 +528,7 @@ get_header();
       <?php endif; ?>
 
       <div style="text-align:center;margin-top:32px;">
-        <a class="btn btn-outline-navy" href="<?php echo esc_url(home_url('/blog')); ?>">
+        <a class="btn btn-outline-navy" href="<?php echo esc_url(fts_blog_url()); ?>">
           <?php _e('View All Articles &rarr;', 'fts-law'); ?>
         </a>
       </div>

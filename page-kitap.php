@@ -22,7 +22,7 @@ get_header();
         <?php _e('Legal guidance for foreign nationals applying for a Permanent Stay Permit (Kartu Izin Tinggal Tetap) in Indonesia — handled by a licensed lawyer.', 'fts-law'); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
-        <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+        <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>" target="_blank" rel="noopener noreferrer">💬 <?php _e('WhatsApp Chat', 'fts-law'); ?></a>
       </div>
     </div>
@@ -462,28 +462,28 @@ get_header();
     <div class="container">
       <h3 class="related-title"><?php _e('Related Visa Services', 'fts-law'); ?></h3>
       <div class="related-links-grid">
-        <a class="related-link-card" href="<?php echo esc_url( home_url( '/kitas' ) ); ?>">
+        <a class="related-link-card" href="<?php echo esc_url( fts_page_url( 'kitas' ) ); ?>">
           <span class="related-link-card__icon" aria-hidden="true">📋</span>
           <div>
             <strong><?php _e('KITAS Visa', 'fts-law'); ?></strong>
             <span><?php _e('Temporary Stay Permit', 'fts-law'); ?></span>
           </div>
         </a>
-        <a class="related-link-card" href="<?php echo esc_url( home_url( '/investor-visa' ) ); ?>">
+        <a class="related-link-card" href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">
           <span class="related-link-card__icon" aria-hidden="true">💼</span>
           <div>
             <strong><?php _e('Investor KITAS', 'fts-law'); ?></strong>
             <span><?php _e('For Foreign Business Owners', 'fts-law'); ?></span>
           </div>
         </a>
-        <a class="related-link-card" href="<?php echo esc_url( home_url( '/visa-extension' ) ); ?>">
+        <a class="related-link-card" href="<?php echo esc_url( fts_page_url( 'visa-extension' ) ); ?>">
           <span class="related-link-card__icon" aria-hidden="true">🗓</span>
           <div>
             <strong><?php _e('Visa Extension', 'fts-law'); ?></strong>
             <span><?php _e('Extend Before Expiry', 'fts-law'); ?></span>
           </div>
         </a>
-        <a class="related-link-card" href="<?php echo esc_url( home_url( '/visa' ) ); ?>">
+        <a class="related-link-card" href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">
           <span class="related-link-card__icon" aria-hidden="true">📑</span>
           <div>
             <strong><?php _e('All Visa Services', 'fts-law'); ?></strong>

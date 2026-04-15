@@ -22,7 +22,7 @@ get_header(); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
         <a class="btn btn-gold"  href="<?php echo esc_url(
-            home_url("/consultation"),
+            fts_page_url( 'consultation' ),
         ); ?>"><?php _e('Book Extension Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url(
             fts_wa_url(),
@@ -45,7 +45,7 @@ get_header(); ?>
           <?php _e('<strong>Important:</strong> Overstaying your visa or stay permit in Indonesia results in <strong>fines of IDR 1,000,000 per day</strong>, possible detention, and deportation. Apply for extension at least <strong>30–60 days before expiry</strong>.', 'fts-law'); ?>
         </div>
         <a class="btn btn-gold urgency-bar__cta"
-           href="<?php echo esc_url(home_url("/consultation")); ?>">
+           href="<?php echo esc_url(fts_page_url( 'consultation' )); ?>">
           <?php _e('Act Now', 'fts-law'); ?>
         </a>
       </div>
@@ -304,7 +304,7 @@ get_header(); ?>
         <?php _e('<strong>🚨 Already overstaying?</strong> Contact our office immediately via WhatsApp. Do not attempt to leave Indonesia without legal advice — the process for handling overstay correctly is critical to minimising penalties and protecting your ability to return to Indonesia.', 'fts-law'); ?>
         <div style="margin-top: 14px;">
           <a class="btn btn-gold" href="<?php echo esc_url(
-              home_url("/consultation"),
+              fts_page_url( 'consultation' ),
           ); ?>"><?php _e('Book Emergency Consultation', 'fts-law'); ?></a>
           &nbsp;
           <a class="btn btn-green" href="<?php echo esc_url(
@@ -516,7 +516,7 @@ get_header(); ?>
       <div class="grid-3">
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/kitas"),
+            fts_page_url( 'kitas' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">📋</span>
           <h4><?php _e('KITAS – Temporary Stay Permit', 'fts-law'); ?></h4>
@@ -524,7 +524,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/kitap"),
+            fts_page_url( 'kitap' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏠</span>
           <h4><?php _e('KITAP – Permanent Stay', 'fts-law'); ?></h4>
@@ -532,7 +532,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/investor-visa"),
+            fts_page_url( 'investor-visa' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">💼</span>
           <h4><?php _e('Investor KITAS', 'fts-law'); ?></h4>

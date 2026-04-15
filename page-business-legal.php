@@ -19,7 +19,7 @@ get_header(); ?>
         <?php _e('Ongoing and transactional legal support for foreign-owned businesses in Indonesia — corporate governance, compliance monitoring, and dispute prevention, handled by a licensed lawyer.', 'fts-law'); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
-        <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+        <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>" target="_blank" rel="noopener noreferrer">💬 <?php _e('WhatsApp Chat', 'fts-law'); ?></a>
       </div>
     </div>
@@ -79,7 +79,7 @@ get_header(); ?>
             </li>
           </ul>
           <a class="btn btn-gold" style="width:100%;margin-top:16px;"
-             href="<?php echo esc_url( home_url('/consultation') ); ?>">
+             href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Discuss Your Legal Needs', 'fts-law'); ?>
           </a>
         </div>
@@ -377,19 +377,19 @@ get_header(); ?>
       <h2 class="section-title" style="text-align:center;"><?php _e('Related Legal Services', 'fts-law'); ?></h2>
       <div class="grid-3">
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/contract-drafting') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">✍️</span>
           <h4><?php _e('Contract Drafting &amp; Review', 'fts-law'); ?></h4>
           <p><?php _e('Business contracts, partnership agreements, and investor agreements drafted and reviewed by our lawyer.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/legal-risk') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Consultation', 'fts-law'); ?></h4>
           <p><?php _e('Identify and manage legal risks in your existing business structure, contracts, and operations.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/foreign-investment') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">📈</span>
           <h4><?php _e('Foreign Investment Law', 'fts-law'); ?></h4>
           <p><?php _e('Understand your compliance obligations under Indonesian foreign investment regulations.', 'fts-law'); ?></p>

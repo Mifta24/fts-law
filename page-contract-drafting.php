@@ -19,7 +19,7 @@ get_header(); ?>
         <?php _e('Professional contract drafting and legal review services for foreign investors, businesses, and expatriates in Indonesia — supervised by a licensed Indonesian lawyer.', 'fts-law'); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
-        <a class="btn btn-gold"  href="<?php echo esc_url( home_url('/consultation') ); ?>"><?php _e('Book Contract Review', 'fts-law'); ?></a>
+        <a class="btn btn-gold"  href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Contract Review', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>" target="_blank" rel="noopener noreferrer">💬 <?php _e('WhatsApp Chat', 'fts-law'); ?></a>
       </div>
     </div>
@@ -79,7 +79,7 @@ get_header(); ?>
             </li>
           </ul>
           <a class="btn btn-gold" style="width:100%;margin-top:16px;"
-             href="<?php echo esc_url( home_url('/consultation') ); ?>">
+             href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Request Contract Review', 'fts-law'); ?>
           </a>
         </div>
@@ -114,7 +114,7 @@ get_header(); ?>
             <li><?php _e('Non-Disclosure Agreements (NDA)', 'fts-law'); ?></li>
             <li><?php _e('Memoranda of Understanding (MoU)', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Get a Quote &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -133,7 +133,7 @@ get_header(); ?>
             <li><?php _e('Share transfer agreements', 'fts-law'); ?></li>
             <li><?php _e('Buy-sell / exit provisions', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Get a Quote &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -152,7 +152,7 @@ get_header(); ?>
             <li><?php _e('Revenue sharing arrangements', 'fts-law'); ?></li>
             <li><?php _e('Profit participation agreements', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Get a Quote &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -171,7 +171,7 @@ get_header(); ?>
             <li><?php _e('Termination agreements', 'fts-law'); ?></li>
             <li><?php _e('Severance calculation advice', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Get a Quote &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -190,7 +190,7 @@ get_header(); ?>
             <li><?php _e('Property licence agreements', 'fts-law'); ?></li>
             <li><?php _e('Lease renewal terms', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Get a Quote &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -209,7 +209,7 @@ get_header(); ?>
             <li><?php _e('Suggested amendments and additions', 'fts-law'); ?></li>
             <li><?php _e('Plain-English legal summary', 'fts-law'); ?></li>
           </ul>
-          <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+          <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Submit for Review &rarr;', 'fts-law'); ?>
           </a>
         </article>
@@ -360,7 +360,7 @@ get_header(); ?>
             <?php _e('Send us your existing contract for a legal review. Our lawyer will identify legal risks, unenforceable clauses, and missing provisions — and provide specific recommendations for improvement.', 'fts-law'); ?>
           </p>
           <div class="cta-band__actions">
-            <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>">
+            <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
               <?php _e('Submit Contract for Review', 'fts-law'); ?>
             </a>
             <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>"
@@ -393,19 +393,19 @@ get_header(); ?>
       <h2 class="section-title" style="text-align:center;"><?php _e('Related Legal Services', 'fts-law'); ?></h2>
       <div class="grid-3">
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/business-legal') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'business-legal' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">⚖️</span>
           <h4><?php _e('Business Legal Support', 'fts-law'); ?></h4>
           <p><?php _e('Ongoing legal advisory for your business operations, compliance, and governance in Indonesia.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/legal-risk') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Consultation', 'fts-law'); ?></h4>
           <p><?php _e('Identify and assess legal risks in your current business structure, agreements, and operations.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/pt-pma') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏢</span>
           <h4><?php _e('PT PMA Setup', 'fts-law'); ?></h4>
           <p><?php _e('Company formation including Articles of Association and shareholder agreement drafting.', 'fts-law'); ?></p>

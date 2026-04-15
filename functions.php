@@ -193,41 +193,39 @@ class FTS_Walker_Nav extends Walker_Nav_Menu {
  * Called as the `fallback_cb` in wp_nav_menu().
  */
 function fts_law_fallback_nav() {
-    $base = home_url( '/' );
-    echo '<a href="' . esc_url( $base ) . '">Home</a>';
-    echo '<a href="' . esc_url( $base . 'lawyer' ) . '">Lawyer</a>';
-    echo '<a href="' . esc_url( $base . 'services' ) . '">Legal Services</a>';
+    echo '<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'lawyer' ) ) . '">' . esc_html__( 'Lawyer', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'services' ) ) . '">' . esc_html__( 'Legal Services', 'fts-law' ) . '</a>';
 
     // Visa dropdown
     echo '<div class="nav-dropdown">';
-    echo '<button class="nav-dropdown-toggle" type="button" aria-expanded="false">Visa &amp; Immigration</button>';
+    echo '<button class="nav-dropdown-toggle" type="button" aria-expanded="false">' . esc_html__( 'Visa & Immigration', 'fts-law' ) . '</button>';
     echo '<div class="nav-dropdown-menu">';
-    echo '<a href="' . esc_url( $base . 'visa' ) . '">Visa Overview</a>';
-    echo '<a href="' . esc_url( $base . 'kitas' ) . '">KITAS Visa</a>';
-    echo '<a href="' . esc_url( $base . 'kitap' ) . '">KITAP Visa</a>';
-    echo '<a href="' . esc_url( $base . 'investor-visa' ) . '">Investor Visa</a>';
-    echo '<a href="' . esc_url( $base . 'visa-extension' ) . '">Visa Extension</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'visa' ) ) . '">' . esc_html__( 'Visa Overview', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'kitas' ) ) . '">' . esc_html__( 'KITAS Visa', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'kitap' ) ) . '">' . esc_html__( 'KITAP Visa', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'investor-visa' ) ) . '">' . esc_html__( 'Investor Visa', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'visa-extension' ) ) . '">' . esc_html__( 'Visa Extension', 'fts-law' ) . '</a>';
     echo '</div></div>';
 
     // Company dropdown
     echo '<div class="nav-dropdown">';
-    echo '<button class="nav-dropdown-toggle" type="button" aria-expanded="false">Company Setup</button>';
+    echo '<button class="nav-dropdown-toggle" type="button" aria-expanded="false">' . esc_html__( 'Company Setup', 'fts-law' ) . '</button>';
     echo '<div class="nav-dropdown-menu">';
-    echo '<a href="' . esc_url( $base . 'company-setup' ) . '">Overview</a>';
-    echo '<a href="' . esc_url( $base . 'pt-pma' ) . '">PT PMA Setup</a>';
-    echo '<a href="' . esc_url( $base . 'foreign-investment' ) . '">Foreign Investment</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'company-setup' ) ) . '">' . esc_html__( 'Overview', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'pt-pma' ) ) . '">' . esc_html__( 'PT PMA Setup', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'foreign-investment' ) ) . '">' . esc_html__( 'Foreign Investment', 'fts-law' ) . '</a>';
     echo '</div></div>';
 
-    echo '<a href="' . esc_url( $base . 'guide' ) . '">Free Legal Guide</a>';
-    echo '<a href="' . esc_url( $base . 'blog' ) . '">Blog</a>';
-    echo '<a href="' . esc_url( $base . 'consultation' ) . '">Consultation</a>';
-    echo '<a href="' . esc_url( $base . 'contact' ) . '">Contact</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'guide' ) ) . '">' . esc_html__( 'Free Legal Guide', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_blog_url() ) . '">' . esc_html__( 'Blog', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'consultation' ) ) . '">' . esc_html__( 'Consultation', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'contact' ) ) . '">' . esc_html__( 'Contact', 'fts-law' ) . '</a>';
 }
 
 
 // ─── HELPER: FALLBACK FOOTER NAV ──────────────────────────────────────────────
 function fts_law_footer_fallback_nav() {
-    $base = home_url( '/' );
     $links = [
         'About Lawyer'    => 'lawyer',
         'Legal Services'  => 'services',
@@ -239,8 +237,100 @@ function fts_law_footer_fallback_nav() {
         'Privacy Policy'  => 'privacy-policy',
     ];
     foreach ( $links as $label => $slug ) {
-        echo '<a href="' . esc_url( $base . $slug ) . '">' . esc_html( $label ) . '</a>';
+        $url = 'blog' === $slug ? fts_blog_url() : fts_page_url( $slug );
+        echo '<a href="' . esc_url( $url ) . '">' . esc_html__( $label, 'fts-law' ) . '</a>';
     }
+}
+
+
+// ─── HELPER: POLYLANG-AWARE PAGE URL ─────────────────────────────────────────
+/**
+ * Returns a localized page URL by slug when Polylang is active.
+ * Falls back to default permalink or a plain home_url path.
+ */
+function fts_page_url( string $slug = '' ) : string {
+    $slug = trim( $slug, '/' );
+
+    if ( '' === $slug ) {
+        return home_url( '/' );
+    }
+
+    $page = get_page_by_path( $slug );
+
+    if ( $page instanceof WP_Post ) {
+        $page_id = (int) $page->ID;
+
+        if ( function_exists( 'pll_get_post' ) ) {
+            $translated_id = (int) pll_get_post( $page_id );
+            if ( $translated_id > 0 ) {
+                $translated_url = get_permalink( $translated_id );
+                if ( is_string( $translated_url ) && '' !== $translated_url ) {
+                    return $translated_url;
+                }
+            }
+        }
+
+        $page_url = get_permalink( $page_id );
+        if ( is_string( $page_url ) && '' !== $page_url ) {
+            return $page_url;
+        }
+    }
+
+    return home_url( '/' . $slug . '/' );
+}
+
+
+// ─── HELPER: POLYLANG-AWARE BLOG URL ─────────────────────────────────────────
+/**
+ * Returns the localized posts page URL when available.
+ */
+function fts_blog_url() : string {
+    $posts_page_id = (int) get_option( 'page_for_posts' );
+
+    if ( $posts_page_id > 0 ) {
+        if ( function_exists( 'pll_get_post' ) ) {
+            $translated_id = (int) pll_get_post( $posts_page_id );
+            if ( $translated_id > 0 ) {
+                $translated_url = get_permalink( $translated_id );
+                if ( is_string( $translated_url ) && '' !== $translated_url ) {
+                    return $translated_url;
+                }
+            }
+        }
+
+        $posts_page_url = get_permalink( $posts_page_id );
+        if ( is_string( $posts_page_url ) && '' !== $posts_page_url ) {
+            return $posts_page_url;
+        }
+    }
+
+    return home_url( '/blog/' );
+}
+
+
+// ─── HELPER: LANGUAGE SWITCHER OUTPUT ────────────────────────────────────────
+/**
+ * Renders language switcher markup.
+ * Polylang is prioritized, then GTranslate fallback.
+ */
+function fts_language_switcher() : string {
+    if ( function_exists( 'pll_the_languages' ) ) {
+        $html = pll_the_languages( [
+            'dropdown'      => 1,
+            'show_flags'    => 0,
+            'show_names'    => 1,
+            'hide_if_empty' => 0,
+            'echo'          => 0,
+        ] );
+
+        return is_string( $html ) ? $html : '';
+    }
+
+    if ( shortcode_exists( 'gtranslate' ) ) {
+        return (string) do_shortcode( '[gtranslate]' );
+    }
+
+    return '<span class="lang-fallback">' . esc_html( strtoupper( substr( get_locale(), 0, 2 ) ) ) . '</span>';
 }
 
 
@@ -256,7 +346,7 @@ function fts_wa_btn( $label = 'WhatsApp Chat', $extra_class = '' ) {
 // ─── HELPER: CONSULTATION LINK ────────────────────────────────────────────────
 function fts_consult_btn( $label = 'Book Consultation', $extra_class = '' ) {
     $class = trim( 'btn btn-gold ' . $extra_class );
-    return '<a class="' . esc_attr( $class ) . '" href="' . esc_url( home_url( '/consultation' ) ) . '">'
+    return '<a class="' . esc_attr( $class ) . '" href="' . esc_url( fts_page_url( 'consultation' ) ) . '">'
          . esc_html( $label )
          . '</a>';
 }
@@ -385,7 +475,7 @@ function fts_blog_card() {
 function fts_breadcrumb() {
     if ( is_front_page() ) return;
     echo '<nav class="breadcrumb" aria-label="Breadcrumb"><div class="container">';
-    echo '<a href="' . esc_url( home_url( '/' ) ) . '">Home</a>';
+    echo '<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'fts-law' ) . '</a>';
     echo '<span aria-hidden="true"> / </span>';
 
     if ( is_singular( 'post' ) ) {
@@ -398,9 +488,9 @@ function fts_breadcrumb() {
     } elseif ( is_page() ) {
         the_title();
     } elseif ( is_archive() || is_home() ) {
-        echo 'Blog';
+        echo esc_html__( 'Blog', 'fts-law' );
     } elseif ( is_search() ) {
-        echo 'Search Results';
+        echo esc_html__( 'Search Results', 'fts-law' );
     }
 
     echo '</div></nav>';
@@ -500,13 +590,52 @@ function fts_customizer( $wp_customize ) {
 add_action( 'customize_register', 'fts_customizer' );
 
 
+// ─── POLYLANG STRING REGISTRY ────────────────────────────────────────────────
+/**
+ * Registers dynamic theme strings in Polylang (Strings translation).
+ */
+function fts_register_polylang_strings() : void {
+    if ( ! function_exists( 'pll_register_string' ) ) {
+        return;
+    }
+
+    $strings = [
+        'Brand Name'     => FTS_BRAND,
+        'Office Email'   => fts_get_option( 'fts_email', FTS_EMAIL, false ),
+        'Office Address' => fts_get_option( 'fts_address', FTS_ADDRESS, false ),
+        'Office Hours'   => fts_get_option( 'fts_office_hours', FTS_OFFICE_HOURS, false ),
+    ];
+
+    foreach ( $strings as $name => $value ) {
+        if ( is_string( $value ) && '' !== trim( $value ) ) {
+            pll_register_string( $name, $value, 'FTS Law Theme', false );
+        }
+    }
+}
+add_action( 'init', 'fts_register_polylang_strings' );
+
+
 // ─── CUSTOMIZER HELPERS ───────────────────────────────────────────────────────
-function fts_get_option( string $key, string $fallback = '' ) : string {
-    return (string) get_theme_mod( $key, $fallback );
+function fts_translate_string( string $value ) : string {
+    if ( '' !== $value && function_exists( 'pll__' ) ) {
+        return (string) pll__( $value );
+    }
+
+    return $value;
+}
+
+function fts_get_option( string $key, string $fallback = '', bool $translate = false ) : string {
+    $value = (string) get_theme_mod( $key, $fallback );
+
+    return $translate ? fts_translate_string( $value ) : $value;
+}
+
+function fts_brand() : string {
+    return fts_translate_string( FTS_BRAND );
 }
 
 function fts_whatsapp() : string {
-    return fts_get_option( 'fts_whatsapp', FTS_PHONE_RAW );
+    return fts_get_option( 'fts_whatsapp', FTS_PHONE_RAW, false );
 }
 
 function fts_wa_url() : string {
@@ -514,29 +643,29 @@ function fts_wa_url() : string {
 }
 
 function fts_office_email() : string {
-    return fts_get_option( 'fts_email', FTS_EMAIL );
+    return fts_get_option( 'fts_email', FTS_EMAIL, true );
 }
 
 function fts_office_address() : string {
-    return fts_get_option( 'fts_address', FTS_ADDRESS );
+    return fts_get_option( 'fts_address', FTS_ADDRESS, true );
 }
 
 function fts_office_hours() : string {
-    return fts_get_option( 'fts_office_hours', FTS_OFFICE_HOURS );
+    return fts_get_option( 'fts_office_hours', FTS_OFFICE_HOURS, true );
 }
 
 function fts_maps_embed() : string {
-     return fts_get_option('fts_google_maps_embed', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.671136651886!2d106.78509397610306!3d-6.174763644527437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002212556b%3A0xd553386b470af88!2sNEO%20SOHO%20APARTEMENT!5e0!3m2!1sid!2sid!4v1753431520442!5m2!1sid!2sid');
+     return fts_get_option('fts_google_maps_embed', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.671136651886!2d106.78509397610306!3d-6.174763644527437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002212556b%3A0xd553386b470af88!2sNEO%20SOHO%20APARTEMENT!5e0!3m2!1sid!2sid!4v1753431520442!5m2!1sid!2sid', false);
 }
 
 function fts_cf7_contact_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_contact_form_id', '72' ) );
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_contact_form_id', '72', false ) );
 }
 
 function fts_cf7_consultation_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_consultation_form_id', '73' ) );
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_consultation_form_id', '73', false ) );
 }
 
 function fts_cf7_guide_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '74' ) );
+    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '74', false ) );
 }
