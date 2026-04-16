@@ -27,19 +27,17 @@
             <?php endif; ?>
           </div>
           <p class="footer-about">
-            Professional legal services for foreign investors, entrepreneurs, and
-            expatriates in Indonesia. Specialising in visa &amp; immigration,
-            PT&nbsp;PMA company setup, foreign investment law, and business legal support.
+            <?php _e('Professional legal services for foreign investors, entrepreneurs, and expatriates in Indonesia. Specialising in visa &amp; immigration, PT&nbsp;PMA company setup, foreign investment law, and business legal support.', 'fts-law'); ?>
           </p>
           <div class="footer-badges">
-            <span class="footer-badge">🛡 Licensed Indonesian Lawyer</span>
-            <span class="footer-badge">🌍 Foreign Investor Support</span>
+            <span class="footer-badge">🛡 <?php _e('Licensed Indonesian Lawyer', 'fts-law'); ?></span>
+            <span class="footer-badge">🌍 <?php _e('Foreign Investor Support', 'fts-law'); ?></span>
           </div>
         </div><!-- /Col 1 -->
 
         <!-- Col 2 – Quick Links (WP menu or fallback) -->
         <div class="footer-col footer-col--links">
-          <h4 class="footer-title">Quick Links</h4>
+          <h4 class="footer-title"><?php _e('Quick Links', 'fts-law'); ?></h4>
           <div class="footer-links">
             <?php
             if ( has_nav_menu( 'footer-menu' ) ) {
@@ -60,7 +58,7 @@
 
         <!-- Col 3 – Contact Info -->
         <div class="footer-col footer-col--contact">
-          <h4 class="footer-title">Contact Us</h4>
+          <h4 class="footer-title"><?php _e('Contact Us', 'fts-law'); ?></h4>
           <div class="footer-contact-list">
 
             <div class="footer-contact-item">
@@ -80,7 +78,7 @@
               <a href="<?php echo esc_url( fts_wa_url() ); ?>"
                  target="_blank"
                  rel="noopener noreferrer">
-                WhatsApp Consultation
+                <?php _e('WhatsApp Consultation', 'fts-law'); ?>
               </a>
             </div>
 
@@ -94,7 +92,7 @@
           <!-- CTA in footer -->
           <a class="btn btn-gold footer-cta-btn"
              href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
-            Book a Free Consultation
+            <?php _e('Book a Free Consultation', 'fts-law'); ?>
           </a>
         </div><!-- /Col 3 -->
 
@@ -105,12 +103,12 @@
         <div class="footer-bottom__copy">
           &copy; <span data-year></span>
           <?php echo FTS_BRAND; ?>.
-          All rights reserved.
+          <?php _e('All rights reserved.', 'fts-law'); ?>
         </div>
         <div class="footer-bottom__legal">
-          <a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>">Privacy Policy</a>
+          <a href="<?php echo esc_url( home_url( '/privacy-policy' ) ); ?>"><?php _e('Privacy Policy', 'fts-law'); ?></a>
           <span aria-hidden="true">·</span>
-          <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>">Contact</a>
+          <a href="<?php echo esc_url( home_url( '/contact' ) ); ?>"><?php _e('Contact', 'fts-law'); ?></a>
         </div>
       </div><!-- /.footer-bottom -->
 
@@ -145,7 +143,7 @@
                -.22-.37A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2
                s10 4.477 10 10-4.477 10-10 10z"/>
     </svg>
-    <span class="wa-float__label">WhatsApp</span>
+    <span class="wa-float__label"><?php _e('WhatsApp', 'fts-law'); ?></span>
   </a>
 
   <!-- Trik 3: Custom Dictionary JS Khusus GTranslate Bahasa Jepang -->

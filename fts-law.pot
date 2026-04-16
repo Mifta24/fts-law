@@ -1,0 +1,762 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: FTS Law – Foreign Legal &amp; Visa Support\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-10 10:39+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.8.3; wp-6.9.4; php-8.1.10\n"
+"X-Domain: fts-law"
+
+#: front-page.php:331
+msgid "100%"
+msgstr ""
+
+#: front-page.php:499
+msgid ""
+"A step-by-step guide to applying for an Investor KITAS, including "
+"eligibility, required documents, and processing time."
+msgstr ""
+
+#: front-page.php:152
+msgid ""
+"All legal services are handled or directly supervised by a licensed "
+"Indonesian lawyer."
+msgstr ""
+
+#: footer.php:106
+msgid "All rights reserved."
+msgstr ""
+
+#: front-page.php:426
+msgid "Australia"
+msgstr ""
+
+#: footer.php:95
+msgid "Book a Free Consultation"
+msgstr ""
+
+#: front-page.php:28 front-page.php:129 front-page.php:456 header.php:71
+msgid "Book Consultation"
+msgstr ""
+
+#: front-page.php:340
+msgid "Business Identity Number required"
+msgstr ""
+
+#: front-page.php:518
+msgid "Business Law"
+msgstr ""
+
+#: front-page.php:233
+msgid "Business Legal Consulting"
+msgstr ""
+
+#: front-page.php:579
+msgid "Business Legal Support"
+msgstr ""
+
+#: front-page.php:208
+msgid "Business Licensing"
+msgstr ""
+
+#: front-page.php:204
+msgid "Business Setup"
+msgstr ""
+
+#: front-page.php:361
+msgid "Can Foreigners Own a Company in Indonesia?"
+msgstr ""
+
+#: front-page.php:620
+msgid "Chat on WhatsApp"
+msgstr ""
+
+#: front-page.php:424
+msgid "China"
+msgstr ""
+
+#: front-page.php:164
+msgid ""
+"Clear explanation of Indonesian law before starting a company or visa "
+"process. No surprises."
+msgstr ""
+
+#: front-page.php:572
+msgid "Company Name (Optional)"
+msgstr ""
+
+#: front-page.php:205 front-page.php:303 front-page.php:507
+msgid "Company Setup"
+msgstr ""
+
+#: front-page.php:576
+msgid "Company Setup (PT PMA)"
+msgstr ""
+
+#: front-page.php:320
+msgid "Company Setup Overview"
+msgstr ""
+
+#: front-page.php:185
+msgid ""
+"Comprehensive legal support for every stage of your journey in Indonesia — "
+"from arrival to business operations."
+msgstr ""
+
+#: front-page.php:548
+msgid "Connect with our team for legal and visa assistance in Indonesia."
+msgstr ""
+
+#: front-page.php:232
+msgid "Consulting"
+msgstr ""
+
+#: footer.php:111
+msgid "Contact"
+msgstr ""
+
+#: front-page.php:590 functions.php:448
+msgid "Contact Information"
+msgstr ""
+
+#: front-page.php:451
+msgid ""
+"Contact our legal team for professional assistance with company setup, visas,"
+" foreign investment, and business legal matters. First consultation "
+"available online."
+msgstr ""
+
+#: front-page.php:546
+msgid "Contact Our Office"
+msgstr ""
+
+#: footer.php:61
+msgid "Contact Us"
+msgstr ""
+
+#: front-page.php:121 front-page.php:237
+msgid "Contract Drafting"
+msgstr ""
+
+#: front-page.php:222 front-page.php:578
+msgid "Contract Review"
+msgstr ""
+
+#: front-page.php:224
+msgid "Corporate Governance"
+msgstr ""
+
+#: front-page.php:119
+msgid "Corporate Law"
+msgstr ""
+
+#: front-page.php:79
+msgid "Corporate Law &amp; Business Setup"
+msgstr ""
+
+#: front-page.php:218
+msgid "Corporate Legal"
+msgstr ""
+
+#: front-page.php:219
+msgid "Corporate Legal Services"
+msgstr ""
+
+#: front-page.php:312
+msgid "Director &amp; Commissioner setup"
+msgstr ""
+
+#: front-page.php:404
+msgid "Director Removal Risks"
+msgstr ""
+
+#: front-page.php:410
+msgid "Download Free Guide"
+msgstr ""
+
+#: front-page.php:398
+msgid ""
+"Download our free guide explaining Indonesian company law, foreign ownership "
+"risks, shareholder protection, and common legal mistakes made by foreign "
+"investors."
+msgstr ""
+
+#: front-page.php:355
+msgid ""
+"Educational articles to help foreign investors understand Indonesian law "
+"before making decisions."
+msgstr ""
+
+#: front-page.php:603
+msgid "Email"
+msgstr ""
+
+#: front-page.php:419 front-page.php:569
+msgid "Email Address"
+msgstr ""
+
+#: front-page.php:510
+msgid ""
+"Everything foreign investors need to know about setting up a PT&nbsp;PMA — "
+"from minimum capital to business licensing."
+msgstr ""
+
+#: front-page.php:109
+msgid ""
+"Experienced in immigration law, corporate law, and foreign investment "
+"matters. Providing lawyer-supervised legal services for KITAS &amp; KITAP "
+"visas, PT&nbsp;PMA company setup, shareholder agreements, and business legal "
+"advisory."
+msgstr ""
+
+#: front-page.php:158
+msgid ""
+"Extensive experience supporting international investors and foreign-owned "
+"businesses in Indonesia."
+msgstr ""
+
+#: front-page.php:565
+msgid "First Name"
+msgstr ""
+
+#: functions.php:61
+msgid "Footer Menu"
+msgstr ""
+
+#: front-page.php:577
+msgid "Foreign Investment"
+msgstr ""
+
+#: front-page.php:328
+msgid "Foreign Investment Company"
+msgstr ""
+
+#: front-page.php:120
+msgid "Foreign Investment Law"
+msgstr ""
+
+#: front-page.php:157
+msgid "Foreign Investor Experience"
+msgstr ""
+
+#: front-page.php:353
+msgid "Foreign Investor Legal Guide"
+msgstr ""
+
+#: front-page.php:71
+msgid "Foreign Investor Legal Support"
+msgstr ""
+
+#: footer.php:34
+msgid "Foreign Investor Support"
+msgstr ""
+
+#: front-page.php:306
+msgid ""
+"Foreign investors can legally own and operate a business in Indonesia "
+"through a PT&nbsp;PMA (Penanaman Modal Asing) company. We guide you through "
+"the entire setup process — from structure planning to government "
+"registration."
+msgstr ""
+
+#: front-page.php:23
+msgid "Foreign Legal &amp; Visa Support"
+msgstr ""
+
+#: front-page.php:210
+msgid "Foreign Ownership"
+msgstr ""
+
+#: front-page.php:332
+msgid "Foreign ownership in selected sectors"
+msgstr ""
+
+#: front-page.php:401
+msgid "Foreign Ownership Rules"
+msgstr ""
+
+#: front-page.php:519
+msgid "Foreign Ownership Rules in Indonesia (2025)"
+msgstr ""
+
+#: front-page.php:310
+msgid "Foreign ownership structure advice"
+msgstr ""
+
+#: front-page.php:396
+msgid "Free Legal Guide for Foreign Investors"
+msgstr ""
+
+#. Author of the theme
+msgid "FTS Development"
+msgstr ""
+
+#. Name of the theme
+msgid "FTS Law – Foreign Legal &amp; Visa Support"
+msgstr ""
+
+#: front-page.php:418
+msgid "Full Name"
+msgstr ""
+
+#: front-page.php:430
+msgid "Germany"
+msgstr ""
+
+#: front-page.php:360 front-page.php:368 front-page.php:376
+msgid "Guide"
+msgstr ""
+
+#: functions.php:60
+msgid "Header Menu"
+msgstr ""
+
+#: front-page.php:377
+msgid "How Foreigners Lose Their Company in Indonesia"
+msgstr ""
+
+#: front-page.php:497
+msgid "How to Get Investor KITAS in Indonesia"
+msgstr ""
+
+#: front-page.php:508
+msgid "How to Start a Company in Indonesia as a Foreigner"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://fts.biz.id"
+msgstr ""
+
+#. URI of the theme
+msgid "https://law.fts.biz.id"
+msgstr ""
+
+#: front-page.php:118
+msgid "Immigration Law"
+msgstr ""
+
+#: front-page.php:169
+msgid "International Client Support"
+msgstr ""
+
+#: front-page.php:113
+msgid "International Legal Consultant"
+msgstr ""
+
+#: front-page.php:236
+msgid "Investment Compliance"
+msgstr ""
+
+#: front-page.php:193
+msgid "Investor KITAS"
+msgstr ""
+
+#: front-page.php:281
+msgid "Investor Visa"
+msgstr ""
+
+#: front-page.php:422
+msgid "Japan"
+msgstr ""
+
+#: front-page.php:275
+msgid "KITAP"
+msgstr ""
+
+#: front-page.php:195
+msgid "KITAP Permanent Stay"
+msgstr ""
+
+#: front-page.php:269
+msgid "KITAS"
+msgstr ""
+
+#: front-page.php:282
+msgid "KITAS for foreign business owners with a PT PMA company in Indonesia."
+msgstr ""
+
+#: front-page.php:566
+msgid "Last Name"
+msgstr ""
+
+#: front-page.php:475
+msgid "Latest Legal Insights"
+msgstr ""
+
+#: header.php:33
+msgid "LAW OFFICE &bull; SYARIF &amp; PARTNERS"
+msgstr ""
+
+#: front-page.php:657
+msgid "Law Office Location Map"
+msgstr ""
+
+#: front-page.php:643
+msgid "Law Office – Jakarta"
+msgstr ""
+
+#: front-page.php:38
+msgid ""
+"Lawyer-supervised legal services for visas, company setup, foreign "
+"investment, contract review, and business advisory in Indonesia."
+msgstr ""
+
+#: front-page.php:151
+msgid "Lawyer-Supervised Services"
+msgstr ""
+
+#: front-page.php:370
+msgid ""
+"Learn about shareholders, directors, commissioners, minimum capital "
+"requirements, and licensing steps for a PT&nbsp;PMA in Indonesia."
+msgstr ""
+
+#: front-page.php:199 front-page.php:213 front-page.php:227 front-page.php:241
+msgid "Learn More"
+msgstr ""
+
+#: front-page.php:223
+msgid "Legal Advisory"
+msgstr ""
+
+#: front-page.php:574
+msgid "Legal Matter"
+msgstr ""
+
+#: front-page.php:235
+msgid "Legal Risk Review"
+msgstr ""
+
+#: front-page.php:288
+msgid "Legal support for extending your stay permit before it expires."
+msgstr ""
+
+#: front-page.php:24
+msgid "Legal Support for<br>Foreigners in Indonesia"
+msgstr ""
+
+#: footer.php:33 front-page.php:52 front-page.php:67 front-page.php:107
+msgid "Licensed Indonesian Lawyer"
+msgstr ""
+
+#: front-page.php:238
+msgid "Market Entry Support"
+msgstr ""
+
+#: front-page.php:101
+msgid "Meet Your Lawyer"
+msgstr ""
+
+#: front-page.php:449
+msgid "Need Legal Advice in Indonesia?"
+msgstr ""
+
+#: front-page.php:429
+msgid "Netherlands"
+msgstr ""
+
+#: front-page.php:339
+msgid "NIB"
+msgstr ""
+
+#: front-page.php:403
+msgid "Nominee Shareholder Risks"
+msgstr ""
+
+#: front-page.php:595
+msgid "Office Address"
+msgstr ""
+
+#: front-page.php:629
+msgid "Office Hours"
+msgstr ""
+
+#: front-page.php:336
+msgid "Online Single Submission licensing"
+msgstr ""
+
+#: header.php:41
+msgid "Open navigation menu"
+msgstr ""
+
+#: front-page.php:335
+msgid "OSS"
+msgstr ""
+
+#: front-page.php:209
+msgid "OSS &amp; NIB Registration"
+msgstr ""
+
+#: front-page.php:311
+msgid "OSS / NIB business licensing"
+msgstr ""
+
+#: front-page.php:431 front-page.php:580
+msgid "Other"
+msgstr ""
+
+#: front-page.php:183
+msgid "Our Legal Services"
+msgstr ""
+
+#: front-page.php:276
+msgid "Permanent Stay Permit for long-term foreign residents in Indonesia."
+msgstr ""
+
+#: front-page.php:582
+msgid "Please describe your legal matter…"
+msgstr ""
+
+#: front-page.php:660
+msgid ""
+"Please visit <a href=\"https://www.google.com/maps\">Google Maps</a> to view "
+"the map. <br />Or use"
+msgstr ""
+
+#: front-page.php:170
+msgid ""
+"Practical bilingual support for foreign clients across all legal and "
+"business matters."
+msgstr ""
+
+#: front-page.php:477
+msgid ""
+"Practical guides and legal updates for foreigners living and investing in "
+"Indonesia."
+msgstr ""
+
+#: footer.php:109
+msgid "Privacy Policy"
+msgstr ""
+
+#. Description of the theme
+msgid ""
+"Professional law office website for foreign investors, entrepreneurs, and "
+"expats in Indonesia. Specializing in visa &amp; immigration, company setup, "
+"PT PMA, and foreign investment law."
+msgstr ""
+
+#: front-page.php:25
+msgid ""
+"Professional legal services for foreign investors, companies, and residents."
+msgstr ""
+
+#: footer.php:30
+msgid ""
+"Professional legal services for foreign investors, entrepreneurs, and "
+"expatriates in Indonesia. Specialising in visa &amp; immigration, PT&nbsp;"
+"PMA company setup, foreign investment law, and business legal support."
+msgstr ""
+
+#: front-page.php:327
+msgid "PT PMA"
+msgstr ""
+
+#: front-page.php:309
+msgid "PT PMA company formation"
+msgstr ""
+
+#: front-page.php:369
+msgid "PT PMA Company Structure Explained"
+msgstr ""
+
+#: front-page.php:207
+msgid "PT PMA Registration"
+msgstr ""
+
+#: front-page.php:317
+msgid "PT PMA Setup Details"
+msgstr ""
+
+#: front-page.php:402
+msgid "PT PMA Structure"
+msgstr ""
+
+#: footer.php:40
+msgid "Quick Links"
+msgstr ""
+
+#: front-page.php:364 front-page.php:372 front-page.php:380
+msgid "Read Guide &rarr;"
+msgstr ""
+
+#: front-page.php:501 front-page.php:512 front-page.php:523
+msgid "Read more &rarr;"
+msgstr ""
+
+#: front-page.php:421
+msgid "Select Country"
+msgstr ""
+
+#: front-page.php:433
+msgid "Send Download Link"
+msgstr ""
+
+#: front-page.php:583
+msgid "Send Message"
+msgstr ""
+
+#: front-page.php:556
+msgid "Send Us a Message"
+msgstr ""
+
+#: front-page.php:313
+msgid "Shareholder agreement drafting"
+msgstr ""
+
+#: front-page.php:221
+msgid "Shareholder Agreements"
+msgstr ""
+
+#: front-page.php:425
+msgid "Singapore"
+msgstr ""
+
+#: front-page.php:423
+msgid "South Korea"
+msgstr ""
+
+#: front-page.php:304
+msgid "Start Your Business in Indonesia"
+msgstr ""
+
+#: front-page.php:114
+msgid ""
+"Supporting international clients with legal coordination and business "
+"advisory across Japan, Singapore, and Southeast Asia."
+msgstr ""
+
+#: front-page.php:51 front-page.php:106
+msgid "Syarif"
+msgstr ""
+
+#: front-page.php:46 front-page.php:95
+msgid "Syarif – Licensed Indonesian Lawyer"
+msgstr ""
+
+#: front-page.php:270
+msgid ""
+"Temporary Stay Permit for foreign nationals working or investing in "
+"Indonesia."
+msgstr ""
+
+#: front-page.php:378
+msgid ""
+"The legal risks of nominee shareholders, director removal, share dilution, "
+"and shareholder disputes that every foreign investor must understand."
+msgstr ""
+
+#: front-page.php:163
+msgid "Transparent Legal Process"
+msgstr ""
+
+#: front-page.php:103
+msgid ""
+"Trusted legal representation for foreign investors, business owners, and "
+"expatriates navigating Indonesian law."
+msgstr ""
+
+#: front-page.php:362
+msgid ""
+"Understand foreign ownership rules, PT&nbsp;PMA basics, and legal structure "
+"options available to international investors."
+msgstr ""
+
+#: front-page.php:521
+msgid ""
+"Understanding the Negative Investment List, BKPM regulations, and which "
+"sectors are open to 100% foreign ownership."
+msgstr ""
+
+#: front-page.php:428
+msgid "United Kingdom"
+msgstr ""
+
+#: front-page.php:427
+msgid "United States"
+msgstr ""
+
+#: front-page.php:532
+msgid "View All Articles &rarr;"
+msgstr ""
+
+#: front-page.php:249
+msgid "View All Services &rarr;"
+msgstr ""
+
+#: front-page.php:126
+msgid "View Full Profile"
+msgstr ""
+
+#: front-page.php:190
+msgid "Visa"
+msgstr ""
+
+#: front-page.php:191 front-page.php:496 front-page.php:575
+msgid "Visa &amp; Immigration"
+msgstr ""
+
+#: front-page.php:405
+msgid "Visa &amp; Immigration Basics"
+msgstr ""
+
+#: front-page.php:75
+msgid "Visa &amp; Immigration Services"
+msgstr ""
+
+#: front-page.php:261
+msgid "Visa &amp; Immigration Support"
+msgstr ""
+
+#: front-page.php:196 front-page.php:287
+msgid "Visa Extension"
+msgstr ""
+
+#: front-page.php:263
+msgid ""
+"We assist foreign nationals with all types of Indonesian stay permits and "
+"visas — handled by a licensed lawyer."
+msgstr ""
+
+#: front-page.php:145
+msgid ""
+"We differentiate from generic visa agents by offering lawyer-supervised "
+"services, deep investor experience, and transparent legal support."
+msgstr ""
+
+#: footer.php:146 front-page.php:462 front-page.php:615
+msgid "WhatsApp"
+msgstr ""
+
+#: front-page.php:34
+msgid "WhatsApp Chat"
+msgstr ""
+
+#: footer.php:81
+msgid "WhatsApp Consultation"
+msgstr ""
+
+#: front-page.php:570
+msgid "WhatsApp Number"
+msgstr ""
+
+#: front-page.php:143
+msgid "Why Foreign Clients Choose Us"
+msgstr ""
+
+#: front-page.php:194
+msgid "Working KITAS"
+msgstr ""
+
+#: front-page.php:113
+msgid "Yoshi Nakagawa"
+msgstr ""

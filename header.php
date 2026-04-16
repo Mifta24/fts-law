@@ -30,7 +30,7 @@
         </div>
       <?php else : ?>
         <a class="brand brand--text" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php bloginfo('name'); ?> – Home">
-          LAW OFFICE &bull; SYARIF &amp; PARTNERS
+          <?php _e('LAW OFFICE &bull; SYARIF &amp; PARTNERS', 'fts-law'); ?>
         </a>
       <?php endif; ?>
 
@@ -38,7 +38,7 @@
       <button
         class="menu-toggle"
         type="button"
-        aria-label="Open navigation menu"
+        aria-label="<?php esc_attr_e('Open navigation menu', 'fts-law'); ?>"
         aria-expanded="false"
         aria-controls="site-nav">
         <span></span>
@@ -68,7 +68,7 @@
           <div class="nav-consult-language">
             <a
               class="btn btn-gold"
-              href="<?php echo esc_url(home_url('/consultation')); ?>">Book Consultation</a>
+              href="<?php echo esc_url(home_url('/consultation')); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
             <div class="nav-language-switcher">
               <?php
               if (shortcode_exists('gtranslate')) {
