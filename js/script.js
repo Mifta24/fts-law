@@ -124,7 +124,7 @@
     on(window, 'resize', function () {
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(function () {
-        if (window.innerWidth > 1180 && nav.classList.contains('is-open')) {
+        if (window.innerWidth > 1023 && nav.classList.contains('is-open')) {
           closeMenu(menuToggle, nav, body);
         }
       }, 120);

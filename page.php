@@ -17,7 +17,7 @@ get_header();
     <?php
     // ── Page Hero ──────────────────────────────────────────────────────────────
     fts_page_hero(
-        'Legal Services',
+        __('Legal Services', 'fts-law'),
         get_the_title(),
         get_the_excerpt()
     );

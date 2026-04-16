@@ -30,58 +30,49 @@
         </div>
       <?php else : ?>
         <a class="brand brand--text" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php bloginfo('name'); ?> – Home">
-          LAW OFFICE &bull; SYARIF &amp; PARTNERS
+          <?php _e('LAW OFFICE &bull; SYARIF &amp; PARTNERS', 'fts-law'); ?>
         </a>
       <?php endif; ?>
 
-      <!-- ── Mobile Hamburger ── -->
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-        aria-controls="site-nav">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <!-- ── Primary Navigation ── -->
+      <!-- ── Primary Navigation (links only) ── -->
       <nav class="nav" id="site-nav" role="navigation" aria-label="Primary menu">
-
-        <!-- Row 1: main links -->
         <div class="nav-primary">
           <?php
           wp_nav_menu([
             'theme_location'  => 'header-menu',
             'container'       => false,
-            'items_wrap'      => '%3$s',   // no wrapping <ul>
+            'items_wrap'      => '%3$s',
             'walker'          => new FTS_Walker_Nav(),
             'fallback_cb'     => 'fts_law_fallback_nav',
             'depth'           => 2,
           ]);
           ?>
         </div>
+      </nav><!-- /#site-nav -->
 
-        <!-- Row 2: CTAs + language -->
-        <div class="nav-secondary">
-          <div class="nav-consult-language">
-            <a
-              class="btn btn-gold"
-              href="<?php echo esc_url(home_url('/consultation')); ?>">Book Consultation</a>
-            <div class="nav-language-switcher">
-              <?php
-              if (shortcode_exists('gtranslate')) {
-                echo do_shortcode('[gtranslate]');
-              } else {
-                echo '<div class="gtranslate_wrapper"></div>';
-              }
-              ?>
-            </div>
+      <!-- ── CTAs + Language (direct child of header-inner) ── -->
+      <div class="nav-secondary">
+        <div class="nav-consult-language">
+          <a
+            class="btn btn-gold"
+            href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+          <div class="nav-language-switcher">
+            <?php echo fts_language_switcher(); ?>
           </div>
         </div>
+      </div>
 
-      </nav><!-- /#site-nav -->
+      <!-- ── Mobile Hamburger (always last) ── -->
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="<?php esc_attr_e('Open navigation menu', 'fts-law'); ?>"
+        aria-expanded="false"
+        aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div><!-- /.header-inner -->
   </header><!-- /.site-header -->
