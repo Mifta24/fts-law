@@ -248,31 +248,79 @@ function fts_law_footer_fallback_nav() {
  * Returns a localized page URL by slug when Polylang is active.
  * Falls back to default permalink or a plain home_url path.
  */
-function fts_page_url( string $slug = '' ) : string {
-    $slug = trim( $slug, '/' );
-
-    if ( '' === $slug ) {
-        return home_url( '/' );
+function fts_current_lang_slug() : string {
+    if ( function_exists( 'pll_current_language' ) ) {
+        $lang = pll_current_language( 'slug' );
+        if ( is_string( $lang ) && '' !== $lang ) {
+            return $lang;
+        }
     }
 
-    $page = get_page_by_path( $slug );
+    return '';
+}
 
-    if ( $page instanceof WP_Post ) {
-        $page_id = (int) $page->ID;
+function fts_page_url( string $slug = '' ) : string {
+    $slug = trim( $slug, '/' );
+    $lang = fts_current_lang_slug();
 
-        if ( function_exists( 'pll_get_post' ) ) {
-            $translated_id = (int) pll_get_post( $page_id );
-            if ( $translated_id > 0 ) {
-                $translated_url = get_permalink( $translated_id );
-                if ( is_string( $translated_url ) && '' !== $translated_url ) {
-                    return $translated_url;
-                }
+    if ( '' === $slug ) {
+        if ( '' !== $lang && function_exists( 'pll_home_url' ) ) {
+            $localized_home = pll_home_url( $lang );
+            if ( is_string( $localized_home ) && '' !== $localized_home ) {
+                return $localized_home;
             }
         }
 
+        return home_url( '/' );
+    }
+
+    $page_id = 0;
+
+    // Prefer a direct lookup in the active language for simple slugs.
+    if ( '' !== $lang && false === strpos( $slug, '/' ) ) {
+        $posts = get_posts( [
+            'post_type'              => 'page',
+            'post_status'            => 'publish',
+            'name'                   => $slug,
+            'posts_per_page'         => 1,
+            'fields'                 => 'ids',
+            'no_found_rows'          => true,
+            'suppress_filters'       => false,
+            'update_post_meta_cache' => false,
+            'update_post_term_cache' => false,
+            'lang'                   => $lang,
+        ] );
+
+        if ( ! empty( $posts ) ) {
+            $page_id = (int) $posts[0];
+        }
+    }
+
+    if ( $page_id <= 0 ) {
+        $page = get_page_by_path( $slug );
+        if ( $page instanceof WP_Post ) {
+            $page_id = (int) $page->ID;
+        }
+    }
+
+    if ( $page_id > 0 && '' !== $lang && function_exists( 'pll_get_post' ) ) {
+        $translated_id = (int) pll_get_post( $page_id, $lang );
+        if ( $translated_id > 0 ) {
+            $page_id = $translated_id;
+        }
+    }
+
+    if ( $page_id > 0 ) {
         $page_url = get_permalink( $page_id );
         if ( is_string( $page_url ) && '' !== $page_url ) {
             return $page_url;
+        }
+    }
+
+    if ( '' !== $lang && function_exists( 'pll_home_url' ) ) {
+        $localized_home = pll_home_url( $lang );
+        if ( is_string( $localized_home ) && '' !== $localized_home ) {
+            return trailingslashit( $localized_home ) . $slug . '/';
         }
     }
 
@@ -286,10 +334,11 @@ function fts_page_url( string $slug = '' ) : string {
  */
 function fts_blog_url() : string {
     $posts_page_id = (int) get_option( 'page_for_posts' );
+    $lang = fts_current_lang_slug();
 
     if ( $posts_page_id > 0 ) {
-        if ( function_exists( 'pll_get_post' ) ) {
-            $translated_id = (int) pll_get_post( $posts_page_id );
+        if ( '' !== $lang && function_exists( 'pll_get_post' ) ) {
+            $translated_id = (int) pll_get_post( $posts_page_id, $lang );
             if ( $translated_id > 0 ) {
                 $translated_url = get_permalink( $translated_id );
                 if ( is_string( $translated_url ) && '' !== $translated_url ) {
@@ -298,14 +347,91 @@ function fts_blog_url() : string {
             }
         }
 
-        $posts_page_url = get_permalink( $posts_page_id );
-        if ( is_string( $posts_page_url ) && '' !== $posts_page_url ) {
-            return $posts_page_url;
+        // Only use default posts page permalink when Polylang language context is not active.
+        if ( '' === $lang ) {
+            $posts_page_url = get_permalink( $posts_page_id );
+            if ( is_string( $posts_page_url ) && '' !== $posts_page_url ) {
+                return $posts_page_url;
+            }
+        }
+    }
+
+    if ( '' !== $lang && function_exists( 'pll_home_url' ) ) {
+        $localized_home = pll_home_url( $lang );
+        if ( is_string( $localized_home ) && '' !== $localized_home ) {
+            return trailingslashit( $localized_home ) . 'blog/';
         }
     }
 
     return home_url( '/blog/' );
 }
+
+/**
+ * Builds a map of dedicated page templates keyed by slug.
+ * Example: `page-company-setup.php` => `company-setup`.
+ *
+ * @return array<string,string>
+ */
+function fts_dedicated_page_templates() : array {
+    static $templates = null;
+
+    if ( is_array( $templates ) ) {
+        return $templates;
+    }
+
+    $templates = [];
+    $files = glob( trailingslashit( get_stylesheet_directory() ) . 'page-*.php' );
+
+    if ( ! is_array( $files ) ) {
+        return $templates;
+    }
+
+    foreach ( $files as $file ) {
+        $basename = wp_basename( $file );
+        if ( preg_match( '/^page-(.+)\.php$/', $basename, $matches ) ) {
+            $templates[ $matches[1] ] = $file;
+        }
+    }
+
+    return $templates;
+}
+
+/**
+ * Ensures translated Polylang pages keep using the same dedicated template.
+ *
+ * Without this, pages using `page-{slug}.php` only match one slug language,
+ * and translations with different slugs can fall back to `page.php`.
+ */
+function fts_resolve_translated_page_template( string $template ) : string {
+    if ( ! is_page() || ! function_exists( 'pll_get_post_translations' ) ) {
+        return $template;
+    }
+
+    $current_id = (int) get_queried_object_id();
+    if ( $current_id <= 0 ) {
+        return $template;
+    }
+
+    foreach ( fts_dedicated_page_templates() as $slug => $template_file ) {
+        $base_page = get_page_by_path( $slug );
+        if ( ! ( $base_page instanceof WP_Post ) ) {
+            continue;
+        }
+
+        $translations = pll_get_post_translations( (int) $base_page->ID );
+        if ( ! is_array( $translations ) || empty( $translations ) ) {
+            continue;
+        }
+
+        $translation_ids = array_map( 'intval', array_values( $translations ) );
+        if ( in_array( $current_id, $translation_ids, true ) && is_string( $template_file ) && file_exists( $template_file ) ) {
+            return $template_file;
+        }
+    }
+
+    return $template;
+}
+add_filter( 'template_include', 'fts_resolve_translated_page_template', 20 );
 
 
 // ─── HELPER: LANGUAGE SWITCHER OUTPUT ────────────────────────────────────────
@@ -320,6 +446,7 @@ function fts_language_switcher() : string {
             'show_flags'    => 0,
             'show_names'    => 1,
             'hide_if_empty' => 0,
+            'hide_if_no_translation' => 0,
             'echo'          => 0,
         ] );
 
@@ -422,6 +549,22 @@ function fts_excerpt_more( $more ) {
 }
 add_filter( 'excerpt_more', 'fts_excerpt_more' );
 
+/**
+ * Returns a WP_Query-compatible language argument when Polylang is active.
+ *
+ * @return array<string,string>
+ */
+function fts_query_lang_arg() : array {
+    if ( function_exists( 'pll_current_language' ) ) {
+        $lang = pll_current_language( 'slug' );
+        if ( is_string( $lang ) && '' !== $lang ) {
+            return [ 'lang' => $lang ];
+        }
+    }
+
+    return [];
+}
+
 
 // ─── BLOG QUERY HELPER ────────────────────────────────────────────────────────
 /**
@@ -431,12 +574,14 @@ add_filter( 'excerpt_more', 'fts_excerpt_more' );
  * @return WP_Query
  */
 function fts_latest_posts( int $count = 3 ) : WP_Query {
-    return new WP_Query( [
+    $args = [
         'post_type'           => 'post',
         'post_status'         => 'publish',
         'posts_per_page'      => $count,
         'ignore_sticky_posts' => true,
-    ] );
+    ];
+
+    return new WP_Query( array_merge( $args, fts_query_lang_arg() ) );
 }
 
 

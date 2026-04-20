@@ -74,17 +74,24 @@ if ( is_home() && ! is_front_page() ) {
         <!-- All Articles -->
         <a
           class="blog-filter-tab <?php echo ( is_home() && ! is_category() ) ? 'is-active' : ''; ?>"
-          href="<?php echo esc_url( home_url( '/blog' ) ); ?>"
+          href="<?php echo esc_url( fts_blog_url() ); ?>"
         ><?php _e('All Articles', 'fts-law'); ?></a>
 
         <?php
         // Output one tab per category that has published posts
-        $cats = get_categories( [
+        $cats_args = [
             'orderby'    => 'count',
             'order'      => 'DESC',
             'hide_empty' => true,
             'number'     => 8,
-        ] );
+        ];
+
+        $lang = fts_current_lang_slug();
+        if ( '' !== $lang ) {
+            $cats_args['lang'] = $lang;
+        }
+
+        $cats = get_categories( $cats_args );
 
         foreach ( $cats as $cat ) :
             $is_active = is_category( $cat->term_id );
@@ -171,10 +178,10 @@ if ( is_home() && ! is_front_page() ) {
             <?php _e('We haven\'t published any articles yet in this section. Check back soon for legal updates, visa guides, and business law insights for foreign investors in Indonesia.', 'fts-law'); ?>
           </p>
           <div class="no-results__actions">
-            <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
+            <a class="btn btn-gold" href="<?php echo esc_url( fts_blog_url() ); ?>">
               <?php _e('All Articles', 'fts-law'); ?>
             </a>
-            <a class="btn btn-outline-navy" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <a class="btn btn-outline-navy" href="<?php echo esc_url( fts_page_url() ); ?>">
               <?php _e('Back to Home', 'fts-law'); ?>
             </a>
           </div>
@@ -194,32 +201,32 @@ if ( is_home() && ! is_front_page() ) {
       <h3 class="blog-topics-strip__heading"><?php _e('Browse by Legal Topic', 'fts-law'); ?></h3>
       <div class="blog-topic-tiles">
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( home_url( '/visa' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">📋</span>
           <span><?php _e('Visa &amp; Immigration', 'fts-law'); ?></span>
         </a>
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( home_url( '/company-setup' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">🏢</span>
           <span><?php _e('Company Setup', 'fts-law'); ?></span>
         </a>
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( home_url( '/foreign-investment' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">💹</span>
           <span><?php _e('Foreign Investment', 'fts-law'); ?></span>
         </a>
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( home_url( '/contract-drafting' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">📝</span>
           <span><?php _e('Contract Drafting', 'fts-law'); ?></span>
         </a>
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( home_url( '/legal-risk' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">⚠️</span>
           <span><?php _e('Legal Risk', 'fts-law'); ?></span>
         </a>
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( home_url( '/business-legal' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'business-legal' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">⚖️</span>
           <span><?php _e('Business Legal', 'fts-law'); ?></span>
         </a>

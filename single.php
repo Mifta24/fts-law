@@ -31,9 +31,9 @@ get_header();
 
       <!-- Breadcrumb -->
       <nav class="breadcrumb" aria-label="<?php esc_attr_e('Breadcrumb', 'fts-law'); ?>">
-        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php _e('Home', 'fts-law'); ?></a>
+        <a href="<?php echo esc_url( fts_page_url() ); ?>"><?php _e('Home', 'fts-law'); ?></a>
         <span aria-hidden="true"> / </span>
-        <a href="<?php echo esc_url( home_url( '/blog' ) ); ?>"><?php _e('Blog', 'fts-law'); ?></a>
+        <a href="<?php echo esc_url( fts_blog_url() ); ?>"><?php _e('Blog', 'fts-law'); ?></a>
         <span aria-hidden="true"> / </span>
         <a href="<?php echo $cat_link; ?>"><?php echo $cat_label; ?></a>
         <span aria-hidden="true"> / </span>
@@ -104,7 +104,7 @@ get_header();
           <span class="article-disclaimer__icon" aria-hidden="true">ℹ️</span>
           <p>
             <?php _e('This article is provided for general informational purposes only and does not constitute legal advice. For advice specific to your situation, please', 'fts-law'); ?>
-            <a href="<?php echo esc_url( home_url( '/consultation' ) ); ?>"><?php _e('book a legal consultation', 'fts-law'); ?></a>.
+            <a href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('book a legal consultation', 'fts-law'); ?></a>.
           </p>
         </div>
 
@@ -192,7 +192,7 @@ get_header();
             </div>
             <div class="article-inline-cta__actions">
               <a class="btn btn-gold"
-                 href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
+                 href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
                 <?php _e('Book Consultation', 'fts-law'); ?>
               </a>
               <a class="btn btn-green"
@@ -267,7 +267,7 @@ get_header();
               <?php _e('Get direct legal advice on visa, company setup, or foreign investment matters in Indonesia.', 'fts-law'); ?>
             </p>
             <a class="btn btn-gold sidebar-consult-card__cta"
-               href="<?php echo esc_url( home_url( '/consultation' ) ); ?>">
+              href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
               <?php _e('Book Consultation', 'fts-law'); ?>
             </a>
             <a class="btn btn-green sidebar-consult-card__wa"
@@ -283,15 +283,15 @@ get_header();
         <div class="sidebar-services-card">
           <h4 class="sidebar-card__title"><?php _e('Our Legal Services', 'fts-law'); ?></h4>
           <nav class="sidebar-services-list" aria-label="<?php esc_attr_e('Related services', 'fts-law'); ?>">
-            <a href="<?php echo esc_url( home_url( '/visa' ) ); ?>">📋 <?php _e('Visa &amp; Immigration', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/kitas' ) ); ?>">🪪 <?php _e('KITAS', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/kitap' ) ); ?>">🏠 <?php _e('KITAP', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/investor-visa' ) ); ?>">💼 <?php _e('Investor Visa', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/company-setup' ) ); ?>">🏢 <?php _e('Company Setup', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/pt-pma' ) ); ?>">📜 <?php _e('PT PMA', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/foreign-investment' ) ); ?>">💹 <?php _e('Foreign Investment', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/contract-drafting' ) ); ?>">✍️ <?php _e('Contract Drafting', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( home_url( '/legal-risk' ) ); ?>">🔍 <?php _e('Legal Risk', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">📋 <?php _e('Visa &amp; Immigration', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'kitas' ) ); ?>">🪪 <?php _e('KITAS', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'kitap' ) ); ?>">🏠 <?php _e('KITAP', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">💼 <?php _e('Investor Visa', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>">🏢 <?php _e('Company Setup', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">📜 <?php _e('PT PMA', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">💹 <?php _e('Foreign Investment', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">✍️ <?php _e('Contract Drafting', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">🔍 <?php _e('Legal Risk', 'fts-law'); ?></a>
           </nav>
         </div>
 
@@ -303,7 +303,7 @@ get_header();
             <?php _e('Download our guide covering foreign ownership rules, PT PMA structure, and common legal mistakes.', 'fts-law'); ?>
           </p>
           <a class="btn btn-gold"
-             href="<?php echo esc_url( home_url( '/guide' ) ); ?>">
+             href="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>">
             <?php _e('Get Free Guide &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -345,7 +345,7 @@ get_header();
         <?php endwhile; wp_reset_postdata(); ?>
       </div>
       <div style="text-align:center;margin-top:28px;">
-        <a class="btn btn-outline-navy" href="<?php echo esc_url( home_url( '/blog' ) ); ?>">
+        <a class="btn btn-outline-navy" href="<?php echo esc_url( fts_blog_url() ); ?>">
           <?php _e('View All Articles &rarr;', 'fts-law'); ?>
         </a>
       </div>
