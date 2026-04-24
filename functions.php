@@ -15,7 +15,7 @@ define( 'FTS_EMAIL',      'info@law.fts.biz.id' );
 define( 'FTS_ADDRESS',    'Jakarta, Indonesia' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'LAW OFFICE · SYARIF &amp; PARTNERS' );
-define( 'FTS_THEME_VER',  '1.0.2' );
+define( 'FTS_THEME_VER',  '1.0.3' );
 
 
 // ─── THEME SETUP ──────────────────────────────────────────────────────────────
