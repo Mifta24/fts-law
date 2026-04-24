@@ -279,6 +279,23 @@ function fts_footer_menu_label( string $label ) : string {
     }
 }
 
+/**
+ * Ensures footer menu labels are always discoverable by gettext scanners (Loco).
+ *
+ * Some labels come from admin menu titles, so we keep explicit anchors here.
+ */
+function fts_loco_footer_menu_label_anchors() : void {
+    __( 'About Lawyer', 'fts-law' );
+    __( 'Legal Services', 'fts-law' );
+    __( 'Visa Services', 'fts-law' );
+    __( 'Business Setup', 'fts-law' );
+    __( 'Legal Guide', 'fts-law' );
+    __( 'Blog', 'fts-law' );
+    __( 'Contact', 'fts-law' );
+    __( 'Privacy Policy', 'fts-law' );
+}
+add_action( 'init', 'fts_loco_footer_menu_label_anchors' );
+
 
 // ─── HELPER: POLYLANG-AWARE PAGE URL ─────────────────────────────────────────
 /**
