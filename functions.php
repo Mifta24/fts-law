@@ -15,7 +15,7 @@ define( 'FTS_EMAIL',      'info@law.fts.biz.id' );
 define( 'FTS_ADDRESS',    'Jakarta, Indonesia' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'LAW OFFICE · SYARIF &amp; PARTNERS' );
-define( 'FTS_THEME_VER',  '1.0.4' );
+define( 'FTS_THEME_VER',  '1.0.5' );
 
 
 // ─── THEME SETUP ──────────────────────────────────────────────────────────────
@@ -249,22 +249,30 @@ function fts_law_footer_fallback_nav() {
  * helper gives those labels a stable gettext source string.
  */
 function fts_footer_menu_label( string $label ) : string {
-    switch ( $label ) {
-        case 'About Lawyer':
+    $normalized = html_entity_decode( $label, ENT_QUOTES, 'UTF-8' );
+    $normalized = wp_strip_all_tags( $normalized );
+    $normalized = preg_replace( '/\s+/', ' ', trim( $normalized ) );
+    $key = strtolower( (string) $normalized );
+
+    switch ( $key ) {
+        case 'about lawyer':
+        case 'about':
             return __( 'About Lawyer', 'fts-law' );
-        case 'Legal Services':
+        case 'legal services':
             return __( 'Legal Services', 'fts-law' );
-        case 'Visa Services':
+        case 'visa services':
+        case 'visa service':
             return __( 'Visa Services', 'fts-law' );
-        case 'Business Setup':
+        case 'business setup':
             return __( 'Business Setup', 'fts-law' );
-        case 'Legal Guide':
+        case 'legal guide':
+        case 'free legal guide':
             return __( 'Legal Guide', 'fts-law' );
-        case 'Blog':
+        case 'blog':
             return __( 'Blog', 'fts-law' );
-        case 'Contact':
+        case 'contact':
             return __( 'Contact', 'fts-law' );
-        case 'Privacy Policy':
+        case 'privacy policy':
             return __( 'Privacy Policy', 'fts-law' );
         default:
             return $label;
