@@ -41,6 +41,7 @@
 html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -50,6 +51,7 @@ body {
     background: var(--white);
     line-height: 1.65;
     font-size: 1rem;
+    overflow-x: hidden;
 }
 
 h1,
@@ -4488,8 +4490,8 @@ textarea {
     padding: 0 0 60px;
 }
 
-/* ─── HEADER TIGHT DESKTOP: 1024-1279px (two-row) ──────────── */
-@media (min-width: 1024px) and (max-width: 1279px) {
+/* ─── HEADER TIGHT DESKTOP: 1024-1439px (two-row) ──────────── */
+@media (min-width: 1024px) and (max-width: 1439px) {
 
     /* Row 1: Brand (left) + nav-secondary (right) */
     /* Row 2: Full nav-primary links (full width)   */
@@ -4524,6 +4526,8 @@ textarea {
     .nav-primary {
         justify-content: flex-start;
         gap: 10px;
+        flex-wrap: wrap;
+        row-gap: 4px;
         flex: 1;
     }
 
