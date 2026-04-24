@@ -158,6 +158,18 @@ msgstr ""
 msgid "Quick Links"
 msgstr ""
 
+#: footer.php:118 functions.php:356
+msgid "About Lawyer"
+msgstr ""
+
+#: footer.php:119 functions.php:358
+msgid "Visa Services"
+msgstr ""
+
+#: footer.php:120 functions.php:360
+msgid "Legal Guide"
+msgstr ""
+
 #: footer.php:61 page-privacy-policy.php:545
 msgid "Contact Us"
 msgstr ""

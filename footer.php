@@ -112,6 +112,15 @@
         </div>
       </div><!-- /.footer-bottom -->
 
+      <?php
+      // Keep quick-link labels discoverable by Loco in this template file.
+      if ( false ) {
+          _e( 'About Lawyer', 'fts-law' );
+          _e( 'Visa Services', 'fts-law' );
+          _e( 'Legal Guide', 'fts-law' );
+      }
+      ?>
+
     </div><!-- /.container -->
   </footer><!-- /.site-footer -->
 
@@ -141,7 +150,12 @@
 class FTS_Footer_Walker extends Walker_Nav_Menu {
 
     public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-    $output .= '<a href="' . esc_url( $item->url ) . '">' . esc_html( fts_footer_menu_label( (string) $item->title ) ) . '</a>' . "\n";
+    $label = fts_footer_menu_item_label( $item );
+    if ( '' === $label ) {
+      $label = (string) $item->title;
+    }
+
+    $output .= '<a href="' . esc_url( $item->url ) . '">' . esc_html( $label ) . '</a>' . "\n";
     }
 
     public function end_el( &$output, $item, $depth = 0, $args = null ) {

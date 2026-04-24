@@ -279,6 +279,118 @@ function fts_footer_menu_label( string $label ) : string {
     }
 }
 
+/**
+ * Returns translated footer label based on menu item target (page/slug),
+ * then falls back to title-based matching.
+ *
+ * This keeps one template working across many languages even when menu titles
+ * differ per language in WP admin.
+ */
+function fts_footer_menu_item_label( $item ) : string {
+    if ( is_object( $item ) ) {
+        $slug_candidates = [];
+
+        if ( isset( $item->object_id ) ) {
+            $object_id = (int) $item->object_id;
+            if ( $object_id > 0 ) {
+                $post = get_post( $object_id );
+                if ( $post instanceof WP_Post ) {
+                    $slug_candidates[] = (string) $post->post_name;
+                }
+
+                // If Polylang is active, prefer the default-language page slug
+                // as canonical key for all locales.
+                if ( function_exists( 'pll_get_post' ) && function_exists( 'pll_default_language' ) ) {
+                    $default_lang = pll_default_language( 'slug' );
+                    if ( is_string( $default_lang ) && '' !== $default_lang ) {
+                        $default_id = (int) pll_get_post( $object_id, $default_lang );
+                        if ( $default_id > 0 ) {
+                            $default_post = get_post( $default_id );
+                            if ( $default_post instanceof WP_Post ) {
+                                array_unshift( $slug_candidates, (string) $default_post->post_name );
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if ( empty( $slug_candidates ) && ! empty( $item->url ) ) {
+            $path = (string) parse_url( (string) $item->url, PHP_URL_PATH );
+            $path = trim( $path, '/' );
+            if ( '' !== $path ) {
+                $parts = explode( '/', $path );
+                $slug_candidates[] = (string) end( $parts );
+            }
+        }
+
+        foreach ( $slug_candidates as $candidate_slug ) {
+            $slug_key = strtolower( (string) $candidate_slug );
+            $slug_key = preg_replace( '/-\d+$/', '', $slug_key );
+
+            switch ( $slug_key ) {
+                case 'lawyer':
+                case 'lawyer-profile':
+                case 'lawyer-profile-cn':
+                    return __( 'About Lawyer', 'fts-law' );
+                case 'services':
+                    return __( 'Legal Services', 'fts-law' );
+                case 'visa':
+                case 'visa-immigration':
+                    return __( 'Visa Services', 'fts-law' );
+                case 'company-setup':
+                    return __( 'Business Setup', 'fts-law' );
+                case 'guide':
+                case 'guide-2':
+                case 'legal-guide':
+                    return __( 'Legal Guide', 'fts-law' );
+                case 'blog':
+                case 'blog-cn':
+                    return __( 'Blog', 'fts-law' );
+                case 'contact':
+                case 'contact-2':
+                    return __( 'Contact', 'fts-law' );
+                case 'privacy-policy':
+                    return __( 'Privacy Policy', 'fts-law' );
+            }
+
+            // Fallback for locale-specific slugs that keep an English keyword.
+            if ( false !== strpos( $slug_key, 'lawyer' ) ) {
+                return __( 'About Lawyer', 'fts-law' );
+            }
+            if ( false !== strpos( $slug_key, 'visa' ) ) {
+                return __( 'Visa Services', 'fts-law' );
+            }
+            if ( false !== strpos( $slug_key, 'guide' ) ) {
+                return __( 'Legal Guide', 'fts-law' );
+            }
+        }
+
+        if ( isset( $item->title ) ) {
+            return fts_footer_menu_label( (string) $item->title );
+        }
+    }
+
+    return '';
+}
+
+/**
+ * Ensures footer menu labels are always discoverable by gettext scanners (Loco).
+ *
+ * Some labels come from admin menu titles, so we keep explicit anchors here.
+ */
+function fts_loco_footer_menu_label_anchors() : void {
+    __( 'About Lawyer', 'fts-law' );
+    __( 'Legal Services', 'fts-law' );
+    __( 'Visa Services', 'fts-law' );
+    __( 'Business Setup', 'fts-law' );
+    __( 'Legal Guide', 'fts-law' );
+    __( 'Blog', 'fts-law' );
+    __( 'Contact', 'fts-law' );
+    __( 'Privacy Policy', 'fts-law' );
+}
+add_action( 'init', 'fts_loco_footer_menu_label_anchors' );
+
 
 // ─── HELPER: POLYLANG-AWARE PAGE URL ─────────────────────────────────────────
 /**
