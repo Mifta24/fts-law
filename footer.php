@@ -23,7 +23,7 @@
             <?php if ( has_custom_logo() ) : ?>
               <?php the_custom_logo(); ?>
             <?php else : ?>
-              <span class="footer-logo-text"><?php echo wp_kses_post( fts_brand() ); ?></span>
+              <span class="footer-logo-text"><?php echo wp_kses_post( FTS_BRAND ); ?></span>
             <?php endif; ?>
           </div>
           <p class="footer-about">
@@ -102,7 +102,7 @@
       <div class="footer-bottom">
         <div class="footer-bottom__copy">
           &copy; <span data-year></span>
-          <?php echo wp_kses_post( fts_brand() ); ?>.
+          <?php echo wp_kses_post( FTS_BRAND ); ?>.
           <?php _e('All rights reserved.', 'fts-law'); ?>
         </div>
         <div class="footer-bottom__legal">
@@ -141,7 +141,7 @@
 class FTS_Footer_Walker extends Walker_Nav_Menu {
 
     public function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-        $output .= '<a href="' . esc_url( $item->url ) . '">' . esc_html( $item->title ) . '</a>' . "\n";
+    $output .= '<a href="' . esc_url( $item->url ) . '">' . esc_html( fts_footer_menu_label( (string) $item->title ) ) . '</a>' . "\n";
     }
 
     public function end_el( &$output, $item, $depth = 0, $args = null ) {

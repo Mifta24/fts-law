@@ -30,7 +30,7 @@
         </div>
       <?php else : ?>
         <a class="brand brand--text" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php bloginfo('name'); ?> – Home">
-          <?php _e('LAW OFFICE &bull; SYARIF &amp; PARTNERS', 'fts-law'); ?>
+          <?php echo wp_kses_post( FTS_BRAND ); ?>
         </a>
       <?php endif; ?>
 
