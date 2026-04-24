@@ -15,7 +15,7 @@ define( 'FTS_EMAIL',      'info@law.fts.biz.id' );
 define( 'FTS_ADDRESS',    'Jakarta, Indonesia' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'LAW OFFICE · SYARIF &amp; PARTNERS' );
-define( 'FTS_THEME_VER',  '1.0.3' );
+define( 'FTS_THEME_VER',  '1.0.5' );
 
 
 // ─── THEME SETUP ──────────────────────────────────────────────────────────────
@@ -238,7 +238,44 @@ function fts_law_footer_fallback_nav() {
     ];
     foreach ( $links as $label => $slug ) {
         $url = 'blog' === $slug ? fts_blog_url() : fts_page_url( $slug );
-        echo '<a href="' . esc_url( $url ) . '">' . esc_html__( $label, 'fts-law' ) . '</a>';
+        echo '<a href="' . esc_url( $url ) . '">' . esc_html( fts_footer_menu_label( $label ) ) . '</a>';
+    }
+}
+
+/**
+ * Returns a translatable footer menu label for a known English source label.
+ *
+ * Menu items created in the WordPress admin are not scanned by Loco, so this
+ * helper gives those labels a stable gettext source string.
+ */
+function fts_footer_menu_label( string $label ) : string {
+    $normalized = html_entity_decode( $label, ENT_QUOTES, 'UTF-8' );
+    $normalized = wp_strip_all_tags( $normalized );
+    $normalized = preg_replace( '/\s+/', ' ', trim( $normalized ) );
+    $key = strtolower( (string) $normalized );
+
+    switch ( $key ) {
+        case 'about lawyer':
+        case 'about':
+            return __( 'About Lawyer', 'fts-law' );
+        case 'legal services':
+            return __( 'Legal Services', 'fts-law' );
+        case 'visa services':
+        case 'visa service':
+            return __( 'Visa Services', 'fts-law' );
+        case 'business setup':
+            return __( 'Business Setup', 'fts-law' );
+        case 'legal guide':
+        case 'free legal guide':
+            return __( 'Legal Guide', 'fts-law' );
+        case 'blog':
+            return __( 'Blog', 'fts-law' );
+        case 'contact':
+            return __( 'Contact', 'fts-law' );
+        case 'privacy policy':
+            return __( 'Privacy Policy', 'fts-law' );
+        default:
+            return $label;
     }
 }
 
@@ -742,7 +779,6 @@ function fts_register_polylang_strings() : void {
     }
 
     $strings = [
-        'Brand Name'     => FTS_BRAND,
         'Office Email'   => fts_get_option( 'fts_email', FTS_EMAIL, false ),
         'Office Address' => fts_get_option( 'fts_address', FTS_ADDRESS, false ),
         'Office Hours'   => fts_get_option( 'fts_office_hours', FTS_OFFICE_HOURS, false ),
@@ -773,7 +809,7 @@ function fts_get_option( string $key, string $fallback = '', bool $translate = f
 }
 
 function fts_brand() : string {
-    return fts_translate_string( FTS_BRAND );
+    return FTS_BRAND;
 }
 
 function fts_whatsapp() : string {
