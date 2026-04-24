@@ -34,7 +34,35 @@
         </a>
       <?php endif; ?>
 
-      <!-- ── Mobile Hamburger ── -->
+      <!-- ── Primary Navigation (links only) ── -->
+      <nav class="nav" id="site-nav" role="navigation" aria-label="Primary menu">
+        <div class="nav-primary">
+          <?php
+          wp_nav_menu([
+            'theme_location'  => 'header-menu',
+            'container'       => false,
+            'items_wrap'      => '%3$s',
+            'walker'          => new FTS_Walker_Nav(),
+            'fallback_cb'     => 'fts_law_fallback_nav',
+            'depth'           => 2,
+          ]);
+          ?>
+        </div>
+      </nav><!-- /#site-nav -->
+
+      <!-- ── CTAs + Language (direct child of header-inner) ── -->
+      <div class="nav-secondary">
+        <div class="nav-consult-language">
+          <a
+            class="btn btn-gold"
+            href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+          <div class="nav-language-switcher">
+            <?php echo fts_language_switcher(); ?>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Mobile Hamburger (always last) ── -->
       <button
         class="menu-toggle"
         type="button"
@@ -45,43 +73,6 @@
         <span></span>
         <span></span>
       </button>
-
-      <!-- ── Primary Navigation ── -->
-      <nav class="nav" id="site-nav" role="navigation" aria-label="Primary menu">
-
-        <!-- Row 1: main links -->
-        <div class="nav-primary">
-          <?php
-          wp_nav_menu([
-            'theme_location'  => 'header-menu',
-            'container'       => false,
-            'items_wrap'      => '%3$s',   // no wrapping <ul>
-            'walker'          => new FTS_Walker_Nav(),
-            'fallback_cb'     => 'fts_law_fallback_nav',
-            'depth'           => 2,
-          ]);
-          ?>
-        </div>
-
-        <!-- Row 2: CTAs + language -->
-        <div class="nav-secondary">
-          <div class="nav-consult-language">
-            <a
-              class="btn btn-gold"
-              href="<?php echo esc_url(home_url('/consultation')); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
-            <div class="nav-language-switcher">
-              <?php
-              if (shortcode_exists('gtranslate')) {
-                echo do_shortcode('[gtranslate]');
-              } else {
-                echo '<div class="gtranslate_wrapper"></div>';
-              }
-              ?>
-            </div>
-          </div>
-        </div>
-
-      </nav><!-- /#site-nav -->
 
     </div><!-- /.header-inner -->
   </header><!-- /.site-header -->

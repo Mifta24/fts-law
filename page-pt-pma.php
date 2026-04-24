@@ -22,7 +22,7 @@ get_header(); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
         <a class="btn btn-gold"  href="<?php echo esc_url(
-            home_url("/consultation"),
+            fts_page_url( 'consultation' ),
         ); ?>"><?php _e('Book PT PMA Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url(
             fts_wa_url(),
@@ -99,7 +99,7 @@ get_header(); ?>
           </li>
         </ul>
         <a class="btn btn-gold" style="width:100%;margin-top:16px;"
-           href="<?php echo esc_url(home_url("/consultation")); ?>">
+           href="<?php echo esc_url(fts_page_url( 'consultation' )); ?>">
           <?php _e('Get a Free Assessment', 'fts-law'); ?>
         </a>
       </div>
@@ -352,7 +352,7 @@ get_header(); ?>
               <span class="process-step__agency">📍 <?php _e('Indonesian Immigration Office', 'fts-law'); ?></span>
             </div>
             <a class="btn btn-gold" href="<?php echo esc_url(
-                home_url("/investor-visa"),
+                fts_page_url( 'investor-visa' ),
             ); ?>" style="margin-top:12px;">
               <?php _e('Investor KITAS Details &rarr;', 'fts-law'); ?>
             </a>
@@ -509,7 +509,7 @@ get_header(); ?>
             <?php _e('Placing shares in an Indonesian national\'s name to bypass foreign ownership limits is <strong>illegal under Indonesian law</strong>. The nominee can legally take control of your company. There is no legal protection if this happens.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/legal-risk"),
+              fts_page_url( 'legal-risk' ),
           ); ?>" class="mistake-card__link">
             <?php _e('Read: Legal Risks for Foreign Investors &rarr;', 'fts-law'); ?>
           </a>
@@ -522,7 +522,7 @@ get_header(); ?>
             <?php _e('Registering the wrong business activity code (KBLI) limits what your company can legally do, creates licensing problems, and may cause issues with tax reporting or visa applications linked to the company.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/consultation"),
+              fts_page_url( 'consultation' ),
           ); ?>" class="mistake-card__link">
             <?php _e('Get a Consultation &rarr;', 'fts-law'); ?>
           </a>
@@ -535,7 +535,7 @@ get_header(); ?>
             <?php _e('Many foreign investors skip the shareholder agreement, relying only on the Articles of Association. Without a shareholder agreement, your rights to remove directors, approve decisions, or exit the company may be unprotected.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/contract-drafting"),
+              fts_page_url( 'contract-drafting' ),
           ); ?>" class="mistake-card__link">
             <?php _e('Contract Drafting Services &rarr;', 'fts-law'); ?>
           </a>
@@ -548,7 +548,7 @@ get_header(); ?>
             <?php _e('PT PMA companies must file quarterly and annual LKPM (Investment Activity Reports) with BKPM/OSS. Failure to comply results in fines and may jeopardise the company\'s legal standing and Investor KITAS renewal.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/business-legal"),
+              fts_page_url( 'business-legal' ),
           ); ?>" class="mistake-card__link">
             <?php _e('Business Legal Support &rarr;', 'fts-law'); ?>
           </a>
@@ -561,7 +561,7 @@ get_header(); ?>
             <?php _e('Failing to properly inject and evidence the minimum paid-up capital creates compliance issues with BKPM and may result in the company\'s investment registration being suspended or cancelled.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/consultation"),
+              fts_page_url( 'consultation' ),
           ); ?>" class="mistake-card__link">
             <?php _e('Get Legal Advice &rarr;', 'fts-law'); ?>
           </a>
@@ -574,7 +574,7 @@ get_header(); ?>
             <?php _e('A foreign national acting as a director of a PT PMA who resides in Indonesia must have a valid Investor KITAS. Operating without this permit is an immigration violation that can result in deportation and company penalties.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/investor-visa"),
+              fts_page_url( 'investor-visa' ),
           ); ?>" class="mistake-card__link">
             <?php _e('Investor KITAS Details &rarr;', 'fts-law'); ?>
           </a>
@@ -597,7 +597,7 @@ get_header(); ?>
       <div class="grid-3">
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/investor-visa"),
+            fts_page_url( 'investor-visa' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">🪪</span>
           <h4><?php _e('Investor KITAS', 'fts-law'); ?></h4>
@@ -605,7 +605,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/foreign-investment"),
+            fts_page_url( 'foreign-investment' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">📈</span>
           <h4><?php _e('Foreign Investment Law', 'fts-law'); ?></h4>
@@ -613,7 +613,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/contract-drafting"),
+            fts_page_url( 'contract-drafting' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">✍️</span>
           <h4><?php _e('Shareholder Agreement Drafting', 'fts-law'); ?></h4>
@@ -621,7 +621,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/legal-risk"),
+            fts_page_url( 'legal-risk' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Review', 'fts-law'); ?></h4>
@@ -629,7 +629,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/business-legal"),
+            fts_page_url( 'business-legal' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">⚖️</span>
           <h4><?php _e('Business Legal Support', 'fts-law'); ?></h4>
@@ -637,7 +637,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/guide"),
+            fts_page_url( 'guide' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">📘</span>
           <h4><?php _e('Free Legal Guide', 'fts-law'); ?></h4>

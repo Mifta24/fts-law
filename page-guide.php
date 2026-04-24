@@ -147,7 +147,7 @@ get_header(); ?>
               class="guide-lead-form"
               id="guide-download-form"
               method="post"
-              action="<?php echo esc_url( home_url('/guide') ); ?>"
+              action="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>"
               novalidate
             >
               <?php wp_nonce_field('fts_guide_download', 'fts_guide_nonce'); ?>
@@ -215,7 +215,7 @@ get_header(); ?>
                   <input type="checkbox" name="guide_consent" value="1" required />
                   <span>
                     <?php _e('I agree to receive the guide and occasional legal updates by email. I understand I can unsubscribe at any time. View our', 'fts-law'); ?>
-                    <a href="<?php echo esc_url( home_url('/privacy-policy') ); ?>" target="_blank"><?php _e('Privacy Policy', 'fts-law'); ?></a>.
+                    <a href="<?php echo esc_url( fts_page_url( 'privacy-policy' ) ); ?>" target="_blank"><?php _e('Privacy Policy', 'fts-law'); ?></a>.
                   </span>
                 </label>
               </div>
@@ -347,19 +347,19 @@ get_header(); ?>
 
       <div class="grid-3">
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/pt-pma') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏢</span>
           <h4><?php _e('PT PMA Setup', 'fts-law'); ?></h4>
           <p><?php _e('Ready to set up your foreign-owned company in Indonesia? Our lawyer manages the complete legal process.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/investor-visa') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🪪</span>
           <h4><?php _e('Investor KITAS', 'fts-law'); ?></h4>
           <p><?php _e('Get your legal stay permit as a foreign shareholder in a PT PMA. We handle the full application.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/legal-risk') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Consultation', 'fts-law'); ?></h4>
           <p><?php _e('Already operating in Indonesia? Get a professional legal risk review of your current business structure.', 'fts-law'); ?></p>

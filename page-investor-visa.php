@@ -22,7 +22,7 @@ get_header(); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
         <a class="btn btn-gold"  href="<?php echo esc_url(
-            home_url("/consultation"),
+            fts_page_url( 'consultation' ),
         ); ?>"><?php _e('Book Investor Visa Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url(
             fts_wa_url(),
@@ -87,7 +87,7 @@ get_header(); ?>
           </li>
         </ul>
         <a class="btn btn-gold" style="width:100%;margin-top:16px;"
-           href="<?php echo esc_url(home_url("/consultation")); ?>">
+           href="<?php echo esc_url(fts_page_url( 'consultation' )); ?>">
           <?php _e('Get a Free Assessment', 'fts-law'); ?>
         </a>
       </div>
@@ -116,7 +116,7 @@ get_header(); ?>
             <?php _e('A PT&nbsp;PMA (foreign-owned company) must be registered with the Indonesian investment authority (BKPM) and the OSS system. The foreign national applying for an Investor KITAS must be a registered shareholder in the company.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/pt-pma"),
+              fts_page_url( 'pt-pma' ),
           ); ?>" class="connection-step__link">
             <?php _e('PT PMA Setup Guide &rarr;', 'fts-law'); ?>
           </a>
@@ -147,7 +147,7 @@ get_header(); ?>
       <div class="info-box" style="margin-top: 28px; max-width: 860px; margin-left: auto; margin-right: auto;">
         <?php _e('<strong>📌 Combined Service Available:</strong> If you do not yet have a PT&nbsp;PMA, our office can assist with both the company registration and Investor KITAS application simultaneously — reducing the total time and coordination required.', 'fts-law'); ?>
         <a href="<?php echo esc_url(
-            home_url("/pt-pma"),
+            fts_page_url( 'pt-pma' ),
         ); ?>"><?php _e('Learn about PT PMA Setup &rarr;', 'fts-law'); ?></a>
       </div>
 
@@ -307,7 +307,7 @@ get_header(); ?>
             <?php _e('Some foreign investors use Indonesian nominees (local individuals) as "proxy" shareholders in their company. This practice carries significant legal risk — the company may not truly belong to the foreign investor. Investor KITAS issued through a nominee structure may face complications.', 'fts-law'); ?>
           </p>
           <a href="<?php echo esc_url(
-              home_url("/legal-risk"),
+              fts_page_url( 'legal-risk' ),
           ); ?>"><?php _e('Learn About Legal Risks &rarr;', 'fts-law'); ?></a>
         </div>
 
@@ -403,7 +403,7 @@ get_header(); ?>
       <div class="grid-3">
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/pt-pma"),
+            fts_page_url( 'pt-pma' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏢</span>
           <h4><?php _e('PT PMA Setup', 'fts-law'); ?></h4>
@@ -411,7 +411,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/kitas"),
+            fts_page_url( 'kitas' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">📋</span>
           <h4><?php _e('KITAS Overview', 'fts-law'); ?></h4>
@@ -419,7 +419,7 @@ get_header(); ?>
         </a>
 
         <a class="related-card" href="<?php echo esc_url(
-            home_url("/legal-risk"),
+            fts_page_url( 'legal-risk' ),
         ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Consultation', 'fts-law'); ?></h4>

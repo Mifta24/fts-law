@@ -14,9 +14,9 @@ get_header();
 <main id="main-content" role="main">
 
   <?php fts_page_hero(
-      'Legal Insights',
-      is_home() ? 'Latest Articles' : get_the_archive_title(),
-      is_home() ? 'Stay informed with the latest legal updates for foreign investors in Indonesia.'
+      __('Legal Insights', 'fts-law'),
+      is_home() ? __('Latest Articles', 'fts-law') : get_the_archive_title(),
+      is_home() ? __('Stay informed with the latest legal updates for foreign investors in Indonesia.', 'fts-law')
                 : get_the_archive_description()
   ); ?>
 
@@ -38,8 +38,8 @@ get_header();
           <?php
           the_posts_pagination( [
               'mid_size'  => 2,
-              'prev_text' => '&larr; Newer',
-              'next_text' => 'Older &rarr;',
+              'prev_text' => __('&larr; Newer', 'fts-law'),
+              'next_text' => __('Older &rarr;', 'fts-law'),
           ] );
           ?>
         </div>
@@ -47,10 +47,10 @@ get_header();
       <?php else : ?>
 
         <div class="no-results">
-          <h2>No articles found</h2>
-          <p>Check back soon for legal updates, guides, and insights for foreign investors in Indonesia.</p>
+          <h2><?php _e('No articles found', 'fts-law'); ?></h2>
+          <p><?php _e('Check back soon for legal updates, guides, and insights for foreign investors in Indonesia.', 'fts-law'); ?></p>
           <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/' ) ); ?>">
-            Back to Home
+            <?php _e('Back to Home', 'fts-law'); ?>
           </a>
         </div>
 

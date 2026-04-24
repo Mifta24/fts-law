@@ -19,7 +19,7 @@ get_header(); ?>
         <?php _e('Understanding Indonesia\'s investment regulations, foreign ownership limits, and compliance obligations — essential knowledge for every foreign investor.', 'fts-law'); ?>
       </p>
       <div class="hero-actions" style="justify-content:center;margin-top:24px;">
-        <a class="btn btn-gold" href="<?php echo esc_url( home_url('/consultation') ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
+        <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Book Consultation', 'fts-law'); ?></a>
         <a class="btn btn-green" href="<?php echo esc_url( fts_wa_url() ); ?>" target="_blank" rel="noopener noreferrer">💬 <?php _e('WhatsApp Chat', 'fts-law'); ?></a>
       </div>
     </div>
@@ -79,7 +79,7 @@ get_header(); ?>
             </li>
           </ul>
           <a class="btn btn-gold" style="width:100%;margin-top:16px;"
-             href="<?php echo esc_url( home_url('/consultation') ); ?>">
+             href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
             <?php _e('Get Investment Legal Advice', 'fts-law'); ?>
           </a>
         </div>
@@ -365,7 +365,7 @@ get_header(); ?>
           <p>
             <?php _e('Using an Indonesian national as a "nominee" shareholder to hold shares on behalf of a foreign investor is <strong>illegal under Indonesian law</strong>. The nominee can legally take control of the company, transfer shares, or dissolve the business. Foreign investors have no legal recourse in such cases.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url('/legal-risk') ); ?>" class="risk-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>" class="risk-card__link">
             <?php _e('Legal Risk Details &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -376,7 +376,7 @@ get_header(); ?>
           <p>
             <?php _e('A foreign director can be removed from their position by a shareholder resolution if the Articles of Association or shareholder agreement do not include adequate protective provisions. This can effectively lock a foreign investor out of their own company.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url('/legal-risk') ); ?>" class="risk-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>" class="risk-card__link">
             <?php _e('Legal Risk Details &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -387,7 +387,7 @@ get_header(); ?>
           <p>
             <?php _e('Operating in a sector that is restricted or closed to foreign investment, or exceeding the permitted foreign ownership percentage, can result in licence revocation, forced divestment, and penalties. Always verify sector eligibility before investment.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url('/consultation') ); ?>" class="risk-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>" class="risk-card__link">
             <?php _e('Get Legal Advice &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -398,7 +398,7 @@ get_header(); ?>
           <p>
             <?php _e('Failure to file LKPM reports results in administrative warnings and may lead to investment registration suspension. PT PMA companies that fail LKPM compliance may face difficulties renewing business licences and Investor KITAS.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url('/business-legal') ); ?>" class="risk-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'business-legal' ) ); ?>" class="risk-card__link">
             <?php _e('Compliance Support &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -409,7 +409,7 @@ get_header(); ?>
           <p>
             <?php _e('A PT PMA operating without a comprehensive shareholder agreement leaves the foreign investor\'s rights (dividend rights, voting rights, exit rights) unprotected. Disputes become far more difficult to resolve without this document.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url('/contract-drafting') ); ?>" class="risk-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>" class="risk-card__link">
             <?php _e('Contract Drafting &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -420,7 +420,7 @@ get_header(); ?>
           <p>
             <?php _e('Failure to properly inject and document the minimum paid-up capital creates compliance issues with BKPM and may trigger a review of the company\'s investment registration — potentially affecting all licences and permits linked to the PT PMA.', 'fts-law'); ?>
           </p>
-          <a href="<?php echo esc_url( home_url('/pt-pma') ); ?>" class="risk-card__link">
+          <a href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>" class="risk-card__link">
             <?php _e('PT PMA Setup Details &rarr;', 'fts-law'); ?>
           </a>
         </div>
@@ -437,19 +437,19 @@ get_header(); ?>
       <h2 class="section-title" style="text-align:center;"><?php _e('Related Legal Services', 'fts-law'); ?></h2>
       <div class="grid-3">
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/pt-pma') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🏢</span>
           <h4><?php _e('PT PMA Setup', 'fts-law'); ?></h4>
           <p><?php _e('Complete legal support for foreign-owned company registration in Indonesia.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/legal-risk') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">🔍</span>
           <h4><?php _e('Legal Risk Consultation', 'fts-law'); ?></h4>
           <p><?php _e('Identify and prevent legal risks in your investment structure before they become problems.', 'fts-law'); ?></p>
         </a>
 
-        <a class="related-card" href="<?php echo esc_url( home_url('/business-legal') ); ?>">
+        <a class="related-card" href="<?php echo esc_url( fts_page_url( 'business-legal' ) ); ?>">
           <span class="related-card__icon" aria-hidden="true">⚖️</span>
           <h4><?php _e('Business Legal Support', 'fts-law'); ?></h4>
           <p><?php _e('Ongoing compliance monitoring, LKPM reporting, and corporate governance support.', 'fts-law'); ?></p>
