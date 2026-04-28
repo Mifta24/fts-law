@@ -959,3 +959,8 @@ function fts_cf7_consultation_form_id() : string {
 function fts_cf7_guide_form_id() : string {
     return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '74', false ) );
 }
+
+add_filter( 'pll_get_post_types', function( $post_types ) {
+    $post_types['wpcf7_contact_form'] = 'wpcf7_contact_form';
+    return $post_types;
+} );
