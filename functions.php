@@ -948,19 +948,64 @@ function fts_maps_embed() : string {
      return fts_get_option('fts_google_maps_embed', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.671136651886!2d106.78509397610306!3d-6.174763644527437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002212556b%3A0xd553386b470af88!2sNEO%20SOHO%20APARTEMENT!5e0!3m2!1sid!2sid!4v1753431520442!5m2!1sid!2sid', false);
 }
 
+/**
+ * Map language code => CF7 form ID (alphanumeric hash from CF7 shortcode).
+ * 'en' is the default/fallback used when no language match is found.
+ * Fill in the IDs after creating forms for each language in CF7 admin.
+ */
+function fts_cf7_form_map() : array {
+    return [
+        'contact' => [
+            'en' => fts_get_option( 'fts_cf7_contact_form_id', '618', false ),
+            'zh' => '597', // Chinese Simplified — fill after creating form
+            'ko' => '589', // Korean
+            'de' => '620', // German
+            'fr' => '621', // French
+            'id' => '619', // Indonesian
+            'ja' => '617', // Japanese
+        ],
+        'consultation' => [
+            'en' => fts_get_option( 'fts_cf7_consultation_form_id', '73', false ),
+            'zh' => '603',
+            'ko' => '623',
+            'de' => '626',
+            'fr' => '625',
+            'id' => '624',
+            'ja' => '622',
+        ],
+        'guide' => [
+            'en' => fts_get_option( 'fts_cf7_guide_form_id', '74', false ),
+            'zh' => '627',
+            'ko' => '628',
+            'de' => '631',
+            'fr' => '632',
+            'id' => '630',
+            'ja' => '629',
+        ],
+    ];
+}
+
+function fts_cf7_get_id( string $type ) : string {
+    $map  = fts_cf7_form_map();
+    $lang = function_exists( 'pll_current_language' ) ? pll_current_language() : 'en';
+    $ids  = $map[ $type ] ?? [];
+    $id   = ( ! empty( $ids[ $lang ] ) ? $ids[ $lang ] : ( $ids['en'] ?? '' ) );
+    return sanitize_text_field( $id );
+}
+
 function fts_cf7_contact_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_contact_form_id', '72', false ) );
+    return fts_cf7_get_id( 'contact' );
 }
 
 function fts_cf7_consultation_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_consultation_form_id', '73', false ) );
+    return fts_cf7_get_id( 'consultation' );
 }
 
 function fts_cf7_guide_form_id() : string {
-    return preg_replace( '/\D+/', '', fts_get_option( 'fts_cf7_guide_form_id', '74', false ) );
+    return fts_cf7_get_id( 'guide' );
 }
 
-add_filter( 'pll_get_post_types', function( $post_types ) {
+add_filter( 'pll_get_post_types', function( $post_types, $_is_settings ) {
     $post_types['wpcf7_contact_form'] = 'wpcf7_contact_form';
     return $post_types;
-} );
+}, 10, 2 );
