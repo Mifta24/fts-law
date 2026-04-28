@@ -48,10 +48,6 @@
           ]);
           ?>
         </div>
-        <!-- ── Language switcher inside mobile menu ── -->
-        <div class="nav-mobile-lang">
-          <?php echo fts_language_switcher(); ?>
-        </div>
       </nav><!-- /#site-nav -->
 
       <!-- ── CTAs + Language (direct child of header-inner) ── -->
