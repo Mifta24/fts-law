@@ -509,36 +509,35 @@ section {
 .nav-language-switcher select {
     height: 40px;
     border-radius: 999px;
-    border: 1px solid rgba(200, 169, 107, 0.4);
-    background: rgba(200, 169, 107, 0.08);
-    color: #fff;
+    border: 1.5px solid #c8a96b;
+    background: #0f2747;
+    color: #ffffff;
     padding: 0 34px 0 16px;
     font-size: 0.84rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1;
     appearance: none;
     -webkit-appearance: none;
     cursor: pointer;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
     transition: border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
     white-space: nowrap;
 }
 
 .nav-language-switcher select:hover {
-    border-color: rgba(200, 169, 107, 0.7);
-    background: rgba(200, 169, 107, 0.14);
+    border-color: #d4ba7b;
+    background: #1a3a5f;
 }
 
 .nav-language-switcher select:focus {
     outline: none;
-    border-color: rgba(200, 169, 107, 0.95);
-    box-shadow: 0 0 0 3px rgba(200, 169, 107, 0.18);
+    border-color: #c8a96b;
+    box-shadow: 0 0 0 3px rgba(200, 169, 107, 0.25);
 }
 
 .nav-language-switcher select option {
-    color: #fff;
+    color: #ffffff;
     background: #0f2747;
+    padding: 8px 12px;
 }
 
 /* Mobile-only language switcher inside nav menu — hidden on desktop */
@@ -4667,93 +4666,13 @@ textarea {
         gap: 6px;
     }
 
-    /* Hide language switcher in header bar on tablet/mobile — save space */
+    /* Keep a single language switcher instance visible on tablet/mobile */
     .nav-secondary .nav-language-switcher {
-        display: none;
+        display: block;
     }
 
-    /* Show language switcher inside the mobile nav menu */
     .nav-mobile-lang {
-        display: block;
-        margin-top: 8px;
-        padding-top: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-mobile-lang::before {
-        content: "Language / 言語";
-        display: block;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(200, 169, 107, 0.85);
-        margin-bottom: 8px;
-        padding-left: 2px;
-    }
-
-    .nav-mobile-lang form {
-        margin: 0;
-        padding: 0;
-        position: relative;
-    }
-
-    /* Custom arrow */
-    .nav-mobile-lang form::after {
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        right: 14px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 16px;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6l4 4 4-4' stroke='%23c8a96b' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
-
-    .nav-mobile-lang select {
-        width: 100%;
-        height: 48px;
-        border-radius: 12px;
-        border: 1px solid rgba(200, 169, 107, 0.35);
-        background: rgba(200, 169, 107, 0.07);
-        color: #fff;
-        padding: 0 40px 0 14px;
-        font-size: 0.88rem;
-        font-weight: 600;
-        cursor: pointer;
-        appearance: none;
-        -webkit-appearance: none;
-        outline: none;
-        transition: border-color 0.18s ease, background 0.18s ease;
-    }
-
-    .nav-mobile-lang select:focus {
-        border-color: rgba(200, 169, 107, 0.75);
-        background: rgba(200, 169, 107, 0.12);
-    }
-
-    .nav-mobile-lang select option {
-        background: #0f2747;
-        color: #fff;
-    }
-
-    .nav-mobile-lang .lang-fallback {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        width: 100%;
-        height: 48px;
-        border-radius: 12px;
-        border: 1px solid rgba(200, 169, 107, 0.35);
-        background: rgba(200, 169, 107, 0.07);
-        color: rgba(200, 169, 107, 0.95);
-        font-size: 0.88rem;
-        font-weight: 700;
-        letter-spacing: 0.06em;
+        display: none !important;
     }
 
     .nav-consult-language .btn {
@@ -4981,6 +4900,7 @@ textarea {
 /* ─── RESPONSIVE: 720px (MOBILE) ────────────────────────────── */
 @media (max-width: 720px) {
     .header-inner {
+        min-height: 68px;
         gap: 8px;
     }
 
@@ -4991,16 +4911,26 @@ textarea {
     }
 
     .nav-consult-language .btn {
-        font-size: 0.74rem;
+        font-size: 0.72rem;
         padding: 8px 10px;
+        min-height: 34px;
+    }
+
+    .nav-secondary .nav-language-switcher select,
+    .nav-secondary .nav-language-switcher .lang-fallback {
+        height: 34px;
+        min-width: 78px;
+        font-size: 0.72rem;
+        padding: 0 24px 0 10px;
     }
 
     /* Layout */
     .hero {
-        padding: 64px 0 56px;
+        padding: 48px 0 44px;
+        background-position: center top;
     }
     section {
-        padding: 60px 0;
+        padding: 52px 0;
     }
 
     .grid-4,
@@ -5011,6 +4941,7 @@ textarea {
 
     .hero-actions {
         flex-direction: column;
+        gap: 10px;
     }
     .btn {
         width: 100%;
@@ -5023,6 +4954,45 @@ textarea {
     .cta-band__actions .btn,
     .profile-cta .btn {
         width: auto;
+    }
+
+    .hero-grid {
+        gap: 22px;
+    }
+
+    .hero-copy {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.9rem, 8vw, 2.6rem);
+        line-height: 1.06;
+    }
+
+    .hero p {
+        font-size: 0.98rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 34rem;
+    }
+
+    .hero-note {
+        padding: 16px 16px;
+        border-radius: 18px;
+        font-size: 0.92rem;
+        text-align: left;
+    }
+
+    .hero-card {
+        max-width: 340px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 22px;
+    }
+
+    .hero-card img,
+    .profile-photo img {
+        max-width: 100%;
     }
 
     .brand {
@@ -5089,6 +5059,49 @@ textarea {
     .wa-float {
         right: 14px;
         bottom: 14px;
+    }
+}
+
+/* ─── RESPONSIVE: 420px (SMALL PHONES) ─────────────────────── */
+@media (max-width: 420px) {
+    .header-inner {
+        min-height: 60px;
+        padding: 8px 0;
+        gap: 6px;
+    }
+
+    .brand--text {
+        max-width: 112px;
+        font-size: 0.66rem;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        padding: 7px 6px;
+    }
+
+    .nav-consult-language .btn {
+        display: none;
+    }
+
+    .nav-secondary .nav-language-switcher select,
+    .nav-secondary .nav-language-switcher .lang-fallback {
+        min-width: 68px;
+        height: 32px;
+        font-size: 0.68rem;
+        padding: 0 20px 0 8px;
+    }
+
+    .hero {
+        padding-top: 42px;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.7rem, 9.2vw, 2.2rem);
     }
 }
 
