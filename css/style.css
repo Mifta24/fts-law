@@ -4524,6 +4524,21 @@ textarea {
     padding: 0 0 60px;
 }
 
+/* ─── HEADER WIDE DESKTOP: ≥1440px (single row) ────────────── */
+@media (min-width: 1440px) {
+    .header-inner {
+        gap: 20px;
+    }
+
+    .nav {
+        margin-right: 12px;
+    }
+
+    .nav-primary {
+        justify-content: flex-end;
+    }
+}
+
 /* ─── HEADER TIGHT DESKTOP: 1024-1439px (two-row) ──────────── */
 @media (min-width: 1024px) and (max-width: 1439px) {
 
