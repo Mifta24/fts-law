@@ -4524,18 +4524,42 @@ textarea {
     padding: 0 0 60px;
 }
 
-/* ─── HEADER WIDE DESKTOP: ≥1440px (single row) ────────────── */
+/* ─── HEADER WIDE DESKTOP: ≥1440px (two-row when needed) ───── */
 @media (min-width: 1440px) {
     .header-inner {
-        gap: 20px;
+        flex-wrap: wrap;
+        row-gap: 0;
+        padding: 10px 0 0;
+        align-items: center;
+    }
+
+    .brand {
+        flex-shrink: 0;
+    }
+
+    .nav-secondary {
+        margin-left: auto;
+        flex-shrink: 0;
+    }
+
+    .menu-toggle {
+        display: none !important;
     }
 
     .nav {
-        margin-right: 12px;
+        order: 3;
+        flex: 0 0 100%;
+        width: 100%;
+        padding: 6px 0 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .nav-primary {
-        justify-content: flex-end;
+        justify-content: flex-start;
+        gap: 12px;
+        flex-wrap: wrap;
+        row-gap: 4px;
+        flex: 1;
     }
 }
 
