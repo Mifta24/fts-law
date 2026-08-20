@@ -299,7 +299,7 @@ get_header(); ?>
         <!-- Office Photo -->
         <div class="office-photo-card">
           <img
-            src="https://law.fts.biz.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
+            src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
             alt="<?php esc_attr_e('Law Office – ', 'fts-law'); ?><?php echo esc_attr( fts_office_address() ); ?>"
             loading="lazy"
             width="800"
@@ -363,7 +363,7 @@ get_header(); ?>
         <div class="contact-person-card">
           <div class="contact-person-card__avatar" aria-label="<?php esc_attr_e('Syarif', 'fts-law'); ?>">
             <img
-              src="https://law.fts.biz.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg"
+              src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg"
               alt="<?php esc_attr_e('Syarif – Licensed Indonesian Lawyer', 'fts-law'); ?>"
               loading="lazy"
             />

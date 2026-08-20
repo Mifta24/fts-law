@@ -42,7 +42,7 @@ get_header();
       <!-- Right: Lawyer Card -->
       <div class="hero-card" aria-label="Lawyer Profile Card">
         <img
-          src="https://law.fts.biz.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
+          src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
           alt="<?php esc_attr_e('Syarif – Licensed Indonesian Lawyer', 'fts-law'); ?>"
           loading="eager"
           width="280"
@@ -91,7 +91,7 @@ get_header();
       <!-- Photo -->
       <div class="profile-photo">
         <img
-          src="https://law.fts.biz.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
+          src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
           alt="<?php esc_attr_e('Syarif – Licensed Indonesian Lawyer', 'fts-law'); ?>"
           loading="lazy" />
       </div>
@@ -639,7 +639,7 @@ get_header();
 
         <div class="office-photo-card">
           <img
-            src="https://law.fts.biz.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
+            src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
             alt="<?php esc_attr_e('Law Office – Jakarta', 'fts-law'); ?>"
             loading="lazy" />
         </div>

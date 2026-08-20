@@ -11,7 +11,7 @@
 define( 'FTS_PHONE_RAW',  '6281234567890' );          // No + for wa.me link
 define( 'FTS_PHONE_DISPLAY', '+62 812-3456-7890' );   // Human-readable
 define( 'FTS_WA_LINK',    'https://wa.me/6281234567890' );
-define( 'FTS_EMAIL',      'info@law.fts.biz.id' );
+define( 'FTS_EMAIL',      'info@law.fts-tech.co.id' );
 define( 'FTS_ADDRESS',    'Jakarta, Indonesia' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'LAW OFFICE · SYARIF &amp; PARTNERS' );
@@ -837,7 +837,7 @@ function fts_customizer( $wp_customize ) {
         ],
         'fts_email' => [
             'label'   => 'Office Email',
-            'default' => 'info@law.fts.biz.id',
+            'default' => 'info@law.fts-tech.co.id',
         ],
         'fts_address' => [
             'label'   => 'Office Address',
