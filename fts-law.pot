@@ -5655,7 +5655,7 @@ msgid "1. Introduction"
 msgstr ""
 
 #: page-privacy-policy.php:44
-msgid "This Privacy Policy explains how <strong>LAW OFFICE · SYARIF &amp; PARTNERS</strong> (\"we\", \"our\", \"the office\") collects, uses, stores, and protects personal information provided by visitors to our website at <strong>law.fts.biz.id</strong> and by clients who engage our legal services."
+msgid "This Privacy Policy explains how <strong>LAW OFFICE · SYARIF &amp; PARTNERS</strong> (\"we\", \"our\", \"the office\") collects, uses, stores, and protects personal information provided by visitors to our website at <strong>law.fts-tech.co.id</strong> and by clients who engage our legal services."
 msgstr ""
 
 #: page-privacy-policy.php:47
@@ -6187,7 +6187,7 @@ msgid "<strong>📌 Effective Date:</strong> This Privacy Policy is effective as
 msgstr ""
 
 #: page-privacy-policy.php:509
-msgid "and applies to all personal information collected through our website at <strong>law.fts.biz.id</strong> and through our legal service engagements."
+msgid "and applies to all personal information collected through our website at <strong>law.fts-tech.co.id</strong> and through our legal service engagements."
 msgstr ""
 
 #: page-privacy-policy.php:517

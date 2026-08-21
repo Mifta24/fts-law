@@ -41,7 +41,7 @@ get_header(); ?>
           <div class="privacy-section">
             <h2><?php _e('1. Introduction', 'fts-law'); ?></h2>
             <p>
-              <?php _e('This Privacy Policy explains how <strong>LAW OFFICE · SYARIF &amp; PARTNERS</strong> ("we", "our", "the office") collects, uses, stores, and protects personal information provided by visitors to our website at <strong>law.fts.biz.id</strong> and by clients who engage our legal services.', 'fts-law'); ?>
+              <?php _e('This Privacy Policy explains how <strong>LAW OFFICE · SYARIF &amp; PARTNERS</strong> ("we", "our", "the office") collects, uses, stores, and protects personal information provided by visitors to our website at <strong>law.fts-tech.co.id</strong> and by clients who engage our legal services.', 'fts-law'); ?>
             </p>
             <p>
               <?php _e('We are committed to protecting your privacy and handling your personal data in compliance with applicable Indonesian data protection law, including <strong>Law No. 27 of 2022 on Personal Data Protection</strong> (Undang-Undang Perlindungan Data Pribadi / UU PDP).', 'fts-law'); ?>
@@ -479,7 +479,7 @@ get_header(); ?>
                   <strong><?php _e('Website', 'fts-law'); ?></strong>
                   <p>
                     <a href="<?php echo esc_url( fts_page_url( 'contact' ) ); ?>">
-                      law.fts.biz.id/contact
+                      law.fts-tech.co.id/contact
                     </a>
                   </p>
                 </div>
@@ -506,7 +506,7 @@ get_header(); ?>
           <div class="privacy-section privacy-section--ack">
             <div class="info-box">
               <?php _e('<strong>📌 Effective Date:</strong> This Privacy Policy is effective as of', 'fts-law'); ?>
-              <?php echo date('F Y'); ?> <?php _e('and applies to all personal information collected through our website at <strong>law.fts.biz.id</strong> and through our legal service engagements.', 'fts-law'); ?>
+              <?php echo date('F Y'); ?> <?php _e('and applies to all personal information collected through our website at <strong>law.fts-tech.co.id</strong> and through our legal service engagements.', 'fts-law'); ?>
             </div>
           </div>
 
