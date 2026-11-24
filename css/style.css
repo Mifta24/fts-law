@@ -5159,3 +5159,34 @@ textarea {
         font-size: 0.8em;
     }
 }
+
+
+/* Okelegal logo (bundled fallback when no Customizer logo is set) */
+.brand--okelegal img {
+    height: 54px;
+    width: auto;
+    max-width: 100%;
+    background: #fefefe;
+    padding: 3px 12px;
+    border-radius: 10px;
+    filter: none;
+}
+
+.footer-logo-okelegal {
+    display: inline-block;
+}
+
+.footer-logo-okelegal img {
+    height: 84px;
+    width: auto;
+    background: #fefefe;
+    padding: 6px 16px;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .brand--okelegal img {
+        height: 44px;
+        padding: 2px 10px;
+    }
+}

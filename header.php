@@ -29,8 +29,8 @@
           <?php the_custom_logo(); ?>
         </div>
       <?php else : ?>
-        <a class="brand brand--text" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php bloginfo('name'); ?> – Home">
-          <?php echo wp_kses_post( FTS_BRAND ); ?>
+        <a class="brand brand--logo brand--okelegal" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php bloginfo('name'); ?> – Home">
+          <img src="<?php echo esc_url( get_template_directory_uri() . '/images/okelegal-logo.png' ); ?>" alt="<?php esc_attr_e('Okelegal Law Office', 'fts-law'); ?>" width="736" height="599" />
         </a>
       <?php endif; ?>
 
