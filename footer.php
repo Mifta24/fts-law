@@ -23,7 +23,7 @@
             <?php if ( has_custom_logo() ) : ?>
               <?php the_custom_logo(); ?>
             <?php else : ?>
-              <a class="footer-logo-okelegal" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_template_directory_uri() . '/images/okelegal-logo.png' ); ?>" alt="<?php esc_attr_e( 'Okelegal Law Office', 'fts-law' ); ?>" width="736" height="599" loading="lazy" /></a>
+              <a class="footer-logo-okelegal" href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( fts_asset( '/images/okelegal-logo.png' ) ); ?>" alt="<?php esc_attr_e( 'Okelegal Law Office', 'fts-law' ); ?>" width="736" height="599" loading="lazy" /></a>
             <?php endif; ?>
           </div>
           <p class="footer-about">

@@ -30,7 +30,7 @@
         </div>
       <?php else : ?>
         <a class="brand brand--logo brand--okelegal" href="<?php echo esc_url(home_url('/')); ?>" aria-label="<?php bloginfo('name'); ?> – Home">
-          <img src="<?php echo esc_url( get_template_directory_uri() . '/images/okelegal-logo.png' ); ?>" alt="<?php esc_attr_e('Okelegal Law Office', 'fts-law'); ?>" width="736" height="599" />
+          <img src="<?php echo esc_url( fts_asset( '/images/okelegal-logo.png' ) ); ?>" alt="<?php esc_attr_e('Okelegal Law Office', 'fts-law'); ?>" width="736" height="599" />
         </a>
       <?php endif; ?>
 

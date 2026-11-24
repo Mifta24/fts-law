@@ -42,7 +42,7 @@ get_header();
       <!-- Right: Founder Card -->
       <div class="hero-card" aria-label="Founder Profile Card">
         <img
-          src="<?php echo esc_url( get_template_directory_uri() . '/images/team/syarif.jpg' ); ?>"
+          src="<?php echo esc_url( fts_asset( '/images/team/syarif.jpg' ) ); ?>"
           alt="<?php esc_attr_e('Syarif Anis, S.H. – CEO / Founder', 'fts-law'); ?>"
           loading="eager"
           width="280"
@@ -90,7 +90,7 @@ get_header();
 
       <div class="profile-photo">
         <img
-          src="<?php echo esc_url( get_template_directory_uri() . '/images/team/syarif.jpg' ); ?>"
+          src="<?php echo esc_url( fts_asset( '/images/team/syarif.jpg' ) ); ?>"
           alt="<?php esc_attr_e('Syarif Anis, S.H. – CEO / Founder', 'fts-law'); ?>"
           loading="lazy" />
       </div>
@@ -248,9 +248,9 @@ get_header();
   ══════════════════════════════════════════════════════════════════ -->
   <section class="photo-strip" aria-label="<?php esc_attr_e('Our work', 'fts-law'); ?>">
     <div class="container photo-strip__grid">
-      <figure><img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/legal-gavel-scales.jpg' ); ?>" alt="<?php esc_attr_e('Law and justice', 'fts-law'); ?>" loading="lazy" /></figure>
-      <figure><img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/contract-signing.jpg' ); ?>" alt="<?php esc_attr_e('Contract review', 'fts-law'); ?>" loading="lazy" /></figure>
-      <figure><img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/team-charts.jpg' ); ?>" alt="<?php esc_attr_e('Business analysis', 'fts-law'); ?>" loading="lazy" /></figure>
+      <figure><img src="<?php echo esc_url( fts_asset( '/images/slides/legal-gavel-scales.jpg' ) ); ?>" alt="<?php esc_attr_e('Law and justice', 'fts-law'); ?>" loading="lazy" /></figure>
+      <figure><img src="<?php echo esc_url( fts_asset( '/images/slides/contract-signing.jpg' ) ); ?>" alt="<?php esc_attr_e('Contract review', 'fts-law'); ?>" loading="lazy" /></figure>
+      <figure><img src="<?php echo esc_url( fts_asset( '/images/slides/team-charts.jpg' ) ); ?>" alt="<?php esc_attr_e('Business analysis', 'fts-law'); ?>" loading="lazy" /></figure>
     </div>
   </section>
 
@@ -570,7 +570,7 @@ get_header();
         <div class="office-photo-card">
           <img
             class="office-photo-card__logo"
-            src="<?php echo esc_url( get_template_directory_uri() . '/images/okelegal-logo.png' ); ?>"
+            src="<?php echo esc_url( fts_asset( '/images/okelegal-logo.png' ) ); ?>"
             alt="<?php esc_attr_e('Okelegal Law Office', 'fts-law'); ?>"
             loading="lazy" />
         </div>

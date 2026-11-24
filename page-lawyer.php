@@ -36,7 +36,7 @@ $fts_groups = fts_team_groups();
 
         <div class="profile-photo">
           <img
-            src="<?php echo esc_url( get_template_directory_uri() . '/images/team/syarif.jpg' ); ?>"
+            src="<?php echo esc_url( fts_asset( '/images/team/syarif.jpg' ) ); ?>"
             alt="<?php esc_attr_e('Syarif Anis, S.H. – CEO / Founder', 'fts-law'); ?>"
             loading="eager" />
         </div>
