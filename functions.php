@@ -8,10 +8,10 @@
  */
 
 // ─── SITE CONSTANTS ───────────────────────────────────────────────────────────
-define( 'FTS_PHONE_RAW',  '6281234567890' );          // No + for wa.me link
-define( 'FTS_PHONE_DISPLAY', '+62 812-3456-7890' );   // Human-readable
-define( 'FTS_WA_LINK',    'https://wa.me/6281234567890' );
-define( 'FTS_EMAIL',      'info@law.fts-tech.co.id' );
+define( 'FTS_PHONE_RAW',  '6281320460027' );          // No + for wa.me link
+define( 'FTS_PHONE_DISPLAY', '+62 813-2046-0027' );   // Human-readable
+define( 'FTS_WA_LINK',    'https://wa.me/6281320460027' );
+define( 'FTS_EMAIL',      'okelegalid@gmail.com' );
 define( 'FTS_ADDRESS',    'Pasteur Gateway, Jl. Gn. Batu No.203A, Sukaraja, Kec. Cicendo, Kota Bandung, Jawa Barat 40175' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'OKELEGAL LAW OFFICE' );
@@ -833,11 +833,11 @@ function fts_customizer( $wp_customize ) {
     $fields = [
         'fts_whatsapp' => [
             'label'   => 'WhatsApp Number (with country code, no +)',
-            'default' => '6281234567890',
+            'default' => '6281320460027',
         ],
         'fts_email' => [
             'label'   => 'Office Email',
-            'default' => 'info@law.fts-tech.co.id',
+            'default' => 'okelegalid@gmail.com',
         ],
         'fts_address' => [
             'label'   => 'Office Address',
