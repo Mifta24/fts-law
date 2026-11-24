@@ -648,17 +648,17 @@ function fts_team_groups() : array {
               'bio'  => __( 'Works independently to represent clients in all areas of law, and is ready to serve as legal consultant to large companies through Legal Retainer services.', 'fts-law' ) ],
         ],
         'management' => [
-            [ 'name' => 'Radit, H', 'initials' => 'R', 'role' => __( 'CTO (Chief Technology Officer)', 'fts-law' ),
+            [ 'name' => 'Radit, H', 'photo' => fts_asset( '/images/team/radit.jpg' ), 'role' => __( 'CTO (Chief Technology Officer)', 'fts-law' ),
               'bio'  => __( 'Decides on the firm\'s technology infrastructure and keeps technology strategy aligned with the firm\'s goals.', 'fts-law' ) ],
             [ 'name' => 'Ibnu Kaban, S.H.', 'photo' => fts_asset( '/images/team/ibnu.jpg' ), 'role' => __( 'Advisor', 'fts-law' ),
               'bio'  => __( 'Gives input, advice, and recommendations so Okelegal makes the best decisions, and advises the company director.', 'fts-law' ) ],
         ],
         'staff' => [
-            [ 'name' => 'Saffina Tussalama', 'initials' => 'ST', 'role' => __( 'Operational Manager', 'fts-law' ) ],
-            [ 'name' => 'Zulkiply, Sst, Par', 'initials' => 'Z', 'role' => __( 'Business Development Manager', 'fts-law' ) ],
-            [ 'name' => 'Milda Nurmalia G, S.Pd', 'initials' => 'MN', 'role' => __( 'Finance Manager', 'fts-law' ) ],
-            [ 'name' => 'Nabila Cyzarine', 'initials' => 'NC', 'role' => __( 'Public Relations', 'fts-law' ) ],
-            [ 'name' => 'Ali Ridho Behesyti, S.Kom', 'initials' => 'AR', 'role' => __( 'Graphic Designer', 'fts-law' ) ],
+            [ 'name' => 'Saffina Tussalama', 'photo' => fts_asset( '/images/team/saffina.jpg' ), 'role' => __( 'Operational Manager', 'fts-law' ) ],
+            [ 'name' => 'Zulkiply, Sst, Par', 'photo' => fts_asset( '/images/team/zulkiply.jpg' ), 'role' => __( 'Business Development Manager', 'fts-law' ) ],
+            [ 'name' => 'Milda Nurmalia G, S.Pd', 'photo' => fts_asset( '/images/team/milda.jpg' ), 'role' => __( 'Finance Manager', 'fts-law' ) ],
+            [ 'name' => 'Nabila Cyzarine', 'photo' => fts_asset( '/images/team/nabila.jpg' ), 'role' => __( 'Public Relations', 'fts-law' ) ],
+            [ 'name' => 'Ali Ridho Behesyti, S.Kom', 'photo' => fts_asset( '/images/team/aliridho.jpg' ), 'role' => __( 'Graphic Designer', 'fts-law' ) ],
         ],
     ];
 }
@@ -683,8 +683,7 @@ function fts_team_cards( array $members ) : void {
         if ( ! empty( $m['photo'] ) ) {
             echo '<img src="' . esc_url( $m['photo'] ) . '" alt="" loading="lazy" />';
         } else {
-            $ini = ! empty( $m['initials'] ) ? $m['initials'] : fts_team_initials( $m['name'] );
-            echo '<span>' . esc_html( $ini ) . '</span>';
+            echo '<span>' . esc_html( fts_team_initials( $m['name'] ) ) . '</span>';
         }
         echo '</div>';
         echo '<h3 class="team-card__name">' . esc_html( $m['name'] ) . '</h3>';
