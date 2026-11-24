@@ -1,6 +1,6 @@
 <?php
 /**
- * FTS Law – Foreign Legal & Visa Support
+ * Okelegal Law Office – WordPress theme (fts-law)
  * Theme Functions
  *
  * @package fts-law
@@ -194,30 +194,9 @@ class FTS_Walker_Nav extends Walker_Nav_Menu {
  */
 function fts_law_fallback_nav() {
     echo '<a href="' . esc_url( home_url( '/' ) ) . '">' . esc_html__( 'Home', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'lawyer' ) ) . '">' . esc_html__( 'Lawyer', 'fts-law' ) . '</a>';
+    echo '<a href="' . esc_url( fts_page_url( 'lawyer' ) ) . '">' . esc_html__( 'Our Team', 'fts-law' ) . '</a>';
     echo '<a href="' . esc_url( fts_page_url( 'services' ) ) . '">' . esc_html__( 'Legal Services', 'fts-law' ) . '</a>';
 
-    // Visa dropdown
-    echo '<div class="nav-dropdown">';
-    echo '<button class="nav-dropdown-toggle" type="button" aria-expanded="false">' . esc_html__( 'Visa & Immigration', 'fts-law' ) . '</button>';
-    echo '<div class="nav-dropdown-menu">';
-    echo '<a href="' . esc_url( fts_page_url( 'visa' ) ) . '">' . esc_html__( 'Visa Overview', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'kitas' ) ) . '">' . esc_html__( 'KITAS Visa', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'kitap' ) ) . '">' . esc_html__( 'KITAP Visa', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'investor-visa' ) ) . '">' . esc_html__( 'Investor Visa', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'visa-extension' ) ) . '">' . esc_html__( 'Visa Extension', 'fts-law' ) . '</a>';
-    echo '</div></div>';
-
-    // Company dropdown
-    echo '<div class="nav-dropdown">';
-    echo '<button class="nav-dropdown-toggle" type="button" aria-expanded="false">' . esc_html__( 'Company Setup', 'fts-law' ) . '</button>';
-    echo '<div class="nav-dropdown-menu">';
-    echo '<a href="' . esc_url( fts_page_url( 'company-setup' ) ) . '">' . esc_html__( 'Overview', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'pt-pma' ) ) . '">' . esc_html__( 'PT PMA Setup', 'fts-law' ) . '</a>';
-    echo '<a href="' . esc_url( fts_page_url( 'foreign-investment' ) ) . '">' . esc_html__( 'Foreign Investment', 'fts-law' ) . '</a>';
-    echo '</div></div>';
-
-    echo '<a href="' . esc_url( fts_page_url( 'guide' ) ) . '">' . esc_html__( 'Free Legal Guide', 'fts-law' ) . '</a>';
     echo '<a href="' . esc_url( fts_blog_url() ) . '">' . esc_html__( 'Blog', 'fts-law' ) . '</a>';
     echo '<a href="' . esc_url( fts_page_url( 'consultation' ) ) . '">' . esc_html__( 'Consultation', 'fts-law' ) . '</a>';
     echo '<a href="' . esc_url( fts_page_url( 'contact' ) ) . '">' . esc_html__( 'Contact', 'fts-law' ) . '</a>';
@@ -227,11 +206,9 @@ function fts_law_fallback_nav() {
 // ─── HELPER: FALLBACK FOOTER NAV ──────────────────────────────────────────────
 function fts_law_footer_fallback_nav() {
     $links = [
-        'About Lawyer'    => 'lawyer',
-        'Legal Services'  => 'services',
-        'Visa Services'   => 'visa',
-        'Business Setup'  => 'company-setup',
-        'Legal Guide'     => 'guide',
+        'Our Team'        => 'lawyer',
+        'Services'        => 'services',
+        'Consultation'    => 'consultation',
         'Blog'            => 'blog',
         'Contact'         => 'contact',
         'Privacy Policy'  => 'privacy-policy',
@@ -625,6 +602,76 @@ function fts_consult_btn( $label = 'Book Consultation', $extra_class = '' ) {
 }
 
 
+// ─── TEAM DATA (Okelegal Law Office company profile) ──────────────────────────
+/**
+ * Team members grouped for the Home preview and the Our Team page.
+ * Source: Okelegal company profile, "Our Team" slides. No photos bundled yet:
+ * cards fall back to initials unless a 'photo' URL is given.
+ */
+function fts_team_groups() : array {
+    return [
+        'founder' => [
+            [ 'name' => 'Syarif Anis, S.H.', 'role' => __( 'CEO / Founder', 'fts-law' ),
+              'bio'  => __( 'Guides the whole team to work professionally and innovatively, and to maximise each member\'s role at PT. Okelegal Law Office.', 'fts-law' ),
+              'photo' => 'https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg' ],
+        ],
+        'lawyers' => [
+            [ 'name' => 'Michael M Luawarman, S.H.', 'role' => __( 'Advocate / Lawyer', 'fts-law' ),
+              'bio'  => __( 'Works independently to represent Okelegal clients in all areas of criminal and civil law.', 'fts-law' ) ],
+            [ 'name' => 'Isvan Diary, S.H.', 'role' => __( 'Lawyer', 'fts-law' ),
+              'bio'  => __( 'Works independently to represent clients in all areas of law, and is ready to serve as legal consultant to large companies through Legal Retainer services.', 'fts-law' ) ],
+        ],
+        'management' => [
+            [ 'name' => 'Radit, H', 'role' => __( 'CTO (Chief Technology Officer)', 'fts-law' ),
+              'bio'  => __( 'Decides on the firm\'s technology infrastructure and keeps technology strategy aligned with the firm\'s goals.', 'fts-law' ) ],
+            [ 'name' => 'Ibnu Kaban, S.H.', 'role' => __( 'Advisor', 'fts-law' ),
+              'bio'  => __( 'Gives input, advice, and recommendations so Okelegal makes the best decisions, and advises the company director.', 'fts-law' ) ],
+        ],
+        'staff' => [
+            [ 'name' => 'Saffina Tussalama', 'role' => __( 'Operational Manager', 'fts-law' ) ],
+            [ 'name' => 'Zulkiply, Sst, Par', 'role' => __( 'Business Development Manager', 'fts-law' ) ],
+            [ 'name' => 'Milda Nurmalia G, S.Pd', 'role' => __( 'Finance Manager', 'fts-law' ) ],
+            [ 'name' => 'Nabila Cyzarine', 'role' => __( 'Public Relations', 'fts-law' ) ],
+            [ 'name' => 'Ali Ridho Behesyti, S.Kom', 'role' => __( 'Graphic Designer', 'fts-law' ) ],
+        ],
+    ];
+}
+
+function fts_team_initials( string $name ) : string {
+    $parts = preg_split( '/[\s,]+/', trim( $name ) );
+    $out = '';
+    foreach ( $parts as $w ) {
+        if ( '' !== $w && ctype_upper( mb_substr( $w, 0, 1 ) ) ) {
+            $out .= mb_substr( $w, 0, 1 );
+        }
+        if ( mb_strlen( $out ) >= 2 ) { break; }
+    }
+    return $out;
+}
+
+function fts_team_cards( array $members ) : void {
+    echo '<div class="team-grid">';
+    foreach ( $members as $m ) {
+        echo '<article class="team-card">';
+        echo '<div class="team-card__avatar" aria-hidden="true">';
+        if ( ! empty( $m['photo'] ) ) {
+            echo '<img src="' . esc_url( $m['photo'] ) . '" alt="" loading="lazy" />';
+        } else {
+            echo '<span>' . esc_html( fts_team_initials( $m['name'] ) ) . '</span>';
+        }
+        echo '</div>';
+        echo '<h3 class="team-card__name">' . esc_html( $m['name'] ) . '</h3>';
+        echo '<p class="team-card__role">' . esc_html( $m['role'] ) . '</p>';
+        if ( ! empty( $m['bio'] ) ) {
+            echo '<p class="team-card__bio">' . esc_html( $m['bio'] ) . '</p>';
+        }
+        echo '</article>';
+    }
+    echo '</div>';
+}
+
+
+
 // ─── HELPER: CTA SECTION ──────────────────────────────────────────────────────
 /**
  * Outputs the standard consultation CTA band used on all inner pages.
@@ -633,8 +680,8 @@ function fts_consult_btn( $label = 'Book Consultation', $extra_class = '' ) {
  * @param string $desc   Supporting paragraph text.
  */
 function fts_cta_section(
-    string $title = 'Need Legal Advice in Indonesia?',
-    string $desc  = 'Contact our legal team for professional assistance with visas, company setup, foreign investment, and business legal matters.'
+    string $title = 'Need Legal or Business Advice?',
+    string $desc  = 'Contact the Okelegal team for company establishment, licensing, legal consultation, intellectual property, certification, and business consulting. Free initial consultation.'
 ) {
     ?>
     <section class="section-cta">

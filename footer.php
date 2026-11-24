@@ -27,11 +27,11 @@
             <?php endif; ?>
           </div>
           <p class="footer-about">
-            <?php _e('Professional legal services for foreign investors, entrepreneurs, and expatriates in Indonesia. Specialising in visa &amp; immigration, PT&nbsp;PMA company setup, foreign investment law, and business legal support.', 'fts-law'); ?>
+            <?php _e('PT. Okelegal Law Office provides legal and business consulting since 2013: company establishment and licensing, legal consultation, notary / PPAT, intellectual property, certification, and virtual office.', 'fts-law'); ?>
           </p>
           <div class="footer-badges">
-            <span class="footer-badge">🛡 <?php _e('Licensed Indonesian Lawyer', 'fts-law'); ?></span>
-            <span class="footer-badge">🌍 <?php _e('Foreign Investor Support', 'fts-law'); ?></span>
+            <span class="footer-badge">🛡 <?php _e('Serving Clients Since 2013', 'fts-law'); ?></span>
+            <span class="footer-badge">⚖️ <?php _e('Free Consultation', 'fts-law'); ?></span>
           </div>
         </div><!-- /Col 1 -->
 
@@ -115,8 +115,8 @@
       <?php
       // Keep quick-link labels discoverable by Loco in this template file.
       if ( false ) {
-          _e( 'About Lawyer', 'fts-law' );
-          _e( 'Visa Services', 'fts-law' );
+          _e( 'Our Team', 'fts-law' );
+          _e( 'Services', 'fts-law' );
           _e( 'Legal Guide', 'fts-law' );
       }
       ?>

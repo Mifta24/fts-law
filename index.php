@@ -16,7 +16,7 @@ get_header();
   <?php fts_page_hero(
       __('Legal Insights', 'fts-law'),
       is_home() ? __('Latest Articles', 'fts-law') : get_the_archive_title(),
-      is_home() ? __('Stay informed with the latest legal updates for foreign investors in Indonesia.', 'fts-law')
+      is_home() ? __('Stay informed with the latest legal and business updates from Okelegal.', 'fts-law')
                 : get_the_archive_description()
   ); ?>
 
@@ -48,7 +48,7 @@ get_header();
 
         <div class="no-results">
           <h2><?php _e('No articles found', 'fts-law'); ?></h2>
-          <p><?php _e('Check back soon for legal updates, guides, and insights for foreign investors in Indonesia.', 'fts-law'); ?></p>
+          <p><?php _e('Check back soon for legal updates, guides, and insights from Okelegal.', 'fts-law'); ?></p>
           <a class="btn btn-gold" href="<?php echo esc_url( home_url( '/' ) ); ?>">
             <?php _e('Back to Home', 'fts-law'); ?>
           </a>

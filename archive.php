@@ -17,7 +17,7 @@ get_header();
 // ── Determine page context ─────────────────────────────────────────────────
 if ( is_home() && ! is_front_page() ) {
     $archive_title    = __('Legal Blog & Insights', 'fts-law');
-    $archive_subtitle = __('Practical legal guides, visa updates, and business law articles for foreign investors and expatriates in Indonesia.', 'fts-law');
+    $archive_subtitle = __('Practical legal guides and business law articles from the Okelegal team.', 'fts-law');
     $archive_eyebrow  = __('Blog', 'fts-law');
 } elseif ( is_category() ) {
     $archive_title    = single_cat_title( '', false );
@@ -175,7 +175,7 @@ if ( is_home() && ! is_front_page() ) {
           <div class="no-results__icon" aria-hidden="true">📄</div>
           <h2><?php _e('No Articles Found', 'fts-law'); ?></h2>
           <p>
-            <?php _e('We haven\'t published any articles yet in this section. Check back soon for legal updates, visa guides, and business law insights for foreign investors in Indonesia.', 'fts-law'); ?>
+            <?php _e('We haven\'t published any articles yet in this section. Check back soon for legal updates and business law insights for foreign investors in Indonesia.', 'fts-law'); ?>
           </p>
           <div class="no-results__actions">
             <a class="btn btn-gold" href="<?php echo esc_url( fts_blog_url() ); ?>">
@@ -201,36 +201,25 @@ if ( is_home() && ! is_front_page() ) {
       <h3 class="blog-topics-strip__heading"><?php _e('Browse by Legal Topic', 'fts-law'); ?></h3>
       <div class="blog-topic-tiles">
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">
-          <span class="blog-topic-tile__icon" aria-hidden="true">📋</span>
-          <span><?php _e('Visa &amp; Immigration', 'fts-law'); ?></span>
-        </a>
-
-        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">🏢</span>
-          <span><?php _e('Company Setup', 'fts-law'); ?></span>
+          <span><?php _e('Company Legality', 'fts-law'); ?></span>
         </a>
 
-        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">
-          <span class="blog-topic-tile__icon" aria-hidden="true">💹</span>
-          <span><?php _e('Foreign Investment', 'fts-law'); ?></span>
-        </a>
-
-        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">
-          <span class="blog-topic-tile__icon" aria-hidden="true">📝</span>
-          <span><?php _e('Contract Drafting', 'fts-law'); ?></span>
-        </a>
-
-        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
-          <span class="blog-topic-tile__icon" aria-hidden="true">⚠️</span>
-          <span><?php _e('Legal Risk', 'fts-law'); ?></span>
-        </a>
-
-        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'business-legal' ) ); ?>">
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
           <span class="blog-topic-tile__icon" aria-hidden="true">⚖️</span>
-          <span><?php _e('Business Legal', 'fts-law'); ?></span>
+          <span><?php _e('Legal Consultation', 'fts-law'); ?></span>
         </a>
 
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
+          <span class="blog-topic-tile__icon" aria-hidden="true">©️</span>
+          <span><?php _e('Intellectual Property', 'fts-law'); ?></span>
+        </a>
+
+        <a class="blog-topic-tile" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
+          <span class="blog-topic-tile__icon" aria-hidden="true">📈</span>
+          <span><?php _e('Business Consulting', 'fts-law'); ?></span>
+        </a>
       </div>
     </div>
   </section>
@@ -242,7 +231,7 @@ if ( is_home() && ! is_front_page() ) {
   <?php
   fts_cta_section(
       __('Have a Legal Question?', 'fts-law'),
-      __('Our legal team is available for consultations on visa matters, company setup, foreign investment law, and business legal support in Indonesia.', 'fts-law')
+      __('Our team is available for free consultations on company establishment, licensing, legal matters, intellectual property, and business consulting.', 'fts-law')
   );
   ?>
 

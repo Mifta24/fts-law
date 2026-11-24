@@ -18,7 +18,7 @@ get_header(); ?>
       <span class="eyebrow"><?php _e('Get in Touch', 'fts-law'); ?></span>
       <h1><?php _e('Contact Our Office', 'fts-law'); ?></h1>
       <p class="page-hero__subtitle">
-        <?php _e('Reach out to our legal team for assistance with visa &amp; immigration, company setup, foreign investment, or any other legal matter in Indonesia. We respond within 1 business day.', 'fts-law'); ?>
+        <?php _e('Reach out to the Okelegal team for company establishment, licensing, legal consultation, intellectual property, or business consulting. Free initial consultation.', 'fts-law'); ?>
       </p>
     </div>
   </section>
@@ -115,7 +115,7 @@ get_header(); ?>
                 type="text"
                 id="contact_company"
                 name="company"
-                placeholder="<?php esc_attr_e('Your company or PT PMA name', 'fts-law'); ?>"
+                placeholder="<?php esc_attr_e('Your company name', 'fts-law'); ?>"
                 autocomplete="organization"
               />
             </div>
@@ -125,25 +125,30 @@ get_header(); ?>
               <label for="contact_matter"><?php _e('Legal Matter', 'fts-law'); ?></label>
               <select id="contact_matter" name="legal_matter">
                 <option value="" disabled selected><?php _e('What can we help you with?', 'fts-law'); ?></option>
-                <optgroup label="<?php esc_attr_e('Visa &amp; Immigration', 'fts-law'); ?>">
-                  <option><?php _e('KITAS – Temporary Stay Permit', 'fts-law'); ?></option>
-                  <option><?php _e('KITAP – Permanent Stay Permit', 'fts-law'); ?></option>
-                  <option><?php _e('Investor KITAS', 'fts-law'); ?></option>
-                  <option><?php _e('Visa Extension / Renewal', 'fts-law'); ?></option>
-                  <option><?php _e('Overstay – Urgent Assistance', 'fts-law'); ?></option>
-                </optgroup>
-                <optgroup label="<?php esc_attr_e('Company &amp; Business', 'fts-law'); ?>">
-                  <option><?php _e('PT PMA Company Setup', 'fts-law'); ?></option>
-                  <option><?php _e('Company Structure / Advice', 'fts-law'); ?></option>
-                  <option><?php _e('Business Licensing', 'fts-law'); ?></option>
-                  <option><?php _e('Foreign Investment Compliance', 'fts-law'); ?></option>
+                <optgroup label="<?php esc_attr_e('Company Legality &amp; Licensing', 'fts-law'); ?>">
+                  <option><?php _e('PT / CV / UMKM Establishment', 'fts-law'); ?></option>
+                  <option><?php _e('Cooperative / Foundation', 'fts-law'); ?></option>
+                  <option><?php _e('PMA (Foreign Investment) Company', 'fts-law'); ?></option>
+                  <option><?php _e('Business Licensing (NIB / OSS)', 'fts-law'); ?></option>
                 </optgroup>
                 <optgroup label="<?php esc_attr_e('Legal Services', 'fts-law'); ?>">
-                  <option><?php _e('Contract Drafting', 'fts-law'); ?></option>
-                  <option><?php _e('Contract Review', 'fts-law'); ?></option>
-                  <option><?php _e('Shareholder Agreement', 'fts-law'); ?></option>
-                  <option><?php _e('Legal Risk Review', 'fts-law'); ?></option>
-                  <option><?php _e('Business Legal Advisory', 'fts-law'); ?></option>
+                  <option><?php _e('Corporate Lawyer', 'fts-law'); ?></option>
+                  <option><?php _e('Dispute / Litigation / Arbitration', 'fts-law'); ?></option>
+                  <option><?php _e('Family Law', 'fts-law'); ?></option>
+                  <option><?php _e('Notary / PPAT Deed', 'fts-law'); ?></option>
+                </optgroup>
+                <optgroup label="<?php esc_attr_e('Intellectual Property (HKI)', 'fts-law'); ?>">
+                  <option><?php _e('Trademark', 'fts-law'); ?></option>
+                  <option><?php _e('Copyright', 'fts-law'); ?></option>
+                  <option><?php _e('Patent', 'fts-law'); ?></option>
+                  <option><?php _e('Industrial Design', 'fts-law'); ?></option>
+                </optgroup>
+                <optgroup label="<?php esc_attr_e('Business Consulting', 'fts-law'); ?>">
+                  <option><?php _e('Startup &amp; Franchise Consulting', 'fts-law'); ?></option>
+                  <option><?php _e('Securities / Crypto / Bappebti Licensing', 'fts-law'); ?></option>
+                  <option><?php _e('Tax Consulting', 'fts-law'); ?></option>
+                  <option><?php _e('ISO / SNI / Halal MUI Certification', 'fts-law'); ?></option>
+                  <option><?php _e('Virtual Office', 'fts-law'); ?></option>
                 </optgroup>
                 <option><?php _e('General Inquiry', 'fts-law'); ?></option>
                 <option><?php _e('Other', 'fts-law'); ?></option>
@@ -359,39 +364,35 @@ get_header(); ?>
       </p>
 
       <div class="grid-3" style="max-width:860px;margin:0 auto;">
-
         <div class="contact-person-card">
-          <div class="contact-person-card__avatar" aria-label="<?php esc_attr_e('Syarif', 'fts-law'); ?>">
+          <div class="contact-person-card__avatar">
             <img
               src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg"
-              alt="<?php esc_attr_e('Syarif – Licensed Indonesian Lawyer', 'fts-law'); ?>"
+              alt="<?php esc_attr_e('Syarif Anis, S.H.', 'fts-law'); ?>"
               loading="lazy"
             />
           </div>
           <div class="contact-person-card__info">
-            <strong class="contact-person-card__name"><?php _e('Syarif', 'fts-law'); ?></strong>
-            <span class="contact-person-card__role"><?php _e('Licensed Indonesian Lawyer', 'fts-law'); ?></span>
+            <strong class="contact-person-card__name"><?php _e('Syarif Anis, S.H.', 'fts-law'); ?></strong>
+            <span class="contact-person-card__role"><?php _e('CEO / Founder', 'fts-law'); ?></span>
             <p class="contact-person-card__desc">
-              <?php _e('Lead lawyer for all legal consultations — visa, company, and investment matters.', 'fts-law'); ?>
+              <?php _e('Leads the Okelegal team on legal and business consultations.', 'fts-law'); ?>
             </p>
           </div>
         </div>
-
         <div class="contact-person-card">
-          <div class="contact-person-card__avatar contact-person-card__avatar--initials" aria-label="<?php esc_attr_e('Yoshi Nakagawa', 'fts-law'); ?>">
-            <span>YN</span>
+          <div class="contact-person-card__avatar contact-person-card__avatar--initials" aria-hidden="true">
+            <span>ZK</span>
           </div>
           <div class="contact-person-card__info">
-            <strong class="contact-person-card__name"><?php _e('Yoshi Nakagawa', 'fts-law'); ?></strong>
-            <span class="contact-person-card__role"><?php _e('International Legal Consultant', 'fts-law'); ?></span>
+            <strong class="contact-person-card__name"><?php _e('Zulkiply, Sst, Par', 'fts-law'); ?></strong>
+            <span class="contact-person-card__role"><?php _e('Business Development Manager', 'fts-law'); ?></span>
             <p class="contact-person-card__desc">
-              <?php _e('International client coordinator for Japanese, Korean, and Singapore clients.', 'fts-law'); ?>
+              <?php _e('First contact for new inquiries, service packages, and partnerships.', 'fts-law'); ?>
             </p>
           </div>
         </div>
-
       </div>
-
     </div>
   </section>
 
@@ -410,18 +411,18 @@ get_header(); ?>
       <div class="grid-4">
 
         <div class="contact-tip-card">
-          <span class="contact-tip-card__icon" aria-hidden="true">🌍</span>
-          <h4><?php _e('Your Nationality', 'fts-law'); ?></h4>
+          <span class="contact-tip-card__icon" aria-hidden="true">🙋</span>
+          <h4><?php _e('Who You Are', 'fts-law'); ?></h4>
           <p>
-            <?php _e('Your country of citizenship helps us identify the correct visa type and any bilateral treaty provisions that may apply to your situation.', 'fts-law'); ?>
+            <?php _e('Your name, company or organisation, and the best way (WhatsApp or email) and time to reach you.', 'fts-law'); ?>
           </p>
         </div>
 
         <div class="contact-tip-card">
           <span class="contact-tip-card__icon" aria-hidden="true">📋</span>
-          <h4><?php _e('Your Visa / Permit Status', 'fts-law'); ?></h4>
+          <h4><?php _e('Service You Need', 'fts-law'); ?></h4>
           <p>
-            <?php _e('Whether you are currently in Indonesia, abroad, or planning to visit — and what type of visa or permit you currently hold (if any).', 'fts-law'); ?>
+            <?php _e('Company establishment, licensing, legal consultation, notary, trademark / IP, certification, or business consulting.', 'fts-law'); ?>
           </p>
         </div>
 
@@ -429,7 +430,7 @@ get_header(); ?>
           <span class="contact-tip-card__icon" aria-hidden="true">🏢</span>
           <h4><?php _e('Your Business Situation', 'fts-law'); ?></h4>
           <p>
-            <?php _e('If your inquiry relates to a company — whether you have an existing PT PMA, are planning to set one up, or are reviewing an existing structure.', 'fts-law'); ?>
+            <?php _e('If it relates to a company — whether you are planning to establish one or already have an existing PT, CV, or other entity.', 'fts-law'); ?>
           </p>
         </div>
 
@@ -437,7 +438,7 @@ get_header(); ?>
           <span class="contact-tip-card__icon" aria-hidden="true">⏰</span>
           <h4><?php _e('Your Timeline', 'fts-law'); ?></h4>
           <p>
-            <?php _e('Any deadlines, urgency, or time constraints — for example, a visa expiry date, pending contract signing, or business registration deadline.', 'fts-law'); ?>
+            <?php _e('Any deadlines or urgency — for example, a contract signing, a licensing deadline, or a planned business launch.', 'fts-law'); ?>
           </p>
         </div>
 
@@ -459,69 +460,44 @@ get_header(); ?>
 
       <h2 class="section-title" style="text-align:center;"><?php _e('Not Sure Where to Start?', 'fts-law'); ?></h2>
       <p class="section-subtitle" style="text-align:center;margin-left:auto;margin-right:auto;">
-        <?php _e('Browse our service pages to understand what we can help with — then contact us when you\'re ready.', 'fts-law'); ?>
+        <?php _e('Browse our services to see what we can help with — then contact us when you\'re ready.', 'fts-law'); ?>
       </p>
 
       <div class="quick-links-grid">
 
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">📋</span>
-          <span><?php _e('Visa &amp; Immigration', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'kitas' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">🪪</span>
-          <span><?php _e('KITAS', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'kitap' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">🏠</span>
-          <span><?php _e('KITAP', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">💼</span>
-          <span><?php _e('Investor Visa', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'visa-extension' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">🗓</span>
-          <span><?php _e('Visa Extension', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">🏢</span>
-          <span><?php _e('Company Setup', 'fts-law'); ?></span>
+          <span><?php _e('Company Legality &amp; Licensing', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
+          <span class="quick-link-item__icon" aria-hidden="true">⚖️</span>
+          <span><?php _e('Legal Consultation', 'fts-law'); ?></span>
+        </a>
+
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">📜</span>
-          <span><?php _e('PT PMA Setup', 'fts-law'); ?></span>
+          <span><?php _e('Notary / PPAT', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
+          <span class="quick-link-item__icon" aria-hidden="true">©️</span>
+          <span><?php _e('Intellectual Property (HKI)', 'fts-law'); ?></span>
+        </a>
+
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
           <span class="quick-link-item__icon" aria-hidden="true">📈</span>
-          <span><?php _e('Foreign Investment Law', 'fts-law'); ?></span>
+          <span><?php _e('Business Consulting', 'fts-law'); ?></span>
         </a>
 
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">✍️</span>
-          <span><?php _e('Contract Drafting', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">🔍</span>
-          <span><?php _e('Legal Risk Review', 'fts-law'); ?></span>
-        </a>
-
-        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">📘</span>
-          <span><?php _e('Free Legal Guide', 'fts-law'); ?></span>
+        <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">
+          <span class="quick-link-item__icon" aria-hidden="true">🏬</span>
+          <span><?php _e('Virtual Office', 'fts-law'); ?></span>
         </a>
 
         <a class="quick-link-item" href="<?php echo esc_url( fts_page_url( 'lawyer' ) ); ?>">
-          <span class="quick-link-item__icon" aria-hidden="true">⚖️</span>
-          <span><?php _e('About Our Lawyer', 'fts-law'); ?></span>
+          <span class="quick-link-item__icon" aria-hidden="true">👥</span>
+          <span><?php _e('Our Team', 'fts-law'); ?></span>
         </a>
 
       </div>

@@ -193,7 +193,7 @@ get_header();
             <div class="article-inline-cta__actions">
               <a class="btn btn-gold"
                  href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
-                <?php _e('Book Consultation', 'fts-law'); ?>
+                <?php _e('Free Consultation', 'fts-law'); ?>
               </a>
               <a class="btn btn-green"
                  href="<?php echo esc_url( fts_wa_url() ); ?>"
@@ -220,7 +220,7 @@ get_header();
               <p class="article-author-box__bio"><?php echo esc_html( $bio ); ?></p>
             <?php else : ?>
               <p class="article-author-box__bio">
-                <?php _e('Licensed Indonesian lawyer specialising in immigration law, corporate law, and foreign investment matters. Serving foreign nationals and international businesses in Indonesia.', 'fts-law'); ?>
+                <?php _e('The Okelegal Law Office team: legal and business consulting for companies and individuals since 2013.', 'fts-law'); ?>
               </p>
             <?php endif; ?>
           </div>
@@ -262,13 +262,13 @@ get_header();
         <div class="sidebar-consult-card">
           <div class="sidebar-consult-card__inner">
             <span class="sidebar-consult-card__eyebrow"><?php _e('Need Legal Advice?', 'fts-law'); ?></span>
-            <h3 class="sidebar-consult-card__title"><?php _e('Speak with Our Lawyer', 'fts-law'); ?></h3>
+            <h3 class="sidebar-consult-card__title"><?php _e('Speak with Our Team', 'fts-law'); ?></h3>
             <p class="sidebar-consult-card__desc">
-              <?php _e('Get direct legal advice on visa, company setup, or foreign investment matters in Indonesia.', 'fts-law'); ?>
+              <?php _e('Get free advice on company establishment, licensing, legal, or business matters.', 'fts-law'); ?>
             </p>
             <a class="btn btn-gold sidebar-consult-card__cta"
               href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>">
-              <?php _e('Book Consultation', 'fts-law'); ?>
+              <?php _e('Free Consultation', 'fts-law'); ?>
             </a>
             <a class="btn btn-green sidebar-consult-card__wa"
                href="<?php echo esc_url( fts_wa_url() ); ?>"
@@ -281,32 +281,18 @@ get_header();
 
         <!-- Related Services Links -->
         <div class="sidebar-services-card">
-          <h4 class="sidebar-card__title"><?php _e('Our Legal Services', 'fts-law'); ?></h4>
+          <h4 class="sidebar-card__title"><?php _e('Our Services', 'fts-law'); ?></h4>
           <nav class="sidebar-services-list" aria-label="<?php esc_attr_e('Related services', 'fts-law'); ?>">
-            <a href="<?php echo esc_url( fts_page_url( 'visa' ) ); ?>">📋 <?php _e('Visa &amp; Immigration', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'kitas' ) ); ?>">🪪 <?php _e('KITAS', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'kitap' ) ); ?>">🏠 <?php _e('KITAP', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'investor-visa' ) ); ?>">💼 <?php _e('Investor Visa', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'company-setup' ) ); ?>">🏢 <?php _e('Company Setup', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'pt-pma' ) ); ?>">📜 <?php _e('PT PMA', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'foreign-investment' ) ); ?>">💹 <?php _e('Foreign Investment', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'contract-drafting' ) ); ?>">✍️ <?php _e('Contract Drafting', 'fts-law'); ?></a>
-            <a href="<?php echo esc_url( fts_page_url( 'legal-risk' ) ); ?>">🔍 <?php _e('Legal Risk', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">🏢 <?php _e('Company Legality &amp; Licensing', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">⚖️ <?php _e('Legal Consultation', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">📜 <?php _e('Notary / PPAT', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">©️ <?php _e('Intellectual Property', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">📈 <?php _e('Business Consulting', 'fts-law'); ?></a>
+            <a href="<?php echo esc_url( fts_page_url( 'services' ) ); ?>">🏬 <?php _e('Virtual Office', 'fts-law'); ?></a>
           </nav>
         </div>
 
-        <!-- Free Guide Promo -->
-        <div class="sidebar-guide-card">
-          <span class="sidebar-guide-card__label"><?php _e('Free Download', 'fts-law'); ?></span>
-          <h4 class="sidebar-guide-card__title"><?php _e('Free Legal Guide<br>for Foreign Investors', 'fts-law'); ?></h4>
-          <p class="sidebar-guide-card__desc">
-            <?php _e('Download our guide covering foreign ownership rules, PT PMA structure, and common legal mistakes.', 'fts-law'); ?>
-          </p>
-          <a class="btn btn-gold"
-             href="<?php echo esc_url( fts_page_url( 'guide' ) ); ?>">
-            <?php _e('Get Free Guide &rarr;', 'fts-law'); ?>
-          </a>
-        </div>
+        
 
       </aside><!-- /.article-sidebar -->
 
@@ -362,8 +348,8 @@ get_header();
   ══════════════════════════════════════════════════════════════════ -->
   <?php
   fts_cta_section(
-      __('Have a Legal Question About Indonesia?', 'fts-law'),
-      __('Our licensed lawyer is available for consultations on visa matters, company setup, foreign investment law, and business legal support.', 'fts-law')
+      __('Have a Legal or Business Question?', 'fts-law'),
+      __('Our team is available for free consultations on company establishment, licensing, legal matters, intellectual property, and business consulting.', 'fts-law')
   );
   ?>
 

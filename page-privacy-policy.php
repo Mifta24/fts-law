@@ -118,7 +118,7 @@ get_header(); ?>
                 <span class="privacy-use-item__icon" aria-hidden="true">⚖️</span>
                 <div>
                   <strong><?php _e('Providing Legal Services', 'fts-law'); ?></strong>
-                  <p><?php _e('To provide the legal services you have engaged us for, including visa applications, company registrations, contract drafting, and legal advisory.', 'fts-law'); ?></p>
+                  <p><?php _e('To provide the legal services you have engaged us for, including company establishment, licensing, notary deeds, trademark registration, and legal advisory.', 'fts-law'); ?></p>
                 </div>
               </div>
 
@@ -167,7 +167,7 @@ get_header(); ?>
 
             <h3><?php _e('4.1 With Government Agencies (For Legal Service Purposes)', 'fts-law'); ?></h3>
             <p>
-              <?php _e('When providing legal services such as visa applications, company registration, or business licensing, we are required to submit your personal information to relevant Indonesian government agencies, including:', 'fts-law'); ?>
+              <?php _e('When providing legal services such as company registration, business licensing, or intellectual property filing, we are required to submit your personal information to relevant Indonesian government agencies, including:', 'fts-law'); ?>
             </p>
             <ul class="privacy-list">
               <li><?php _e('Directorate General of Immigration (Imigrasi)', 'fts-law'); ?></li>
@@ -211,7 +211,7 @@ get_header(); ?>
               <div class="confidentiality-band__content">
                 <h3><?php _e('Attorney-Client Privilege', 'fts-law'); ?></h3>
                 <p>
-                  <?php _e('All information, documents, and communications shared with our licensed Indonesian lawyer in the context of seeking legal advice or engaging our legal services are protected by <strong>attorney-client privilege</strong> (kerahasiaan advokat) under:', 'fts-law'); ?>
+                  <?php _e('All information, documents, and communications shared with our lawyers in the context of seeking legal advice or engaging our legal services are protected by <strong>attorney-client privilege</strong> (kerahasiaan advokat) under:', 'fts-law'); ?>
                 </p>
                 <ul class="privacy-list">
                   <li><?php _e('Law No. 18 of 2003 on Advocates (UU Advokat)', 'fts-law'); ?></li>
