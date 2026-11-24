@@ -15,7 +15,7 @@ define( 'FTS_EMAIL',      'okelegalid@gmail.com' );
 define( 'FTS_ADDRESS',    'Pasteur Gateway, Jl. Gn. Batu No.203A, Sukaraja, Kec. Cicendo, Kota Bandung, Jawa Barat 40175' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
 define( 'FTS_BRAND',      'OKELEGAL LAW OFFICE' );
-define( 'FTS_THEME_VER',  '1.0.5' );
+define( 'FTS_THEME_VER', '1.1.0' );
 
 
 // ─── THEME SETUP ──────────────────────────────────────────────────────────────
@@ -75,7 +75,7 @@ function fts_law_enqueue_assets() {
         'fts-law-main',
         get_template_directory_uri() . '/css/style.css',
         [],
-        FTS_THEME_VER
+        FTS_THEME_VER . '.' . (int) @filemtime( get_template_directory() . '/css/style.css' )
     );
 
     // Google Fonts – Inter (professional, modern)
@@ -91,7 +91,7 @@ function fts_law_enqueue_assets() {
         'fts-law-main',
         get_template_directory_uri() . '/js/script.js',
         [],
-        FTS_THEME_VER,
+        FTS_THEME_VER . '.' . (int) @filemtime( get_template_directory() . '/js/script.js' ),
         true   // load in footer
     );
 
