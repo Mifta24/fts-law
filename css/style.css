@@ -5270,14 +5270,14 @@ textarea {
 
 
 /* Slide photos from the company profile (Services banners, Home strip) */
-.service-banner { margin: 0 0 28px; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
-.service-banner img { display: block; width: 100%; height: 190px; object-fit: cover; object-position: center; }
-.photo-strip { padding: 36px 0 8px; }
+.service-banner { max-width: 840px; margin: 0 auto 32px; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
+.service-banner img { display: block; width: 100%; height: auto; aspect-ratio: 836 / 286; object-fit: cover; object-position: center 30%; }
+.photo-strip { padding: 44px 0 52px; }
 .photo-strip__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .photo-strip__grid figure { margin: 0; border-radius: var(--radius-sm); overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
 .photo-strip__grid img { display: block; width: 100%; height: 220px; object-fit: cover; }
 @media (max-width: 760px) {
   .photo-strip__grid { grid-template-columns: 1fr; }
   .photo-strip__grid img { height: 180px; }
-  .service-banner img { height: 130px; }
+  .service-banner img { aspect-ratio: 16 / 7; }
 }
