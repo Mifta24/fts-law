@@ -1022,7 +1022,7 @@ function fts_cf7_form_map() : array {
         'contact' => [
             'en' => fts_get_option( 'fts_cf7_contact_form_id', '618', false ),
             'zh' => '597', // Chinese Simplified — fill after creating form
-            'ko' => '589', // Korean
+            'ko' => '598', // Korean
             'de' => '620', // German
             'fr' => '621', // French
             'id' => '619', // Indonesian
