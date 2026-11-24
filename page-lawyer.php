@@ -36,7 +36,7 @@ $fts_groups = fts_team_groups();
 
         <div class="profile-photo">
           <img
-            src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
+            src="<?php echo esc_url( get_template_directory_uri() . '/images/team/syarif.jpg' ); ?>"
             alt="<?php esc_attr_e('Syarif Anis, S.H. – CEO / Founder', 'fts-law'); ?>"
             loading="eager" />
         </div>

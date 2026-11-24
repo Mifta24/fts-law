@@ -5250,3 +5250,20 @@ textarea {
     color: var(--muted);
     line-height: 1.55;
 }
+
+
+/* Office card now shows the Okelegal logo instead of a stock render */
+.office-photo-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+}
+.office-photo-card img.office-photo-card__logo {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+    padding: 24px;
+}

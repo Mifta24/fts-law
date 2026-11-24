@@ -42,7 +42,7 @@ get_header();
       <!-- Right: Founder Card -->
       <div class="hero-card" aria-label="Founder Profile Card">
         <img
-          src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
+          src="<?php echo esc_url( get_template_directory_uri() . '/images/team/syarif.jpg' ); ?>"
           alt="<?php esc_attr_e('Syarif Anis, S.H. – CEO / Founder', 'fts-law'); ?>"
           loading="eager"
           width="280"
@@ -90,7 +90,7 @@ get_header();
 
       <div class="profile-photo">
         <img
-          src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/IMG_20260331_145741.jpg"
+          src="<?php echo esc_url( get_template_directory_uri() . '/images/team/syarif.jpg' ); ?>"
           alt="<?php esc_attr_e('Syarif Anis, S.H. – CEO / Founder', 'fts-law'); ?>"
           loading="lazy" />
       </div>
@@ -561,8 +561,9 @@ get_header();
 
         <div class="office-photo-card">
           <img
-            src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
-            alt="<?php esc_attr_e('Okelegal Law Office – Bandung', 'fts-law'); ?>"
+            class="office-photo-card__logo"
+            src="<?php echo esc_url( get_template_directory_uri() . '/images/okelegal-logo.png' ); ?>"
+            alt="<?php esc_attr_e('Okelegal Law Office', 'fts-law'); ?>"
             loading="lazy" />
         </div>
 

@@ -630,7 +630,7 @@ function fts_team_groups() : array {
         'founder' => [
             [ 'name' => 'Syarif Anis, S.H.', 'role' => __( 'CEO / Founder', 'fts-law' ),
               'bio'  => __( 'Guides the whole team to work professionally and innovatively, and to maximise each member\'s role at PT. Okelegal Law Office.', 'fts-law' ),
-              'photo' => 'https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg' ],
+              'photo' => get_template_directory_uri() . '/images/team/syarif.jpg' ],
         ],
         'lawyers' => [
             [ 'name' => 'Michael M Luawarman, S.H.', 'photo' => get_template_directory_uri() . '/images/team/michael.jpg', 'role' => __( 'Advocate / Lawyer', 'fts-law' ),
