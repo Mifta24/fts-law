@@ -246,6 +246,14 @@ get_header();
   <!-- ═══════════════════════════════════════════════════════════════
        BUSINESS ENTITY TYPES
   ══════════════════════════════════════════════════════════════════ -->
+  <section class="photo-strip" aria-label="<?php esc_attr_e('Our work', 'fts-law'); ?>">
+    <div class="container photo-strip__grid">
+      <figure><img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/legal-gavel-scales.jpg' ); ?>" alt="<?php esc_attr_e('Law and justice', 'fts-law'); ?>" loading="lazy" /></figure>
+      <figure><img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/contract-signing.jpg' ); ?>" alt="<?php esc_attr_e('Contract review', 'fts-law'); ?>" loading="lazy" /></figure>
+      <figure><img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/team-charts.jpg' ); ?>" alt="<?php esc_attr_e('Business analysis', 'fts-law'); ?>" loading="lazy" /></figure>
+    </div>
+  </section>
+
   <section class="section-soft section-visa-strip">
     <div class="container">
       <h2 class="section-title"><?php _e('Business Entity Establishment', 'fts-law'); ?></h2>

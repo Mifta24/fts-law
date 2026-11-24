@@ -88,6 +88,11 @@ get_header();
         </p>
       </div>
 
+      <figure class="service-banner">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/legal-gavel-scales.jpg' ); ?>"
+             alt="<?php esc_attr_e('Law and justice', 'fts-law'); ?>" loading="lazy" />
+      </figure>
+
       <div class="grid-4">
 
         <article class="card card--service-detail">
@@ -162,6 +167,11 @@ get_header();
         </p>
       </div>
 
+      <figure class="service-banner">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/legal-writing.jpg' ); ?>"
+             alt="<?php esc_attr_e('Legal consultation', 'fts-law'); ?>" loading="lazy" />
+      </figure>
+
       <div class="grid-3">
 
         <article class="card card--service-detail">
@@ -222,6 +232,11 @@ get_header();
           <?php _e('Support to grow your business to international standards in the Industry 4.0 era.', 'fts-law'); ?>
         </p>
       </div>
+
+      <figure class="service-banner">
+        <img src="<?php echo esc_url( get_template_directory_uri() . '/images/slides/business-charts.jpg' ); ?>"
+             alt="<?php esc_attr_e('Business consulting and analysis', 'fts-law'); ?>" loading="lazy" />
+      </figure>
 
       <div class="grid-3">
 
