@@ -379,13 +379,7 @@ get_header(); ?>
           </div>
         </div>
         <div class="contact-person-card">
-          <div class="contact-person-card__avatar">
-            <img
-              src="<?php echo esc_url( fts_asset( '/images/team/zulkiply.jpg' ) ); ?>"
-              alt="<?php esc_attr_e('Zulkiply, Sst, Par', 'fts-law'); ?>"
-              loading="lazy"
-            />
-          </div>
+          <div class="contact-person-card__avatar contact-person-card__avatar--initials" aria-hidden="true"><span>Z</span></div>
           <div class="contact-person-card__info">
             <strong class="contact-person-card__name"><?php _e('Zulkiply, Sst, Par', 'fts-law'); ?></strong>
             <span class="contact-person-card__role"><?php _e('Business Development Manager', 'fts-law'); ?></span>
