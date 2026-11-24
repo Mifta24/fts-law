@@ -602,6 +602,23 @@ function fts_consult_btn( $label = 'Book Consultation', $extra_class = '' ) {
 }
 
 
+// ─── RETIRED PAGES → redirect (foreign-investor / visa content removed) ───────
+add_action( 'template_redirect', function () {
+    if ( is_admin() || ! ( is_page() || is_404() ) ) { return; }
+    $retired = [
+        'visa', 'kitas', 'kitap', 'investor-visa', 'visa-extension', 'company-setup',
+        'pt-pma', 'foreign-investment', 'contract-drafting', 'legal-risk',
+        'business-legal', 'guide', 'visa-immigration',
+    ];
+    $path = trim( (string) wp_parse_url( $_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH ), '/' );
+    $last = $path === '' ? '' : basename( $path );
+    if ( in_array( $last, $retired, true ) ) {
+        wp_safe_redirect( fts_page_url( 'services' ), 301 );
+        exit;
+    }
+} );
+
+
 // ─── TEAM DATA (Okelegal Law Office company profile) ──────────────────────────
 /**
  * Team members grouped for the Home preview and the Our Team page.
@@ -616,23 +633,23 @@ function fts_team_groups() : array {
               'photo' => 'https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-11.45.24.jpeg' ],
         ],
         'lawyers' => [
-            [ 'name' => 'Michael M Luawarman, S.H.', 'role' => __( 'Advocate / Lawyer', 'fts-law' ),
+            [ 'name' => 'Michael M Luawarman, S.H.', 'photo' => get_template_directory_uri() . '/images/team/michael.jpg', 'role' => __( 'Advocate / Lawyer', 'fts-law' ),
               'bio'  => __( 'Works independently to represent Okelegal clients in all areas of criminal and civil law.', 'fts-law' ) ],
-            [ 'name' => 'Isvan Diary, S.H.', 'role' => __( 'Lawyer', 'fts-law' ),
+            [ 'name' => 'Isvan Diary, S.H.', 'photo' => get_template_directory_uri() . '/images/team/isvan.jpg', 'role' => __( 'Lawyer', 'fts-law' ),
               'bio'  => __( 'Works independently to represent clients in all areas of law, and is ready to serve as legal consultant to large companies through Legal Retainer services.', 'fts-law' ) ],
         ],
         'management' => [
-            [ 'name' => 'Radit, H', 'role' => __( 'CTO (Chief Technology Officer)', 'fts-law' ),
+            [ 'name' => 'Radit, H', 'photo' => get_template_directory_uri() . '/images/team/radit.jpg', 'role' => __( 'CTO (Chief Technology Officer)', 'fts-law' ),
               'bio'  => __( 'Decides on the firm\'s technology infrastructure and keeps technology strategy aligned with the firm\'s goals.', 'fts-law' ) ],
-            [ 'name' => 'Ibnu Kaban, S.H.', 'role' => __( 'Advisor', 'fts-law' ),
+            [ 'name' => 'Ibnu Kaban, S.H.', 'photo' => get_template_directory_uri() . '/images/team/ibnu.jpg', 'role' => __( 'Advisor', 'fts-law' ),
               'bio'  => __( 'Gives input, advice, and recommendations so Okelegal makes the best decisions, and advises the company director.', 'fts-law' ) ],
         ],
         'staff' => [
-            [ 'name' => 'Saffina Tussalama', 'role' => __( 'Operational Manager', 'fts-law' ) ],
-            [ 'name' => 'Zulkiply, Sst, Par', 'role' => __( 'Business Development Manager', 'fts-law' ) ],
-            [ 'name' => 'Milda Nurmalia G, S.Pd', 'role' => __( 'Finance Manager', 'fts-law' ) ],
-            [ 'name' => 'Nabila Cyzarine', 'role' => __( 'Public Relations', 'fts-law' ) ],
-            [ 'name' => 'Ali Ridho Behesyti, S.Kom', 'role' => __( 'Graphic Designer', 'fts-law' ) ],
+            [ 'name' => 'Saffina Tussalama', 'photo' => get_template_directory_uri() . '/images/team/saffina.jpg', 'role' => __( 'Operational Manager', 'fts-law' ) ],
+            [ 'name' => 'Zulkiply, Sst, Par', 'photo' => get_template_directory_uri() . '/images/team/zulkiply.jpg', 'role' => __( 'Business Development Manager', 'fts-law' ) ],
+            [ 'name' => 'Milda Nurmalia G, S.Pd', 'photo' => get_template_directory_uri() . '/images/team/milda.jpg', 'role' => __( 'Finance Manager', 'fts-law' ) ],
+            [ 'name' => 'Nabila Cyzarine', 'photo' => get_template_directory_uri() . '/images/team/nabila.jpg', 'role' => __( 'Public Relations', 'fts-law' ) ],
+            [ 'name' => 'Ali Ridho Behesyti, S.Kom', 'photo' => get_template_directory_uri() . '/images/team/aliridho.jpg', 'role' => __( 'Graphic Designer', 'fts-law' ) ],
         ],
     ];
 }

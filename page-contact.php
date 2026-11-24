@@ -381,8 +381,12 @@ get_header(); ?>
           </div>
         </div>
         <div class="contact-person-card">
-          <div class="contact-person-card__avatar contact-person-card__avatar--initials" aria-hidden="true">
-            <span>ZK</span>
+          <div class="contact-person-card__avatar">
+            <img
+              src="<?php echo esc_url( get_template_directory_uri() . '/images/team/zulkiply.jpg' ); ?>"
+              alt="<?php esc_attr_e('Zulkiply, Sst, Par', 'fts-law'); ?>"
+              loading="lazy"
+            />
           </div>
           <div class="contact-person-card__info">
             <strong class="contact-person-card__name"><?php _e('Zulkiply, Sst, Par', 'fts-law'); ?></strong>
