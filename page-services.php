@@ -119,12 +119,12 @@ get_header();
         <article class="card card--service-detail">
           <span class="mini-label"><?php _e('Notary', 'fts-law'); ?></span>
           <h3><?php _e('Notary / PPAT Services', 'fts-law'); ?></h3>
-          <p><?php _e('Deed-related services through our notary and land deed official (PPAT) network.', 'fts-law'); ?></p>
+          <p><?php _e('Our experienced notary team handles business entity deeds, deed amendments and agreements, and legalisation.', 'fts-law'); ?></p>
           <ul class="service-list">
-            <li><?php _e('Deed ratification', 'fts-law'); ?></li>
-            <li><?php _e('Document legalisation', 'fts-law'); ?></li>
-            <li><?php _e('Company deed amendments', 'fts-law'); ?></li>
-            <li><?php _e('Land deed support', 'fts-law'); ?></li>
+            <li><?php _e('Business entity deeds', 'fts-law'); ?></li>
+            <li><?php _e('Deed amendments &amp; agreements', 'fts-law'); ?></li>
+            <li><?php _e('Legalisation of documents', 'fts-law'); ?></li>
+            <li><?php _e('Sale-and-purchase deeds (land &amp; buildings)', 'fts-law'); ?></li>
           </ul>
           <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Consult This Service', 'fts-law'); ?></a>
         </article>
@@ -167,12 +167,12 @@ get_header();
         <article class="card card--service-detail">
           <span class="mini-label"><?php _e('Consultation', 'fts-law'); ?></span>
           <h3><?php _e('Legal Consultation', 'fts-law'); ?></h3>
-          <p><?php _e('Advice and representation across the main areas of law, for businesses and individuals.', 'fts-law'); ?></p>
+          <p><?php _e('Lawyers for companies and individuals: corporate law, arbitration, family matters, and dispute resolution.', 'fts-law'); ?></p>
           <ul class="service-list">
-            <li><?php _e('Corporate law', 'fts-law'); ?></li>
-            <li><?php _e('Family law', 'fts-law'); ?></li>
-            <li><?php _e('Dispute resolution', 'fts-law'); ?></li>
-            <li><?php _e('Litigation &amp; arbitration', 'fts-law'); ?></li>
+            <li><?php _e('Corporate lawyers (corporate law &amp; litigation)', 'fts-law'); ?></li>
+            <li><?php _e('Family lawyers (divorce, adoption, guardianship)', 'fts-law'); ?></li>
+            <li><?php _e('Disputes (sengketa) &amp; litigation in court', 'fts-law'); ?></li>
+            <li><?php _e('Arbitration lawyers', 'fts-law'); ?></li>
           </ul>
           <a class="btn btn-gold" href="<?php echo esc_url( fts_page_url( 'consultation' ) ); ?>"><?php _e('Consult This Service', 'fts-law'); ?></a>
         </article>
