@@ -12,9 +12,9 @@ define( 'FTS_PHONE_RAW',  '6281234567890' );          // No + for wa.me link
 define( 'FTS_PHONE_DISPLAY', '+62 812-3456-7890' );   // Human-readable
 define( 'FTS_WA_LINK',    'https://wa.me/6281234567890' );
 define( 'FTS_EMAIL',      'info@law.fts-tech.co.id' );
-define( 'FTS_ADDRESS',    'Jakarta, Indonesia' );
+define( 'FTS_ADDRESS',    'Pasteur Gateway, Jl. Gn. Batu No.203A, Sukaraja, Kec. Cicendo, Kota Bandung, Jawa Barat 40175' );
 define( 'FTS_OFFICE_HOURS', 'Mon – Fri: 09:00 – 18:00 WIB' );
-define( 'FTS_BRAND',      'LAW OFFICE · SYARIF &amp; PARTNERS' );
+define( 'FTS_BRAND',      'OKELEGAL LAW OFFICE' );
 define( 'FTS_THEME_VER',  '1.0.5' );
 
 
@@ -841,7 +841,7 @@ function fts_customizer( $wp_customize ) {
         ],
         'fts_address' => [
             'label'   => 'Office Address',
-            'default' => 'Jakarta, Indonesia',
+            'default' => 'Pasteur Gateway, Jl. Gn. Batu No.203A, Sukaraja, Kec. Cicendo, Kota Bandung, Jawa Barat 40175',
         ],
         'fts_office_hours' => [
             'label'   => 'Office Hours',

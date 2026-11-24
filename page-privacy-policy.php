@@ -41,7 +41,7 @@ get_header(); ?>
           <div class="privacy-section">
             <h2><?php _e('1. Introduction', 'fts-law'); ?></h2>
             <p>
-              <?php _e('This Privacy Policy explains how <strong>LAW OFFICE · SYARIF &amp; PARTNERS</strong> ("we", "our", "the office") collects, uses, stores, and protects personal information provided by visitors to our website at <strong>law.fts-tech.co.id</strong> and by clients who engage our legal services.', 'fts-law'); ?>
+              <?php _e('This Privacy Policy explains how <strong>OKELEGAL LAW OFFICE</strong> ("we", "our", "the office") collects, uses, stores, and protects personal information provided by visitors to our website at <strong>law.fts-tech.co.id</strong> and by clients who engage our legal services.', 'fts-law'); ?>
             </p>
             <p>
               <?php _e('We are committed to protecting your privacy and handling your personal data in compliance with applicable Indonesian data protection law, including <strong>Law No. 27 of 2022 on Personal Data Protection</strong> (Undang-Undang Perlindungan Data Pribadi / UU PDP).', 'fts-law'); ?>
@@ -432,7 +432,7 @@ get_header(); ?>
                 <span class="privacy-contact-item__icon" aria-hidden="true">🏢</span>
                 <div>
                   <strong><?php _e('Office Name', 'fts-law'); ?></strong>
-                  <p><?php _e('LAW OFFICE · SYARIF &amp; PARTNERS', 'fts-law'); ?></p>
+                  <p><?php _e('OKELEGAL LAW OFFICE', 'fts-law'); ?></p>
                 </div>
               </div>
 
