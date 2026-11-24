@@ -175,7 +175,7 @@ if ( is_home() && ! is_front_page() ) {
           <div class="no-results__icon" aria-hidden="true">📄</div>
           <h2><?php _e('No Articles Found', 'fts-law'); ?></h2>
           <p>
-            <?php _e('We haven\'t published any articles yet in this section. Check back soon for legal updates and business law insights for foreign investors in Indonesia.', 'fts-law'); ?>
+            <?php _e('We haven\'t published any articles yet in this section. Check back soon for legal updates and business law insights for businesses in Indonesia.', 'fts-law'); ?>
           </p>
           <div class="no-results__actions">
             <a class="btn btn-gold" href="<?php echo esc_url( fts_blog_url() ); ?>">

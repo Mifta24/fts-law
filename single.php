@@ -324,7 +324,7 @@ get_header();
   <section class="section-related-articles section-soft">
     <div class="container">
       <h2 class="section-title"><?php _e('Related Articles', 'fts-law'); ?></h2>
-      <p class="section-subtitle"><?php _e('More legal guides and updates for foreigners in Indonesia.', 'fts-law'); ?></p>
+      <p class="section-subtitle"><?php _e('More legal guides and updates for businesses and individuals in Indonesia.', 'fts-law'); ?></p>
       <div class="grid-3">
         <?php while ( $related_query->have_posts() ) : $related_query->the_post(); ?>
           <?php fts_blog_card(); ?>
