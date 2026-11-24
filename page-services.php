@@ -43,7 +43,7 @@ get_header();
             <?php _e('Okelegal Law Office is a legal consulting firm based in Bandung, West Java. Our team helps you with company establishment, business licensing, legal consultation, intellectual property, certification, and business consulting.', 'fts-law'); ?>
           </p>
           <p>
-            <?php _e('Our professional lawyers and consultants provide the best solution for your needs, with affordable services and free initial consultation.', 'fts-law'); ?>
+            <?php _e('Backed by lawyers with more than 20 years of experience serving domestic and international clients, we provide the best solution for your needs, with affordable services and free initial consultation.', 'fts-law'); ?>
           </p>
         </div>
         <div class="intro-band__trust">
