@@ -162,7 +162,7 @@ get_header();
           <div class="card-icon" aria-hidden="true">🏆</div>
           <h3><?php _e('Professional Experience', 'fts-law'); ?></h3>
           <ul class="plain-list">
-            <li><?php _e('10+ years of legal practice in Jakarta', 'fts-law'); ?></li>
+            <li><?php _e('Legal practice based in Bandung, West Java', 'fts-law'); ?></li>
             <li><?php _e('100+ PT PMA company setups assisted', 'fts-law'); ?></li>
             <li><?php _e('200+ visa &amp; immigration cases handled', 'fts-law'); ?></li>
             <li><?php _e('Clients from Japan, Korea, EU, US, Australia', 'fts-law'); ?></li>

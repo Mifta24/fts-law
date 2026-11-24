@@ -640,7 +640,7 @@ get_header();
         <div class="office-photo-card">
           <img
             src="https://law.fts-tech.co.id/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-16-at-15.54.46.jpeg"
-            alt="<?php esc_attr_e('Law Office – Jakarta', 'fts-law'); ?>"
+            alt="<?php esc_attr_e('Okelegal Law Office – Bandung', 'fts-law'); ?>"
             loading="lazy" />
         </div>
 
@@ -659,7 +659,7 @@ get_header();
             <div class="map-placeholder">
               <p><?php _e('Please visit <a href="https://www.google.com/maps">Google Maps</a> to view the map. <br />Or use', 'fts-law'); ?>
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.671136651886!2d106.78509397610306!3d-6.174763644527437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002212556b%3A0xd553386b470af88!2sNEO%20SOHO%20APARTEMENT!5e0!3m2!1sid!2sid!4v1753431520442!5m2!1sid!2sid"
+                  src="https://www.google.com/maps?q=Pasteur+Gateway,+Jl.+Gn.+Batu+No.203A,+Sukaraja,+Cicendo,+Bandung+40175&amp;output=embed"
                   loading="lazy"
                   allowfullscreen
                   referrerpolicy="no-referrer-when-downgrade"

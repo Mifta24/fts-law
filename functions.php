@@ -945,7 +945,7 @@ function fts_office_hours() : string {
 }
 
 function fts_maps_embed() : string {
-     return fts_get_option('fts_google_maps_embed', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.671136651886!2d106.78509397610306!3d-6.174763644527437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f7002212556b%3A0xd553386b470af88!2sNEO%20SOHO%20APARTEMENT!5e0!3m2!1sid!2sid!4v1753431520442!5m2!1sid!2sid', false);
+     return fts_get_option('fts_google_maps_embed', 'https://www.google.com/maps?q=Pasteur+Gateway,+Jl.+Gn.+Batu+No.203A,+Sukaraja,+Cicendo,+Bandung+40175&output=embed&hl=en', false);
 }
 
 /**

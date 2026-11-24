@@ -37,7 +37,7 @@ get_header(); ?>
       </div>
       <div class="trust-item">
         <span class="trust-icon" aria-hidden="true">🏢</span>
-        <span><?php _e('In-Person – Jakarta Office', 'fts-law'); ?></span>
+        <span><?php _e('In-Person – Bandung Office', 'fts-law'); ?></span>
       </div>
       <div class="trust-item">
         <span class="trust-icon" aria-hidden="true">💬</span>
@@ -193,7 +193,7 @@ get_header(); ?>
                   <option><?php _e('Online (Zoom / Google Meet)', 'fts-law'); ?></option>
                   <option><?php _e('WhatsApp Call', 'fts-law'); ?></option>
                   <option><?php _e('WhatsApp Chat', 'fts-law'); ?></option>
-                  <option><?php _e('In-Person – Jakarta Office', 'fts-law'); ?></option>
+                  <option><?php _e('In-Person – Bandung Office', 'fts-law'); ?></option>
                   <option><?php _e('Phone Call', 'fts-law'); ?></option>
                   <option><?php _e('Email', 'fts-law'); ?></option>
                 </select>
@@ -358,7 +358,7 @@ get_header(); ?>
           <div class="step-number">3</div>
           <h4><?php _e('Consultation Session', 'fts-law'); ?></h4>
           <p>
-            <?php _e('We conduct the consultation via video call (Zoom / Google Meet), WhatsApp, phone, or in-person at our Jakarta office — according to your preference.', 'fts-law'); ?>
+            <?php _e('We conduct the consultation via video call (Zoom / Google Meet), WhatsApp, phone, or in-person at our Bandung office — according to your preference.', 'fts-law'); ?>
           </p>
         </div>
 
